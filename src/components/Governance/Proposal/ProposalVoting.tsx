@@ -53,7 +53,11 @@ const VoteButtonGroup = styled(ButtonGroup)`
     text-transform: none;
 
     :hover {
-      background: linear-gradient(104.04deg, #b3fff9 0%, #00dbcb 100%);
+      background: linear-gradient(
+        104.04deg,
+        rgb(162 207 217) 0%,
+        rgb(141, 217, 191) 100%
+      );
       border: 1px solid #b3fff9;
       color: #00332f;
     }

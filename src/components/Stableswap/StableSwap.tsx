@@ -34,7 +34,7 @@ import BasePageContainer from "components/Base/PageContainer";
 export const StableSwapInputWrapper = styled(MuiBox)`
   position: relative;
   padding: 20px 24px 44px;
-  background: #1e2f4c;
+  background: #072a40;
   border-radius: 12px;
   width: 100%;
 `;
@@ -72,7 +72,7 @@ export const StableSwapFormLabel = styled(AppFormLabel)`
 `;
 
 export const StableSwapWalletBalance = styled(WalletBalance)`
-  color: #43fff1;
+  color: #a0f2c4;
 `;
 
 export const StableSwapMaxButton = styled(MaxButton)`
@@ -99,8 +99,8 @@ export const SwapButton = styled(ButtonPrimary)`
 `;
 
 const AddRemoveLiquidity = styled(Box)`
-  border-bottom: 1px solid #253656;
-  border-top: 1px solid #253656;
+  border-bottom: 1px solid #072a40;
+  border-top: 1px solid #072a40;
   display: flex;
   width: 100%;
   padding-bottom: 10px;

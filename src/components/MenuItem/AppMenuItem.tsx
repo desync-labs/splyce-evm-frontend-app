@@ -42,7 +42,7 @@ const useStyles = makeStyles<{ isActive: boolean; showText: boolean }>()(
       borderRadius: "8px",
       justifyContent: showText ? "flex-start" : "center",
       "&.active": {
-        backgroundColor: isActive ? "#2C4066" : "transparent",
+        backgroundColor: isActive ? "#072a40" : "transparent",
 
         "& .MuiListItemIcon-root": {
           color: isActive
@@ -51,7 +51,7 @@ const useStyles = makeStyles<{ isActive: boolean; showText: boolean }>()(
         },
       },
       "&:hover": {
-        background: "#2C4066",
+        background: "#072a40",
         borderRadius: "8px",
       },
       "& .MuiListItemText-inset": {
@@ -71,7 +71,7 @@ const useStyles = makeStyles<{ isActive: boolean; showText: boolean }>()(
         lineHeight: "20px",
       },
       margin: "0",
-      color: isActive ? "#fff" : "#B0C5E7",
+      color: isActive ? "#fff" : "#7B9EA6",
     },
   })
 );

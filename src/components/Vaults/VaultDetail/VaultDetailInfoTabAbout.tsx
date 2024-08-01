@@ -25,12 +25,12 @@ export const VaultInfoWrapper = styled(Box)`
 export const VaultDescriptionWrapper = styled(Box)`
   font-size: 14px;
   font-weight: 400;
-  color: #b7c8e5;
+  color: #7b9ea6;
 
   span {
     font-size: 14px;
     font-weight: 400;
-    color: #b7c8e5;
+    color: #7b9ea6;
   }
 
   ul {
@@ -56,9 +56,9 @@ export const VaultDescriptionWrapper = styled(Box)`
 
 export const VaultContractAddress = styled(Box)`
   font-size: 14px;
-  color: #b7c8e5;
+  color: #7b9ea6;
   a {
-    color: #b7c8e5;
+    color: #7b9ea6;
     text-decoration: underline;
   }
 
@@ -70,14 +70,14 @@ export const VaultContractAddress = styled(Box)`
 export const AppListApy = styled(AppListVault)`
   ${({ theme }) => theme.breakpoints.down("sm")} {
     & li {
-      color: #b7c8e5;
+      color: #7b9ea6;
       padding: 0;
       &.MuiListItemText-root {
         margin-top: 2px;
         margin-bottom: 2px;
       }
       span {
-        color: #b7c8e5;
+        color: #7b9ea6;
       }
       & div:last-child {
         font-weight: 400;
@@ -91,7 +91,7 @@ export const AppListFees = styled(AppListVault)`
   ${({ theme }) => theme.breakpoints.down("sm")} {
     padding: 4px 0;
     & li {
-      color: #6d86b2;
+      color: #7b9ea6;
       font-size: 13px;
       font-weight: 600;
       padding: 0;
@@ -100,7 +100,7 @@ export const AppListFees = styled(AppListVault)`
         margin-bottom: 2px;
       }
       span {
-        color: #6d86b2;
+        color: #7b9ea6;
         font-size: 13px;
         font-weight: 600;
       }

@@ -225,7 +225,7 @@ const StakingLockForm: FC = () => {
                   onChange={onChange}
                   data-testid="dao-lockPeriod-input"
                 />
-                <MaxButton sx={{ color: "#6379A1", background: "none" }}>
+                <MaxButton sx={{ color: "#7b9ea6", background: "none" }}>
                   Days
                 </MaxButton>
               </AppFormInputWrapper>

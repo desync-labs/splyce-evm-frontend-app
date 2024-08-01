@@ -25,8 +25,8 @@ const RightColumn = styled(Box)<{ open?: boolean; scrolled: number }>`
   height: 100vh;
   width: ${({ open }) => (open ? "220px" : "64px")};
   padding: 1.25rem;
-  border-left: 1px solid #2c4066;
-  background-color: #132340;
+  border-left: 1px solid #072a40;
+  background-color: #051926;
   z-index: 9999;
   overflow: auto;
 
@@ -37,7 +37,7 @@ const RightColumn = styled(Box)<{ open?: boolean; scrolled: number }>`
 
 const SavedButton = styled(RowBetween)<{ open?: boolean }>`
   padding-bottom: ${({ open }) => open && "20px"};
-  border-bottom: ${({ open }) => open && "1px solid #253656"};
+  border-bottom: ${({ open }) => open && "1px solid #072a40"};
   margin-bottom: ${({ open }) => open && "1.25rem"};
 
   :hover {

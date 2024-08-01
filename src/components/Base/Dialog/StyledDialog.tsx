@@ -19,8 +19,8 @@ export const BaseDialogWrapper = styled(
   },
   "& .MuiDialog-paper": {
     borderRadius: "16px",
-    border: "1px solid #2c4066",
-    background: "#132340",
+    border: "1px solid #072a40",
+    background: "#051926",
     [theme.breakpoints.down("sm")]: {
       width: "100vw",
       height: "calc(var(--vh, 1vh) * 100)",
@@ -40,7 +40,7 @@ export const BaseDialogWrapper = styled(
 
 export const BaseDialogNavWrapper = styled(Box)`
   width: fit-content;
-  border-bottom: 1.5px solid #1d2d49;
+  border-bottom: 1.5px solid #072a40;
   display: flex;
   align-items: center;
   padding: 0;

@@ -142,7 +142,7 @@ const EarlyUnstakeDialog: FC<EarlyUnstakeDialogProps> = ({
             <InfoWrapper>
               <InfoLabel>
                 Total Available
-                <InfoIcon sx={{ fontSize: "18px", color: "#6379A1" }} />
+                <InfoIcon sx={{ fontSize: "18px", color: "#7b9ea6" }} />
               </InfoLabel>
               <InfoValue>
                 {formatPercentage(unstakeAmount / 10 ** 18)} {token}
@@ -158,7 +158,7 @@ const EarlyUnstakeDialog: FC<EarlyUnstakeDialogProps> = ({
             <InfoWrapper>
               <InfoLabel>
                 Maximum Received
-                <InfoIcon sx={{ fontSize: "18px", color: "#6379A1" }} />
+                <InfoIcon sx={{ fontSize: "18px", color: "#7b9ea6" }} />
               </InfoLabel>
               <InfoValue>
                 {formatPercentage(unstakeAmountWithFee / 10 ** 18)} {token}

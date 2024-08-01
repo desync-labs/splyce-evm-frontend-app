@@ -41,7 +41,7 @@ const TransactionState = styled(ExternalLink)<{
 
 export const IconWrapper = styled(Box)<{ pending: boolean; success?: boolean }>`
   color: ${({ pending, success }) =>
-    pending ? "#253656" : success ? "#27AE60" : "#FD4040"};
+    pending ? "#072a40" : success ? "#27AE60" : "#FD4040"};
 `;
 
 export type TransactionItem = {

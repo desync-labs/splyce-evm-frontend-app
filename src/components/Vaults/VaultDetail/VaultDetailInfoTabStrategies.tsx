@@ -16,7 +16,7 @@ export const VaultInfoWrapper = styled(Box)`
 `;
 
 export const StrategySelectorLabel = styled(Typography)`
-  color: #b7c8e5;
+  color: #7b9ea6;
   font-size: 11px;
   font-weight: 600;
   line-height: 16px;
@@ -35,7 +35,7 @@ export const StrategySelector = styled(ButtonGroup)`
   width: auto;
   overflow-x: auto;
   border-radius: unset;
-  border-bottom: 1px solid #43fff1;
+  border-bottom: 1px solid #a0f2c4;
   padding: 8px 0 16px 0;
   overflow-x: scroll;
   width: 100%;
@@ -44,10 +44,10 @@ export const StrategySelector = styled(ButtonGroup)`
     height: 4px;
   }
   &::-webkit-scrollbar-track {
-    background: #1e2f4d;
+    background: #072a40;
   }
   &::-webkit-scrollbar-thumb {
-    background: #43fff1;
+    background: #a0f2c4;
     border-radius: 4px;
   }
 
@@ -60,8 +60,8 @@ export const StrategySelector = styled(ButtonGroup)`
     font-weight: 400;
     white-space: nowrap;
     border-radius: 8px;
-    border: 1px solid #2c4066;
-    background: #1e2f4d;
+    border: 1px solid #072a40;
+    background: #072a40;
     padding: 10px 24px;
 
     &:hover {
@@ -70,8 +70,8 @@ export const StrategySelector = styled(ButtonGroup)`
 
     &.activeStrategyItem {
       color: #fff;
-      border: 1px solid #43fff1;
-      background: #1e2f4d;
+      border: 1px solid #a0f2c4;
+      background: #072a40;
     }
   }
   ${({ theme }) => theme.breakpoints.down("sm")} {

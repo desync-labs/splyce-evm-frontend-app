@@ -100,7 +100,7 @@ const BaseDateRangePicker: FC<BaseDateRangePickerProps> = ({
         />
         <DatePickerButton onClick={handleOpen}>
           <CalendarTodayOutlinedIcon
-            sx={{ color: "#43FFF1", width: "22px", height: "22px" }}
+            sx={{ color: "#a0f2c4", width: "22px", height: "22px" }}
           />
         </DatePickerButton>
         <Popover

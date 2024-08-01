@@ -186,15 +186,15 @@ const TokenChart: FC<TokenChartProps> = (props) => {
             options={CHART_VIEW}
             active={chartFilter}
             setActive={setChartFilter}
-            color={"#5a81ff"}
-            shadow={"0 0 8px #003cff"}
+            color={"#a8bfb0"}
+            shadow={"0 0 8px #a0f2c4"}
           />
           <DropdownSelect
             options={timeframeOptions}
             active={timeWindow}
             setActive={setTimeWindow}
-            color={"#5a81ff"}
-            shadow={"0 0 8px #003cff"}
+            color={"#a8bfb0"}
+            shadow={"0 0 8px #a0f2c4"}
             style={{ paddingRight: isMobile ? "1.25rem" : "0" }}
           />
         </RowBetween>

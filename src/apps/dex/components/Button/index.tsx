@@ -42,7 +42,7 @@ export const ButtonPrimary = styled(Base)<{
   fontSize?: string;
   altDisabledStyle?: boolean;
 }>`
-  background: linear-gradient(104.04deg, #b3fff9 0%, #00dbcb 100%);
+  background: linear-gradient(104.04deg, #99cad8 0%, #9dfbc7 100%);
   border-radius: 8px;
   color: #00332f;
   font-size: ${({ fontSize }) => fontSize};
@@ -58,7 +58,7 @@ export const ButtonPrimary = styled(Base)<{
   &:disabled {
     pointer-events: unset;
     background-color: ${({ altDisabledStyle, disabled }) =>
-      altDisabledStyle ? (disabled ? "#565A69" : "#253656") : "#565A69"};
+      altDisabledStyle ? (disabled ? "#565A69" : "#072a40") : "#565A69"};
     color: #00332f;
     box-shadow: none;
     border: 1px solid transparent;
@@ -71,7 +71,7 @@ export const ButtonPrimary = styled(Base)<{
 `;
 
 export const ButtonLight = styled(Base)`
-  background: linear-gradient(104.04deg, #b3fff9 0%, #00dbcb 100%);
+  background: linear-gradient(104.04deg, #99cad8 0%, #9dfbc7 100%);
   border-radius: 8px;
   color: #00332f;
   font-size: 17px;

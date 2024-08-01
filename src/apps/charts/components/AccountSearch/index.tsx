@@ -34,9 +34,9 @@ const Input = styled("input")`
   outline: none;
   padding: 12px 16px;
   border-radius: 8px;
-  color: #8ea4cc;
-  border: 1px solid #3d5580;
-  background-color: #091433;
+  color: #7b9ea6;
+  border: 1px solid #072a40;
+  background-color: #051926;
   font-size: 16px;
 
   :hover,
@@ -78,10 +78,10 @@ const DashGrid = styled(Box)`
 `;
 
 export const HeaderWrapper = styled(DashGrid)`
-  background: #2c4066;
+  background: #072a40;
   border-radius: 8px;
   padding: 0.5rem 1.125rem 0.5rem;
-  color: #8ea4cc;
+  color: #7b9ea6;
   text-transform: uppercase;
   font-size: 11px;
   font-weight: 600;

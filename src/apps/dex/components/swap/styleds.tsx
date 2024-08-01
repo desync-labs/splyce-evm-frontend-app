@@ -32,7 +32,7 @@ export const ArrowWrapper = styled(Box)<{ clickable: boolean }>`
 export const ArrowDownWrapped = styled(Box)`
   width: 30px;
   height: 30px;
-  background: #6379a1;
+  background: #7b9ea6;
   border-radius: 4px;
   display: flex;
   align-items: center;
@@ -155,8 +155,8 @@ export function SwapCallbackError({ error }: { error: string }) {
 }
 
 export const SwapShowAcceptChanges = styled(AutoColumn)`
-  background-color: ${transparentize(0.9, "#253656")};
-  color: #253656;
+  background-color: ${transparentize(0.9, "#072a40")};
+  color: #072a40;
   padding: 0.5rem;
   border-radius: 12px;
   margin-top: 8px;

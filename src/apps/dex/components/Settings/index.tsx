@@ -219,7 +219,7 @@ const SettingsTab = () => {
       {open && (
         <MenuFlyout>
           <AutoColumn gap="md" style={{ padding: "1rem" }}>
-            <Typography fontWeight={600} fontSize={14} color="#b7c8e5">
+            <Typography fontWeight={600} fontSize={14} color="#7B9EA6">
               Transaction Settings
             </Typography>
             <TransactionSettings
@@ -228,12 +228,12 @@ const SettingsTab = () => {
               deadline={ttl}
               setDeadline={setTtl}
             />
-            <Typography fontWeight={600} fontSize={14} color="#b7c8e5">
+            <Typography fontWeight={600} fontSize={14} color="#7B9EA6">
               Interface Settings
             </Typography>
             <RowBetween>
               <RowFixed color={"#4F658C"}>
-                <TYPE.main fontWeight={400} fontSize={14} color="#b7c8e5">
+                <TYPE.main fontWeight={400} fontSize={14} color="#7B9EA6">
                   Toggle Expert Mode
                 </TYPE.main>
                 <QuestionHelper text="Bypasses confirmation modals and allows high slippage trades. Use at your own risk." />
@@ -256,7 +256,7 @@ const SettingsTab = () => {
             </RowBetween>
             <RowBetween>
               <RowFixed color={"#4F658C"}>
-                <TYPE.main fontWeight={400} fontSize={14} color="#b7c8e5">
+                <TYPE.main fontWeight={400} fontSize={14} color="#7B9EA6">
                   Disable Multihops
                 </TYPE.main>
                 <QuestionHelper text="Restricts swaps to direct pairs only." />

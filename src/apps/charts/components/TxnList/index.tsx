@@ -75,7 +75,7 @@ export const DashGrid = styled(Box)`
 `;
 
 const HeaderWrapper = styled(DashGrid)`
-  background: #2c4066;
+  background: #072a40;
   border-radius: 8px;
   padding-top: 7px !important;
   padding-bottom: 7px !important;
@@ -437,8 +437,8 @@ const TxnList: FC<TxnListProps> = (props) => {
               options={TXN_TYPE}
               active={txFilter}
               setActive={setTxFilter}
-              color={"#5a81ff"}
-              shadow={"0 0 8px #003cff"}
+              color={"#a8bfb0"}
+              shadow={"0 0 8px #a0f2c4"}
             />
           </RowBetween>
         ) : (

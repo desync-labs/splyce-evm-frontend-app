@@ -77,7 +77,7 @@ const AppListTooltip = styled(AppList)`
       span {
         font-size: 11px;
         font-weight: 400;
-        color: #b7c8e5;
+        color: #7b9ea6;
       }
     }
 
@@ -146,7 +146,7 @@ const CustomizedYAxisTick: FC<CustomizedYAxisTickProps> = ({
 }) => {
   return (
     <g transform={`translate(${x},${y - 10})`}>
-      <text x={0} y={0} dy={16} textAnchor="start" fill="#6D86B2" fontSize={11}>
+      <text x={0} y={0} dy={16} textAnchor="start" fill="#7b9ea6" fontSize={11}>
         {formatNumber(payload.value)}
       </text>
     </g>
@@ -271,15 +271,15 @@ const VaultHistoryChart: FC<VaultHistoryChartPropTypes> = ({
           }}
         >
           <CartesianGrid
-            stroke="#3D5580"
+            stroke="#072a40"
             strokeDasharray="5 5"
             vertical={false}
           />
           <XAxis
             domain={["auto", "auto"]}
             dataKey="timestamp"
-            stroke="#5977a0"
-            tick={{ fontSize: 11, fill: "#5977a0" }}
+            stroke="#65858c"
+            tick={{ fontSize: 11, fill: "#65858c" }}
             tickFormatter={tickFormatter}
             allowDataOverflow={true}
             strokeWidth={1}
@@ -297,7 +297,7 @@ const VaultHistoryChart: FC<VaultHistoryChartPropTypes> = ({
           <Line
             type="step"
             dataKey="chartValue"
-            stroke="#00fff6"
+            stroke="#a0f2c4"
             strokeWidth={2}
             name={valueLabel}
             unit={valueUnits}

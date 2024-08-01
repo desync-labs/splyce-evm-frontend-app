@@ -131,7 +131,7 @@ export const AssetInput = <T extends Asset = Asset>({
       <Box
         sx={(theme) => ({
           p: "8px 12px",
-          border: "1px solid #253656",
+          border: "1px solid #072a40",
           borderRadius: "8px",
           background: theme.palette.background.default,
           mb: 1,

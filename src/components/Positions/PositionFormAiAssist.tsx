@@ -258,7 +258,7 @@ const PositionFormAiAssist: FC<PositionFormAiAssistProps> = ({
                     {BigNumber(minPricePrediction as number).isEqualTo(
                       pool.collateralPrice
                     ) ? (
-                      <Box sx={{ color: "#43FFF1" }}>(Current price)</Box>
+                      <Box sx={{ color: "#a0f2c4" }}>(Current price)</Box>
                     ) : null}
                   </ListTitleWrapper>
                 }

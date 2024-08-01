@@ -22,11 +22,11 @@ export const BaseTextField = styled(MuiTextField)`
     font-size: 14px;
     line-height: 20px;
     color: #4f658c;
-    border: 1px solid #253656;
+    border: 1px solid #072a40;
     &:hover,
     &:focus {
-      border: 1px solid #5a81ff;
-      box-shadow: 0 0 8px #003cff;
+      border: 1px solid #a8bfb0;
+      box-shadow: 0 0 8px #a0f2c4;
     }
   }
 
@@ -56,8 +56,8 @@ export const BaseTextField = styled(MuiTextField)`
   & input:disabled,
   textarea:disabled {
     background: unset;
-    border: 1px solid #3d5580;
-    color: #3d5580;
+    border: 1px solid #072a40;
+    color: #072a40;
     cursor: not-allowed;
     pointer-events: all;
     &:hover,
@@ -80,7 +80,7 @@ export const BaseTextField = styled(MuiTextField)`
   .MuiFormHelperText-root {
     margin-left: 0;
     margin-top: 0;
-    color: #6379a1;
+    color: #7b9ea6;
     &.Mui-error {
       color: #dd3c3c;
     }
@@ -94,7 +94,7 @@ export const BaseDialogFormWrapper = styled(Box)`
   position: relative;
   width: 100%;
   border-radius: 12px;
-  background: #1e2f4d;
+  background: #072a40;
   padding: 16px;
 `;
 
@@ -102,7 +102,7 @@ export const BaseDialogFormInfoWrapper = styled(Box)`
   position: relative;
   width: 100%;
   border-radius: 12px;
-  background: #1e2f4c;
+  background: #072a40;
   padding: 16px;
   margin-top: 8px;
 `;
@@ -144,7 +144,7 @@ export const BaseFormWalletBalance = styled(Typography)`
   font-size: 12px;
   line-height: 16px;
   float: right;
-  color: #43fff1;
+  color: #a0f2c4;
   text-align: end;
   ${({ theme }) => theme.breakpoints.down("sm")} {
     font-size: 11px;
@@ -155,7 +155,7 @@ export const BaseFormInputUsdIndicator = styled("div")`
   position: absolute;
   top: 58px;
   left: 40px;
-  color: #b7c8e5;
+  color: #7b9ea6;
   font-size: 14px;
   font-weight: 400;
   ${({ theme }) => theme.breakpoints.down("sm")} {
@@ -175,7 +175,7 @@ export const BaseFormLabelRow = styled(Box)`
 `;
 
 export const BaseFormInputLabel = styled(MuiFormLabel)`
-  color: #b7c8e5;
+  color: #7b9ea6;
   font-size: 11px;
   font-weight: 600;
   line-height: 16px;
@@ -192,19 +192,19 @@ export const BaseFormTextField = styled(MuiTextField)`
   textarea {
     height: 42px;
     width: 100%;
-    background: #091433;
+    background: #051926;
     color: #fff;
     font-size: 18px;
     font-weight: 500;
     line-height: 20px;
-    border: 1px solid #2c4066;
+    border: 1px solid #072a40;
     border-radius: 8px;
     padding: 0 72px 18px 40px;
 
     &:hover,
     &:focus {
-      border: 1px solid #5a81ff;
-      box-shadow: 0 0 8px #003cff;
+      border: 1px solid #a8bfb0;
+      box-shadow: 0 0 8px #a0f2c4;
     }
   }
 
@@ -235,7 +235,7 @@ export const BaseFormTextField = styled(MuiTextField)`
   textarea:disabled {
     height: 46px;
     background: unset;
-    border: 1px solid #2c4066;
+    border: 1px solid #072a40;
     color: #566e99;
     -webkit-text-fill-color: unset;
     cursor: not-allowed;
@@ -262,7 +262,7 @@ export const BaseFormTextField = styled(MuiTextField)`
   .MuiFormHelperText-root {
     margin-left: 0;
     margin-top: 0;
-    color: #6379a1;
+    color: #7b9ea6;
 
     &.Mui-error {
       color: #dd3c3c;
@@ -294,20 +294,20 @@ export const BaseFormSetMaxButton = styled(MuiButton)`
   top: 35px;
   right: 16px;
   height: 40px;
-  color: #43fff1;
+  color: #a0f2c4;
   text-align: center;
   font-size: 12px;
   font-style: normal;
   font-weight: 600;
   border-radius: 8px;
-  border: 0.7px solid #2c4066;
-  background: #091433;
+  border: 0.7px solid #072a40;
+  background: #051926;
   cursor: pointer;
   padding: 8px;
 
   &:hover {
-    border: 0.7px solid #43fff1;
-    background: #253656;
+    border: 0.7px solid #a0f2c4;
+    background: #072a40;
   }
 
   ${({ theme }) => theme.breakpoints.down("sm")} {
@@ -316,7 +316,7 @@ export const BaseFormSetMaxButton = styled(MuiButton)`
     height: 32px;
     font-size: 11px;
     color: #fff;
-    border: 0.7px solid #2c4066;
+    border: 0.7px solid #072a40;
     background: #243454;
   }
 `;

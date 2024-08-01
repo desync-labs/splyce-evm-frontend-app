@@ -28,7 +28,7 @@ import { DEFAULT_CHAIN_ID } from "utils/Constants";
 import BasePopover, { PopoverType } from "components/Base/Popover/BasePopover";
 
 const NetworkPaper = styled(AppPaper)`
-  background: #253656;
+  background: #072a40;
   border: 1px solid #4f658c;
   box-shadow: 0 12px 32px #000715;
   border-radius: 8px;
@@ -57,7 +57,7 @@ const EmptyButtonWrapper = styled(Box)`
   border-radius: 8px;
   margin-right: 10px;
   cursor: auto;
-  background: #253656;
+  background: #072a40;
   &.error {
     background: transparent;
     margin-right: 0;

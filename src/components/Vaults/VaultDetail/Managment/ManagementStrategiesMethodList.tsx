@@ -34,7 +34,7 @@ const StrategyManagerDescription = styled("div")`
   padding-bottom: 48px;
 
   & a {
-    color: #43fff1;
+    color: #a0f2c4;
     text-decoration-line: underline;
   }
 
@@ -45,7 +45,7 @@ const StrategyManagerDescription = styled("div")`
 
 const StrategyManagerDescriptionDivider = styled(Divider)`
   display: none;
-  border-color: #3d5580;
+  border-color: #072a40;
   ${({ theme }) => theme.breakpoints.down("sm")} {
     display: block;
     padding-top: 20px;
@@ -56,7 +56,7 @@ export const StrategySelectLabel = styled("div")`
   font-size: 11px;
   font-weight: 600;
   line-height: 16px;
-  color: #b7c8e5;
+  color: #7b9ea6;
   text-transform: uppercase;
   padding-bottom: 5px;
   ${({ theme }) => theme.breakpoints.down("sm")} {
@@ -74,12 +74,12 @@ const StrategySelect = styled(AppSelect)`
   & .MuiOutlinedInput-input {
     color: #566e99;
     border-radius: 8px;
-    border: 1px solid #2c4066;
-    background: #1e2f4d;
+    border: 1px solid #072a40;
+    background: #072a40;
   }
 
   & .MuiSelect-icon {
-    color: #6d86b2;
+    color: #7b9ea6;
   }
 `;
 
@@ -126,9 +126,9 @@ const ManagementStrategiesMethodTabs: FC<{
           }}
         >
           {value === 0 ? (
-            <ReadeMethodIcon color={"#6D86B2"} />
+            <ReadeMethodIcon color={"#7b9ea6"} />
           ) : (
-            <WriteMethodIcon color={"#6D86B2"} />
+            <WriteMethodIcon color={"#7b9ea6"} />
           )}
           <Typography sx={{ color: "#fff", fontSize: "14px" }}>
             {value === 0

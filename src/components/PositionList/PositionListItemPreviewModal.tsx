@@ -35,7 +35,7 @@ const BreadcrumbsContainer = styled(Box)`
 `;
 
 const PositionBreadcrumbsCloseModal = styled("div")`
-  color: #6d86b2;
+  color: #7b9ea6;
   font-size: 12px;
   font-weight: 600;
   line-height: 20px;

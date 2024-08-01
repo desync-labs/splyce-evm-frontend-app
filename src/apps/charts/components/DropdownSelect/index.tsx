@@ -14,7 +14,7 @@ const Wrapper = styled(FormControl)`
   z-index: 20;
 
   .MuiOutlinedInput-notchedOutline {
-    border-color: #253656;
+    border-color: #072a40;
     border-radius: 8px;
   }
   .Mui-focused .MuiOutlinedInput-notchedOutline {
@@ -22,7 +22,7 @@ const Wrapper = styled(FormControl)`
     box-shadow: rgb(0, 60, 255) 0 0 8px;
   }
   .MuiSelect-select {
-    background-color: #253656;
+    background-color: #072a40;
     border-radius: 8px;
   }
 `;

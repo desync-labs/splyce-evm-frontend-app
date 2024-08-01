@@ -22,7 +22,7 @@ const VaultListTableHeaderRow = styled(TableRow)`
 `;
 
 const VaultListTableCell = styled(TableCell)`
-  color: #8ea4cc;
+  color: #7b9ea6;
   font-size: 11px;
   font-weight: 600;
   line-height: 16px;

@@ -2,7 +2,7 @@ import { Box, Button, styled } from "@mui/material";
 
 export const AppNavWrapper = styled(Box)`
   width: fit-content;
-  border-bottom: 1.5px solid #1d2d49;
+  border-bottom: 1.5px solid #072a40;
   display: flex;
   align-items: center;
   padding: 0;
@@ -28,7 +28,7 @@ export const AppNavItem = styled(Button)`
 
   &.active {
     color: #fff;
-    border-bottom: 1px solid #00fff6;
+    border-bottom: 1px solid #a0f2c4;
   }
 
   &:hover {

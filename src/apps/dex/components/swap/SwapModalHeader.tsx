@@ -62,7 +62,7 @@ const SwapModalHeader: FC<SwapModalHeaderProps> = ({
             fontWeight={500}
             color={
               showAcceptChanges && trade.tradeType === TradeType.EXACT_OUTPUT
-                ? "#253656"
+                ? "#072a40"
                 : ""
             }
             data-testid="dex-swapModalHeader-fromAmount"
@@ -102,7 +102,7 @@ const SwapModalHeader: FC<SwapModalHeaderProps> = ({
               priceImpactSeverity > 2
                 ? "#FD4040"
                 : showAcceptChanges && trade.tradeType === TradeType.EXACT_INPUT
-                ? "#253656"
+                ? "#072a40"
                 : ""
             }
             data-testid="dex-swapModalHeader-toAmount"
@@ -128,7 +128,7 @@ const SwapModalHeader: FC<SwapModalHeaderProps> = ({
               <WarningAmberRoundedIcon
                 sx={{ width: "20px", height: "20px", marginRight: "8px" }}
               />
-              <TYPE.main color="#253656"> Price Updated</TYPE.main>
+              <TYPE.main color="#072a40"> Price Updated</TYPE.main>
             </RowFixed>
             <ButtonPrimary
               style={{

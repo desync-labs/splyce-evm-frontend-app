@@ -17,7 +17,7 @@ export const TitleSecondary = styled(Typography)`
 
 export const NoResults = styled(Typography)`
   font-weight: 500;
-  color: #6379a1;
+  color: #7b9ea6;
   font-size: 14px;
   line-height: 20px;
   padding: 8px 10px;
@@ -25,7 +25,7 @@ export const NoResults = styled(Typography)`
 `;
 
 export const Summary = styled(Typography)`
-  color: #b7c8e5;
+  color: #7b9ea6;
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
@@ -45,11 +45,11 @@ export const SummaryVaultFormInfo = styled(Summary)`
 export const WalletBalance = styled(Typography)`
   font-size: 12px;
   line-height: 16px;
-  color: #6379a1;
+  color: #7b9ea6;
   float: right;
 `;
 export const VaultWalletBalance = styled(WalletBalance)`
-  color: #43fff1;
+  color: #a0f2c4;
   text-align: end;
   ${({ theme }) => theme.breakpoints.down("sm")} {
     font-size: 11px;
@@ -92,7 +92,7 @@ export const ApproveBoxTypography = styled(Typography)`
 
 export const TVL = styled(Typography)`
   font-size: 12px;
-  color: #6379a1;
+  color: #7b9ea6;
   line-height: 16px;
   text-align: left;
 `;
@@ -161,7 +161,7 @@ export const WrongNetworkMobileIcon = styled(MuiBox)`
 `;
 
 export const RightNetwork = styled(MuiBox)`
-  background: #253656;
+  background: #072a40;
   border-radius: 8px;
   margin-right: 10px;
   justify-content: center;
@@ -181,7 +181,7 @@ export const RightNetwork = styled(MuiBox)`
 `;
 
 export const MainBox = styled(MuiBox)`
-  background: linear-gradient(180deg, #071126 0%, #050c1a 100%);
+  background: #0d0d0d;
   min-height: calc(var(--vh, 1vh) * 100);
   overflow: auto;
   display: flex;
@@ -219,7 +219,7 @@ export const WarningBox = styled(Box)`
 `;
 
 export const InfoBox = styled(Box)`
-  background: #132340;
+  background: #051926;
   border-radius: 8px;
   padding: 8px 16px;
   gap: 8px;
@@ -231,11 +231,11 @@ export const InfoBox = styled(Box)`
   svg {
     height: 20px;
     width: 20px;
-    color: #6379a1;
+    color: #7b9ea6;
   }
 
   p {
-    color: #b7c8e5;
+    color: #7b9ea6;
     font-size: 14px;
     width: 100%;
     white-space: break-spaces;
@@ -257,12 +257,12 @@ export const InfoBoxV2 = styled(Box)`
   svg {
     height: 20px;
     width: 20px;
-    color: #b7c8e5;
+    color: #7b9ea6;
     margin: 0;
   }
 
   p {
-    color: #b7c8e5;
+    color: #7b9ea6;
     font-size: 14px;
     width: 100%;
     white-space: break-spaces;
@@ -298,7 +298,7 @@ export const SuccessBox = styled(Box)`
 export const NestedRouteNav = styled("nav")`
   height: 65px;
   width: 100%;
-  border-bottom: 1.5px solid #1d2d49;
+  border-bottom: 1.5px solid #072a40;
   display: flex;
   align-items: center;
   ${({ theme }) => theme.breakpoints.down("sm")} {
@@ -309,7 +309,7 @@ export const NestedRouteNav = styled("nav")`
     a {
       width: 100%;
       height: 60px;
-      border-bottom: 1.5px solid #1d2d49;
+      border-bottom: 1.5px solid #072a40;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -330,8 +330,8 @@ export const NestedRouteLink = styled(Link)<{ span?: number }>`
 
   &.active {
     color: #fff;
-    border-bottom: 2px solid #00fff6;
-    background: #132340;
+    border-bottom: 2px solid #a0f2c4;
+    background: #051926;
   }
 
   span {

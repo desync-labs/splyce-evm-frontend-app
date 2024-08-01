@@ -33,7 +33,7 @@ const SummaryWrapper = styled(AppFlexBox)`
 const CustomPaper = styled(Box)`
   width: 100%;
   border-radius: 12px;
-  background: #1e2f4d;
+  background: #072a40;
   padding: 16px;
 
   &.withdraw-btn {
@@ -66,7 +66,7 @@ export const AppStepper = styled(Stepper)`
     margin-left: 8px;
   }
   & .MuiStepConnector-line {
-    border-color: #3d5580;
+    border-color: #072a40;
     border-left-width: 2px;
     min-height: 12px;
   }
@@ -78,18 +78,18 @@ export const AppStep = styled(Step)`
     padding: 2px 0;
   }
   & .MuiStepLabel-label {
-    color: #b7c8e5;
+    color: #7b9ea6;
     font-size: 13px;
     font-weight: 600;
     line-height: 16px;
     letter-spacing: 0.5px;
 
     &.Mui-completed {
-      color: #b7c8e5;
+      color: #7b9ea6;
       font-weight: 600;
     }
     &.Mui-active {
-      color: #b7c8e5;
+      color: #7b9ea6;
       font-weight: 600;
     }
   }
@@ -110,7 +110,7 @@ export const StepLabelOptionalValue = styled("div")`
   right: 0;
   top: 1px;
   height: 20px;
-  color: #43fff1;
+  color: #a0f2c4;
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;

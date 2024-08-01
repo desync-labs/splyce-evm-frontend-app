@@ -31,8 +31,8 @@ const GridStats = styled(Box)`
 `;
 
 const GridStatsItem = styled(Box)`
-  border: 1px solid #2c4066;
-  background: #132340;
+  border: 1px solid #072a40;
+  background: #051926;
   height: auto;
   max-height: 68px;
   display: flex;
@@ -63,7 +63,7 @@ const ImgWrapper = styled(Box)`
 
 const Title = styled(Typography)`
   font-size: 10px;
-  color: #6379a1;
+  color: #7b9ea6;
   font-weight: 600;
   text-transform: uppercase;
 `;

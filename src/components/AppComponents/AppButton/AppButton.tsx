@@ -28,7 +28,7 @@ export const ButtonPrimary = styled(MuiButton, {
 })<{ isLoading?: boolean }>(({ isLoading = false }) => {
   const styles = {
     borderRadius: "8px",
-    background: "linear-gradient(104.04deg, #B3FFF9 0%, #00DBCB 100%)",
+    background: "linear-gradient(104.04deg, #99CAD8 0%, #9DFBC7 100%)",
     padding: "8, 12, 8, 12",
     fontSize: "13px",
     lineHeight: "16px",
@@ -47,7 +47,7 @@ export const ButtonPrimary = styled(MuiButton, {
       },
     },
     "> .MuiCircularProgress-root": {
-      color: "#1D2D49",
+      color: "#072a40",
     },
   };
 
@@ -65,7 +65,7 @@ export const ButtonPrimary = styled(MuiButton, {
 });
 
 export const ButtonSecondary = styled(MuiButton)`
-  color: #43FFF1;
+  color: #a0f2c4;
   font-weight: bold;
   font-size: 15px;
   line-height: 20px;
@@ -94,7 +94,7 @@ export const ButtonSecondary = styled(MuiButton)`
 export const ButtonSecondaryLink = styled("a")`
   display: flex;
   align-items: center;  
-  color: #43FFF1;
+  color: #a0f2c4;
   font-weight: bold;
   font-size: 15px;
   line-height: 20px;
@@ -137,13 +137,13 @@ export const CancelButton = styled(IconButton)`
   font-size: 17px;
   line-height: 24px;
   color: #fff;
-  border: 1px solid #6379a1;
+  border: 1px solid #7b9ea6;
   border-radius: 8px;
 `;
 
 export const OpenPositionButton = styled(MuiButton)`
   border-radius: 8px;
-  background: linear-gradient(104.04deg, #b3fff9 0%, #00dbcb 100%);
+  background: linear-gradient(104.04deg, #99cad8 0%, #9dfbc7 100%);
   height: 32px;
   font-size: 12px;
   line-height: 16px;
@@ -165,10 +165,10 @@ export const OpenPositionButton = styled(MuiButton)`
 `;
 
 export const ManagePositionButton = styled(MuiButton)`
-  border: 0.7px solid #43FFF1;
+  border: 0.7px solid #a0f2c4;
   border-radius: 8px;
   background: transparent;
-  color: #43FFF1;
+  color: #a0f2c4;
   font-size: 12px;
   font-weight: 600;
   line-height: 16px;
@@ -205,20 +205,20 @@ export const MaxButtonV2 = styled(MuiButton)`
   top: 35px;
   right: 16px;
   height: 40px;
-  color: #43fff1;
+  color: #a0f2c4;
   text-align: center;
   font-size: 12px;
   font-style: normal;
   font-weight: 600;
   border-radius: 8px;
-  border: 0.7px solid #2c4066;
-  background: #091433;
+  border: 0.7px solid #072a40;
+  background: #051926;
   cursor: pointer;
   padding: 8px;
 
   &:hover {
-    border: 0.7px solid #43fff1;
-    background: #253656;
+    border: 0.7px solid #a0f2c4;
+    background: #072a40;
   }
 
   ${({ theme }) => theme.breakpoints.down("sm")} {
@@ -227,7 +227,7 @@ export const MaxButtonV2 = styled(MuiButton)`
     height: 32px;
     font-size: 11px;
     color: #fff;
-    border: 0.7px solid #2c4066;
+    border: 0.7px solid #072a40;
     background: #243454;
   }
 `;
@@ -237,7 +237,7 @@ export const ApproveButton = styled(MuiButton)`
   font-weight: bold;
   font-size: 13px;
   line-height: 16px;
-  background: linear-gradient(104.04deg, #b3fff9 0%, #00dbcb 100%);
+  background: linear-gradient(104.04deg, #99cad8 0%, #9dfbc7 100%);
   border: 1px solid #b3fff9;
   border-radius: 8px;
   margin-left: 33px;
@@ -338,7 +338,7 @@ export const ManageTypeButton = styled(MuiButton)`
   font-weight: bold;
   &.active {
     background: #4f658c;
-    border: 1px solid #6379a1;
+    border: 1px solid #7b9ea6;
   }
 `;
 
@@ -371,7 +371,7 @@ export const BackToProposalsButton = styled(MuiButton)`
 export const VotingEndedButton = styled(MuiButton)`
   padding: 8px 20px;
   width: 100%;
-  color: #6379a1;
+  color: #7b9ea6;
   font-weight: 600;
   font-size: 17px;
   line-height: 24px;
@@ -393,7 +393,7 @@ export const ExtLinkIcon = styled(OpenInNewRoundedIcon, {
 })<{ width?: string; height?: string }>`
   width: ${({ width = "16px" }) => width};
   height: ${({ height = "16px" }) => height};
-  color: #43fff1;
+  color: #a0f2c4;
   margin-left: 4px;
   ${({ theme }) => theme.breakpoints.down("sm")} {
     margin-left: 0;

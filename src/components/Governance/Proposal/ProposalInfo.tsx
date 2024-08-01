@@ -18,7 +18,7 @@ const ProposalTitle = styled(Typography)`
 `;
 
 const TimeslotContainer = styled(Grid)`
-  border-bottom: 1px solid #253656;
+  border-bottom: 1px solid #072a40;
   padding: 20px 24px 30px;
   ${({ theme }) => theme.breakpoints.down("sm")} {
     padding: 12px 12px 20px;

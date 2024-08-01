@@ -150,8 +150,8 @@ export const getDesignTokens = () => {
     palette: {
       mode: "dark",
       primary: {
-        main: "#00FFF6",
-        light: "#b0c5e7",
+        main: "#a0f2c4",
+        light: "#7B9EA6",
         dark: "#D2D4DC",
       },
       secondary: {
@@ -191,21 +191,21 @@ export const getDesignTokens = () => {
       },
       text: {
         primary: "#fff",
-        secondary: "#6379a1",
+        secondary: "#7b9ea6",
         light: "#c5d7f2",
         disabled: "#62677B",
-        muted: "#5977a0",
-        highlight: "#00fff6",
+        muted: "#65858c",
+        highlight: "#a0f2c4",
       },
       background: {
         default: "#071028",
-        paper: "#132340",
-        surface: "#1d2d49",
-        surface2: "#1d2d49",
+        paper: "#051926",
+        surface: "#072a40",
+        surface2: "#072a40",
         header: "#101d32",
         disabled: "#EBEBEF14",
       },
-      divider: "#2c4066",
+      divider: "#072a40",
       action: {
         active: "#EBEBEF8F",
         hover: "#2a3e5a",
@@ -216,18 +216,18 @@ export const getDesignTokens = () => {
       },
       other: {
         standardInputLine: "#EBEBEF6B",
-        fathomAccent: "#00FFF6",
+        fathomAccent: "#a0f2c4",
         fathomAccentLight: "#B3FFF9",
         fathomAccentMute: "#2696a0",
-        fathomLink: "#5a81ff",
+        fathomLink: "#a8bfb0",
       },
       gradients: {
         fathomMainGradient:
-          "linear-gradient(104.04deg, rgb(179, 255, 249) 0%, rgb(0, 219, 203) 100%)",
+          "linear-gradient(104.04deg, #99CAD8 0%, #9DFBC7 100%)",
         newGradient: "linear-gradient(79.67deg, #8C3EBC 0%, #007782 95.82%)",
         fathomGradient: "linear-gradient(180deg, #071126 0%, #050c1a 100%)",
         fathomlightGradient:
-          "linear-gradient(104.04deg, rgb(179, 255, 249) 0%, rgb(0, 219, 203) 100%)",
+          "linear-gradient(104.04deg, #99CAD8 0%, #9DFBC7 100%)",
       },
     },
     spacing: 8,
@@ -429,10 +429,10 @@ export function getThemedComponents(theme: Theme) {
         styleOverrides: {
           root: {
             "& .MuiSlider-thumb": {
-              color: "#00fff6",
+              color: "#a0f2c4",
             },
             "& .MuiSlider-track": {
-              color: "#00fff6",
+              color: "#a0f2c4",
             },
           },
         },
@@ -464,7 +464,7 @@ export function getThemedComponents(theme: Theme) {
             props: { variant: "surface" },
             style: {
               color: theme.palette.common.white,
-              backgroundColor: "#253656",
+              backgroundColor: "#072a40",
               "&:hover, &.Mui-focusVisible": {
                 backgroundColor: theme.palette.background.header,
               },
@@ -824,7 +824,7 @@ export function getThemedComponents(theme: Theme) {
             lineHeight: 1.5,
             minWidth: "375px",
             color: "#fff",
-            background: "#050c1a",
+            background: "#0d0d0d",
             "> div:first-of-type": {
               minHeight: "100vh",
               display: "flex",
@@ -853,8 +853,8 @@ export function getThemedComponents(theme: Theme) {
           root: {
             "&.Mui-focused, &:hover": {
               ".MuiOutlinedInput-notchedOutline": {
-                border: "1px solid #5a81ff",
-                boxShadow: "0 0 8px #003cff",
+                border: "1px solid #a8bfb0",
+                boxShadow: "0 0 8px #a0f2c4",
               },
             },
             "&.Mui-disabled:hover": {

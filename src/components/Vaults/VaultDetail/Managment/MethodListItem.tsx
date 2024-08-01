@@ -52,9 +52,9 @@ const MethodResponseStyled = styled(Box)`
 `;
 
 const MethodListItemAccordion = styled(Accordion)`
-  background: #253656;
+  background: #072a40;
   border-radius: 8px !important;
-  border: 1px solid #2c4066;
+  border: 1px solid #072a40;
   box-shadow: none;
   margin-bottom: 8px;
   padding: 0;
@@ -88,7 +88,7 @@ const MethodListItemAccordion = styled(Accordion)`
 `;
 
 const AccordionSummaryStyled = styled(AccordionSummary)`
-  background: #091433;
+  background: #051926;
   min-height: 46px;
   padding: 0 16px;
 
@@ -122,7 +122,7 @@ const MethodInputFormGroup = styled(FormGroup)`
   & .MuiTextField-root textarea {
     background: transparent;
     border-radius: 8px;
-    border: 1px solid #6d86b2;
+    border: 1px solid #7b9ea6;
     color: #fff;
     font-size: 14px;
     font-weight: 400;
@@ -142,7 +142,7 @@ const MethodInputFormGroup = styled(FormGroup)`
   }
 `;
 
-export const ReadeMethodIcon = ({ color = "#2C4066" }: { color?: string }) => {
+export const ReadeMethodIcon = ({ color = "#072a40" }: { color?: string }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -161,7 +161,7 @@ export const ReadeMethodIcon = ({ color = "#2C4066" }: { color?: string }) => {
     </svg>
   );
 };
-export const WriteMethodIcon = ({ color = "#2C4066" }: { color?: string }) => {
+export const WriteMethodIcon = ({ color = "#072a40" }: { color?: string }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -342,7 +342,7 @@ const MethodListItem: FC<{
       <AccordionSummaryStyled
         expandIcon={
           <ExpandMoreIcon
-            sx={{ color: "#6D86B2", width: "24px", height: "24px" }}
+            sx={{ color: "#7b9ea6", width: "24px", height: "24px" }}
           />
         }
         aria-controls="panel1a-content"

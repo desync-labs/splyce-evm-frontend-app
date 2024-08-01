@@ -79,7 +79,7 @@ const IconWrapper = styled(Box)`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #6379a1;
+  background: #7b9ea6;
   border-radius: 15px;
 `;
 

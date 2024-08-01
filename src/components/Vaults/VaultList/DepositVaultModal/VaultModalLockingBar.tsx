@@ -17,7 +17,7 @@ const CustomPaper = styled(Box)`
   position: relative;
   width: 100%;
   border-radius: 12px;
-  background: #1e2f4d;
+  background: #072a40;
   padding: 16px;
   margin-bottom: 20px;
 `;

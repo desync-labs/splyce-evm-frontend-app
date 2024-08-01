@@ -45,7 +45,7 @@ export const VaultStackedLiquidity = styled("div")`
 
 export const VaultAvailable = styled("div")`
   &.blue {
-    color: #6d86b2;
+    color: #7b9ea6;
   }
   color: #fff;
   word-break: break-word;
@@ -57,7 +57,7 @@ export const VaultStacked = styled("div")`
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;
-  color: #6d86b2;
+  color: #7b9ea6;
   gap: 12px;
 
   .img-wrapper {
@@ -81,10 +81,10 @@ export const VaultTagLabel = styled("div")`
   justify-content: center;
   height: 28px;
   width: fit-content;
-  background: rgba(79, 101, 140, 0.3);
+  background: rgba(81, 109, 115, 0.4);
   font-size: 13px;
   font-weight: 600;
-  color: #43fff1;
+  color: #a0f2c4;
   border-radius: 6px;
   margin-bottom: 4px;
   padding: 4px 8px;

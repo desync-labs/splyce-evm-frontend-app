@@ -98,7 +98,7 @@ const PopoverWrapper = styled(Box)`
   display: flex;
   flex-direction: column;
   gap: 8px;
-  background-color: #253656;
+  background-color: #072a40;
   padding: 16px;
 `;
 

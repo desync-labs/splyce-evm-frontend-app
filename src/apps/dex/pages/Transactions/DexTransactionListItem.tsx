@@ -22,7 +22,7 @@ import TaskAltIcon from "@mui/icons-material/TaskAlt";
 const PositionActivityListItemWrapper = styled(BaseListItem)`
   justify-content: space-between;
   border-top: none;
-  border-bottom: 1px solid #3d5580;
+  border-bottom: 1px solid #072a40;
   padding: 16px 24px 16px 48px;
   .MuiListItemText-root {
     ${({ theme }) => theme.breakpoints.down("sm")} {
@@ -76,7 +76,7 @@ const TxListItemText = styled(ListItemText, {
     }
 
     & .MuiListItemText-secondary {
-      color: #8ea4cc;
+      color: #7b9ea6;
       font-size: 11px;
       font-style: normal;
       font-weight: 400;

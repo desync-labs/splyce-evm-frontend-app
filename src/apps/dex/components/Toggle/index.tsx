@@ -6,18 +6,18 @@ const ToggleElement = styled("span")<{
   isOnSwitch?: boolean;
 }>`
   background: ${({ isActive, isOnSwitch }) =>
-    isActive ? (isOnSwitch ? "#253656" : "#565A69") : "none"};
+    isActive ? (isOnSwitch ? "#072a40" : "#565A69") : "none"};
   color: ${({ isActive, isOnSwitch }) =>
     isActive ? (isOnSwitch ? "#fff" : "#4F658C") : "#00332F"};
   padding: 0.35rem 0.6rem;
   border-radius: 12px;
-  background: ${({ isActive }) => (isActive ? "#253656" : "none")};
+  background: ${({ isActive }) => (isActive ? "#072a40" : "none")};
   color: ${({ isActive }) => (isActive ? "#fff" : "#4F658C")};
   font-size: 1rem;
   font-weight: ${({ isOnSwitch }) => (isOnSwitch ? "500" : "400")};
   :hover {
     user-select: ${({ isOnSwitch }) => (isOnSwitch ? "none" : "initial")};
-    background: ${({ isActive }) => (isActive ? "#253656" : "none")};
+    background: ${({ isActive }) => (isActive ? "#072a40" : "none")};
     color: "#fff";
   }
 `;

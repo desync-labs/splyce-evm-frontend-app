@@ -19,7 +19,7 @@ const LinksWrapper = styled(Box)`
   a {
     font-size: 14px;
     font-weight: 600;
-    color: #b7c8e5;
+    color: #7b9ea6;
     opacity: 0.8;
     display: flex;
     justify-content: start;

@@ -79,7 +79,7 @@ const RepayPositionForm: FC<ClosePositionDialogPropsType> = ({
             fontSize: "11px",
             textTransform: "uppercase",
             letterSpacing: "1px",
-            color: "#B7C8E5",
+            color: "#7B9EA6",
           }}
         >
           Total debt:

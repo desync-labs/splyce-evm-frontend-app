@@ -177,7 +177,7 @@ const UnStakeDialog: FC<UnStakeDialogProps> = ({
             <InfoWrapper>
               <InfoLabel>
                 You locked
-                <InfoIcon sx={{ fontSize: "18px", color: "#6379A1" }} />
+                <InfoIcon sx={{ fontSize: "18px", color: "#7b9ea6" }} />
               </InfoLabel>
               <InfoValue>
                 {formatPercentage(
@@ -191,7 +191,7 @@ const UnStakeDialog: FC<UnStakeDialogProps> = ({
             <InfoWrapper>
               <InfoLabel>
                 You'll received
-                <InfoIcon sx={{ fontSize: "18px", color: "#6379A1" }} />
+                <InfoIcon sx={{ fontSize: "18px", color: "#7b9ea6" }} />
               </InfoLabel>
               <InfoValue>
                 {unStakeAmount ? formatNumber(Number(unStakeAmount)) : "--"}{" "}

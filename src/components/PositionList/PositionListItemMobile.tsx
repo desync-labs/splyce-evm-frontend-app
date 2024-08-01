@@ -15,13 +15,13 @@ export const PositionListItemMobileContainer = styled(Box)`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background: #132340;
+  background: #051926;
   border-radius: 8px;
   margin-bottom: 4px;
   padding: 14px 16px;
 
   &:active {
-    background: #2c4066;
+    background: #072a40;
   }
 `;
 

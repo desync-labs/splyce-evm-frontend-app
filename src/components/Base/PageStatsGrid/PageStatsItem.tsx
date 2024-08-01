@@ -5,8 +5,8 @@ import BasePopover from "components/Base/Popover/BasePopover";
 const PositionStatItem = styled(Grid)`
   & > .MuiBox-root {
     border-radius: 12px;
-    border: 1px solid #2c4066;
-    background: #132340;
+    border: 1px solid #072a40;
+    background: #051926;
     padding: 12px 24px;
   }
   ${({ theme }) => theme.breakpoints.down("sm")} {
@@ -14,7 +14,7 @@ const PositionStatItem = styled(Grid)`
     margin: 0 !important;
     & > .MuiBox-root {
       border: none;
-      background: #1e2f4c;
+      background: #072a40;
       padding: 12px 16px;
     }
   }
@@ -41,7 +41,7 @@ const PositionStatItemTitle = styled(Box)`
   justify-content: flex-start;
   align-items: center;
   gap: 8px;
-  color: #6d86b2;
+  color: #7b9ea6;
   font-size: 13px;
   font-weight: 600;
   line-height: 16px;

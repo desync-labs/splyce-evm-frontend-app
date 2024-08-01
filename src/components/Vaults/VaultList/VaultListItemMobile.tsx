@@ -17,7 +17,7 @@ import VaultListItemManageModal from "components/Vaults/VaultList/VaultListItemM
 export const VaultItemTableRow = styled(AppTableRow)`
   width: 100%;
   border-radius: 8px;
-  background: #132340;
+  background: #051926;
 
   & td {
     height: 52px;
@@ -28,7 +28,7 @@ export const VaultItemTableRow = styled(AppTableRow)`
   }
 
   &:active {
-    background: #2c4066;
+    background: #072a40;
   }
 `;
 
@@ -59,10 +59,10 @@ export const VaultTagLabel = styled("div")`
   justify-content: center;
   height: 20px;
   width: fit-content;
-  background: rgba(79, 101, 140, 0.3);
+  background: rgba(81, 109, 115, 0.4);
   font-size: 11px;
   font-weight: 600;
-  color: #43fff1;
+  color: #a0f2c4;
   border-radius: 6px;
   padding: 4px 8px;
 `;

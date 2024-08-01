@@ -118,8 +118,8 @@ const TokenDetailsLayout = styled(Box)`
 
 const FixedPanel = styled(Panel)`
   width: fit-content;
-  border: 1px solid #2c4066;
-  background: #132340;
+  border: 1px solid #072a40;
+  background: #051926;
   padding: 8px 12px;
 
   :hover {
@@ -141,7 +141,7 @@ const WarningGrouping = styled(Box)<{ disabled?: boolean }>`
   overflow: hidden;
 `;
 const HeaderWrapper = styled(Box)`
-  background: #2c4066;
+  background: #072a40;
   border-radius: 8px;
   padding-top: 7px !important;
   padding-bottom: 7px !important;

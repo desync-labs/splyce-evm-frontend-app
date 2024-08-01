@@ -34,7 +34,7 @@ import LockAquaSrc from "assets/svg/lock-aqua.svg";
 import LockSrc from "assets/svg/lock.svg";
 
 const VaultBreadcrumbsCloseModal = styled("div")`
-  color: #6d86b2;
+  color: #7b9ea6;
   font-size: 12px;
   font-weight: 600;
   line-height: 20px;

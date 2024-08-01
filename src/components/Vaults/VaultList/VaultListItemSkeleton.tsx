@@ -6,7 +6,7 @@ import { VaultItemTableRow } from "components/Vaults/VaultList/VaultListItemMobi
 import { BaseTableItemRow } from "components/Base/Table/StyledTable";
 
 const CustomSkeleton = styled(Skeleton)`
-  background-color: #2536564a;
+  background-color: #072a404a;
 `;
 
 export const VaultListItemSkeleton = () => {

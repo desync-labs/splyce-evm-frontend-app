@@ -8,7 +8,7 @@ const HistoryRowItem = () => {
   const { isSmallDesktop } = useSharedContext();
   return (
     <Box px={6}>
-      <ListItem px={0} minHeight={50} sx={{ borderTop: "1px solid #2c4066" }}>
+      <ListItem px={0} minHeight={50} sx={{ borderTop: "1px solid #072a40" }}>
         <ListColumn isRow maxWidth={760} minWidth={isSmallDesktop ? 300 : 540}>
           <Box sx={{ overflow: "hidden" }}>
             <Skeleton width={120} height={30} />

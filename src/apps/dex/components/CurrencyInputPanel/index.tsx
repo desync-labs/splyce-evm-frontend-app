@@ -38,7 +38,7 @@ const CurrencySelect = styled(Button)<{ selected: boolean }>`
   height: 2.2rem;
   font-size: 20px;
   font-weight: 500;
-  background-color: #253656;
+  background-color: #072a40;
   color: #ffffff;
   text-transform: capitalize;
   border-radius: 12px;
@@ -145,10 +145,10 @@ const StyledBalanceMax = styled(Button)`
   cursor: pointer;
   color: #43fff6;
   :hover {
-    border: 1px solid #253656;
+    border: 1px solid #072a40;
   }
   :focus {
-    border: 1px solid #253656;
+    border: 1px solid #072a40;
     outline: none;
   }
 `;

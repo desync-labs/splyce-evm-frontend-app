@@ -17,7 +17,7 @@ enum DeadlineError {
 }
 
 const FancyButton = styled("button")`
-  color: #b7c8e5;
+  color: #7b9ea6;
   align-items: center;
   height: 2rem;
   border-radius: 36px;
@@ -28,22 +28,22 @@ const FancyButton = styled("button")`
   outline: none;
   background: #131f35;
   :hover {
-    border: 1px solid #b7c8e5;
+    border: 1px solid #7b9ea6;
     cursor: pointer;
   }
   :focus {
-    border: 1px solid #253656;
+    border: 1px solid #072a40;
   }
   &.active {
     color: #fff;
-    border: 1px solid #b7c8e5;
+    border: 1px solid #7b9ea6;
   }
 `;
 
 const Option = styled(FancyButton)<{ active: boolean }>`
   margin-right: 8px;
   border: none;
-  background-color: ${({ active }) => active && "#253656"};
+  background-color: ${({ active }) => active && "#072a40"};
 `;
 
 const Input = styled("input")`
@@ -153,7 +153,7 @@ const SlippageTabs: FC<SlippageTabsProps> = ({
     <AutoColumn gap="md">
       <AutoColumn gap="sm">
         <RowFixed color={"#4F658C"}>
-          <TYPE.main fontWeight={400} fontSize={14} color="#b7c8e5">
+          <TYPE.main fontWeight={400} fontSize={14} color="#7B9EA6">
             Slippage tolerance
           </TYPE.main>
           <QuestionHelper text="Your transaction will revert if the price changes unfavorably by more than this percentage." />
@@ -242,7 +242,7 @@ const SlippageTabs: FC<SlippageTabsProps> = ({
 
       <AutoColumn gap="sm">
         <RowFixed color={"#4F658C"}>
-          <TYPE.main fontSize={14} fontWeight={400} color="#b7c8e5">
+          <TYPE.main fontSize={14} fontWeight={400} color="#7B9EA6">
             Transaction deadline
           </TYPE.main>
           <QuestionHelper text="Your transaction will revert if it is pending for more than this long." />

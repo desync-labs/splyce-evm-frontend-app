@@ -21,7 +21,7 @@ const VaultPositionTitle = styled(Typography)`
 `;
 
 const UsdValue = styled(Box)`
-  color: #6d86b2;
+  color: #7b9ea6;
   font-size: 15px;
   font-style: normal;
   font-weight: 600;

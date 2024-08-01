@@ -53,12 +53,12 @@ export const SearchInput: FC<SearchInputProps> = ({
         display: "flex",
         alignItems: "center",
         gap: 1,
-        background: "#091433",
+        background: "#051926",
         border:
-          isFocused || isHovered ? "1px solid #5a81ff" : "1px solid #3d5580",
+          isFocused || isHovered ? "1px solid #a8bfb0" : "1px solid #072a40",
         borderRadius: "6px",
         height: "36px",
-        boxShadow: isFocused || isHovered ? "0 0 8px #003cff" : "none",
+        boxShadow: isFocused || isHovered ? "0 0 8px #a0f2c4" : "none",
         ...wrapperSx,
       }}
     >
@@ -68,7 +68,7 @@ export const SearchInput: FC<SearchInputProps> = ({
       <InputBase
         autoFocus={sm}
         inputRef={inputEl}
-        sx={{ width: "100%", color: "#8ea4cc", fontSize: { xs: 16, sm: 14 } }}
+        sx={{ width: "100%", color: "#7b9ea6", fontSize: { xs: 16, sm: 14 } }}
         placeholder={placeholder}
         value={searchTerm}
         onChange={(e) => {

@@ -20,11 +20,11 @@ export const AppTextField = styled(MuiTextField)`
     font-size: 14px;
     line-height: 20px;
     color: #4f658c;
-    border: 1px solid #253656;
+    border: 1px solid #072a40;
     &:hover,
     &:focus {
-      border: 1px solid #5a81ff;
-      box-shadow: 0 0 8px #003cff;
+      border: 1px solid #a8bfb0;
+      box-shadow: 0 0 8px #a0f2c4;
     }
   }
 
@@ -54,8 +54,8 @@ export const AppTextField = styled(MuiTextField)`
   & input:disabled,
   textarea:disabled {
     background: unset;
-    border: 1px solid #3d5580;
-    color: #3d5580;
+    border: 1px solid #072a40;
+    color: #072a40;
     cursor: not-allowed;
     pointer-events: all;
     &:hover,
@@ -78,7 +78,7 @@ export const AppTextField = styled(MuiTextField)`
   .MuiFormHelperText-root {
     margin-left: 0;
     margin-top: 0;
-    color: #6379a1;
+    color: #7b9ea6;
     &.Mui-error {
       color: #dd3c3c;
     }
@@ -97,19 +97,19 @@ export const AppTextFieldV2 = styled(MuiTextField)`
   textarea {
     height: 42px;
     width: 100%;
-    background: #091433;
+    background: #051926;
     color: #fff;
     font-size: 18px;
     font-weight: 500;
     line-height: 20px;
-    border: 1px solid #2c4066;
+    border: 1px solid #072a40;
     border-radius: 8px;
     padding: 0 72px 18px 40px;
 
     &:hover,
     &:focus {
-      border: 1px solid #5a81ff;
-      box-shadow: 0 0 8px #003cff;
+      border: 1px solid #a8bfb0;
+      box-shadow: 0 0 8px #a0f2c4;
     }
   }
 
@@ -140,7 +140,7 @@ export const AppTextFieldV2 = styled(MuiTextField)`
   textarea:disabled {
     height: 46px;
     background: unset;
-    border: 1px solid #2c4066;
+    border: 1px solid #072a40;
     color: #566e99;
     -webkit-text-fill-color: unset;
     cursor: not-allowed;
@@ -167,7 +167,7 @@ export const AppTextFieldV2 = styled(MuiTextField)`
   .MuiFormHelperText-root {
     margin-left: 0;
     margin-top: 0;
-    color: #6379a1;
+    color: #7b9ea6;
 
     &.Mui-error {
       color: #dd3c3c;
@@ -198,7 +198,7 @@ export const AppFormLabel = styled(MuiFormLabel)`
   font-weight: bold;
   font-size: 10.5px;
   line-height: 16px;
-  color: #6379a1;
+  color: #7b9ea6;
   text-transform: uppercase;
   float: left;
   padding-bottom: 0;
@@ -213,7 +213,7 @@ export const AppFormLabelRow = styled(Box)`
   height: 20px;
 `;
 export const AppFormLabelV2 = styled(MuiFormLabel)`
-  color: #b7c8e5;
+  color: #7b9ea6;
   font-size: 11px;
   font-weight: 600;
   line-height: 16px;
@@ -268,7 +268,7 @@ export const AppFormInputUsdIndicator = styled("div")`
   position: absolute;
   top: 58px;
   left: 40px;
-  color: #b7c8e5;
+  color: #7b9ea6;
   font-size: 14px;
   font-weight: 400;
   ${({ theme }) => theme.breakpoints.down("sm")} {
@@ -282,18 +282,18 @@ export const AppSelect = styled(Select)`
   padding: 8px 12px;
   gap: 8px;
   height: 40px;
-  background: #1d2d49;
+  background: #072a40;
   border: 1px solid #324567;
   border-radius: 8px;
   width: 100%;
   &:hover,
   &:focus {
-    border: 1px solid #5a81ff;
-    box-shadow: 0 0 8px #003cff;
+    border: 1px solid #a8bfb0;
+    box-shadow: 0 0 8px #a0f2c4;
   }
   &.Mui-focused .MuiOutlinedInput-notchedOutline {
-    border: 1px solid #5a81ff !important;
-    box-shadow: 0 0 8px #003cff !important;
+    border: 1px solid #a8bfb0 !important;
+    box-shadow: 0 0 8px #a0f2c4 !important;
   }
   fieldset {
     border: none !important;

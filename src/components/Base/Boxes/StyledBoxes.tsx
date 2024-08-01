@@ -12,12 +12,12 @@ export const BaseInfoBox = styled(Box)`
   svg {
     height: 20px;
     width: 20px;
-    color: #b7c8e5;
+    color: #7b9ea6;
     margin: 0;
   }
 
   p {
-    color: #b7c8e5;
+    color: #7b9ea6;
     font-size: 14px;
     width: 100%;
     white-space: break-spaces;
@@ -88,10 +88,10 @@ export const BaseErrorBox = styled(Box)`
 `;
 
 export const BaseTagLabel = styled("span")`
-  color: #43fff1;
+  color: #a0f2c4;
   font-size: 11px;
   line-height: 12px;
-  border: 1px solid #43fff1;
+  border: 1px solid #a0f2c4;
   border-radius: 8px;
   background: transparent;
   padding: 4px 8px;

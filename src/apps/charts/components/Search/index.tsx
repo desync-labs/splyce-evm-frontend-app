@@ -68,12 +68,12 @@ const Input = styled("input")<{ large: boolean }>`
   white-space: nowrap;
   outline: none;
   width: 100%;
-  color: #8ea4cc;
-  border: 1px solid #3d5580;
+  color: #7b9ea6;
+  border: 1px solid #072a40;
   font-size: ${({ large }) => (large ? "20px" : "14px")};
   border-radius: 8px;
   padding: 10px 10px 10px 28px;
-  background-color: #091433;
+  background-color: #051926;
 
   :hover,
   :focus {
@@ -131,8 +131,8 @@ const Menu = styled(Box)<{ hide?: boolean }>`
   overflow: auto;
   left: 0;
   padding-bottom: 20px;
-  background: #091433;
-  border: 1px solid #3d5580;
+  background: #051926;
+  border: 1px solid #072a40;
   border-bottom-right-radius: 8px;
   border-bottom-left-radius: 8px;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.04), 0 4px 8px rgba(0, 0, 0, 0.04),
@@ -158,7 +158,7 @@ const Heading = styled(Row)<{ hide?: boolean }>`
 `;
 
 const Gray = styled("span")`
-  color: #5977a0;
+  color: #65858c;
 `;
 
 const SeeMoreLink = styled("span")`

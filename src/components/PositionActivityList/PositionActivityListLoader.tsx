@@ -76,7 +76,7 @@ export const ListItem: FC<ListItemProps> = ({
         px,
         "&:not(:last-child)": {
           borderBottom: "1px solid",
-          borderColor: "#3d5580",
+          borderColor: "#072a40",
         },
         ...(button ? { "&:hover": { bgcolor: "action.hover" } } : {}),
         ...rest.sx,

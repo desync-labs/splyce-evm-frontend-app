@@ -51,7 +51,7 @@ const Footer = styled(Box)`
   right: 0;
   width: 100%;
   padding: 20px 0;
-  background-color: #1d2d49;
+  background-color: #072a40;
   border-top: 1px solid #061023;
   z-index: 9;
 `;

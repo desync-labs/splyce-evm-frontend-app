@@ -20,12 +20,12 @@ export const MaxButton = styled("button")<{ width: string }>`
   cursor: pointer;
   margin: 0.25rem;
   overflow: hidden;
-  color: #253656;
+  color: #072a40;
   :hover {
-    border: 1px solid #253656;
+    border: 1px solid #072a40;
   }
   :focus {
-    border: 1px solid #253656;
+    border: 1px solid #072a40;
     outline: none;
   }
 

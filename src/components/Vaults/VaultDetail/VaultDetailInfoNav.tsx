@@ -18,7 +18,7 @@ const VaultNavWrapper = styled(AppNavWrapper)`
     align-items: center;
     gap: 24px;
     width: 100%;
-    background: #2c4066;
+    background: #072a40;
     padding: 0 16px;
     z-index: 9;
   }

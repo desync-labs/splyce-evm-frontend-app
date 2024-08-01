@@ -10,7 +10,7 @@ export const BaseButtonsSwitcherGroup = styled(Box)`
   justify-content: stretch;
   width: 100%;
   height: fit-content;
-  background: #091433;
+  background: #051926;
   border-radius: 8px;
   padding: 4px;
   margin-bottom: 16px;
@@ -27,12 +27,12 @@ export const BaseSwitcherButton = styled(MuiButton)`
   border-radius: 8px;
   background: transparent;
   &.active {
-    background: #3d5580;
+    background: #072a40;
   }
 `;
 
 export const BaseButtonSecondary = styled(MuiButton)`
-  color: #43FFF1;
+  color: #a0f2c4;
   font-weight: bold;
   font-size: 15px;
   line-height: 20px;
@@ -61,7 +61,7 @@ export const BaseButtonSecondary = styled(MuiButton)`
 export const BaseButtonSecondaryLink = styled("a")`
   display: flex;
   align-items: center;  
-  color: #43FFF1;
+  color: #a0f2c4;
   font-weight: 600;
   font-size: 15px;
   line-height: 20px;
@@ -98,7 +98,7 @@ export const ExtLinkIcon = styled(OpenInNewRoundedIcon, {
 })<{ width?: string; height?: string }>`
   width: ${({ width = "16px" }) => width};
   height: ${({ height = "16px" }) => height};
-  color: #43fff1;
+  color: #a0f2c4;
   margin-left: 4px;
   ${({ theme }) => theme.breakpoints.down("sm")} {
     margin-left: 0;
@@ -114,7 +114,7 @@ export const BaseToggleButtonGroup = styled(ToggleButtonGroup)`
     font-size: 14px;
     font-weight: 400;
     border-radius: 6px;
-    background: rgba(79, 101, 140, 0.3);
+    background: rgba(81, 109, 115, 0.4);
     padding: 4px 8px;
     width: 25%;
 

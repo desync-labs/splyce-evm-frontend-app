@@ -37,7 +37,7 @@ const Right = styled(Box)<{ open: boolean }>`
   width: ${({ open }) => (open ? "220px" : "64px")};
   height: ${({ open }) => (open ? "fit-content" : "100vh")};
   overflow: auto;
-  border-left: 1px solid #253656;
+  border-left: 1px solid #072a40;
   @media screen and (max-width: 1400px) {
     display: none;
   }

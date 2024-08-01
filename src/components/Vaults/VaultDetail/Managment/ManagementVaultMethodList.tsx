@@ -23,7 +23,7 @@ export const ContractMethodListWrapper = styled(Box)`
 
 export const MethodTypesTabs = styled(Tabs)`
   width: fit-content;
-  border-bottom: 1.5px solid #1d2d49;
+  border-bottom: 1.5px solid #072a40;
   min-height: unset;
   margin-top: 44px;
 
@@ -135,9 +135,9 @@ const ManagementVaultMethodList: FC<VaultItemManagementProps> = ({
             }}
           >
             {value === 0 ? (
-              <ReadeMethodIcon color={"#6D86B2"} />
+              <ReadeMethodIcon color={"#7b9ea6"} />
             ) : (
-              <WriteMethodIcon color={"#6D86B2"} />
+              <WriteMethodIcon color={"#7b9ea6"} />
             )}
             <Typography sx={{ color: "#fff", fontSize: "14px" }}>
               {value === 0

@@ -29,7 +29,7 @@ export const TYPE = {
 
   light(props: TypographyProps) {
     return (
-      <Typography fontWeight={400} color={"#6379a1"} fontSize={14} {...props} />
+      <Typography fontWeight={400} color={"#7b9ea6"} fontSize={14} {...props} />
     );
   },
 };

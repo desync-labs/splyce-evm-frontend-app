@@ -65,7 +65,7 @@ const InputTokenLabelRow = styled(AppFormLabelRow)`
   height: 32px;
   gap: 8px;
   border-radius: 8px;
-  background: #253656;
+  background: #072a40;
   padding: 8px 16px;
 
   img {

@@ -20,7 +20,7 @@ export const BaseAccordion = styled(Accordion)`
       border-bottom: none;
 
       &.Mui-expanded {
-        border-bottom: 1px solid #3d5580;
+        border-bottom: 1px solid #072a40;
       }
     }
     &.Mui-expanded {
@@ -36,7 +36,7 @@ export const BaseAccordion = styled(Accordion)`
 `;
 export const BaseAccordionTxGroupSummary = styled(AccordionSummary)`
   height: 56px;
-  border-bottom: 1px solid #3d5580;
+  border-bottom: 1px solid #072a40;
   padding: 0 24px;
 
   &.Mui-expanded {
@@ -48,7 +48,7 @@ export const BaseAccordionTxGroupSummary = styled(AccordionSummary)`
   }
 `;
 export const BaseAccordionTxGroupDate = styled("div")`
-  color: #b7c8e5;
+  color: #7b9ea6;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;

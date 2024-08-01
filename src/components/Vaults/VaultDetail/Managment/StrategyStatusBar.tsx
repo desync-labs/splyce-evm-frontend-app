@@ -11,7 +11,7 @@ const StatusBarWrapper = styled(Box)`
   flex-direction: column;
   gap: 8px;
   border-radius: 8px;
-  background: #1e2f4d;
+  background: #072a40;
   margin-top: 24px;
   padding: 20px 24px;
   ${({ theme }) => theme.breakpoints.down("sm")} {

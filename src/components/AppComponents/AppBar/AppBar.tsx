@@ -12,8 +12,8 @@ const AppBar = styled(MuiAppBar, {
 })<AppBarProps>(({ theme, open }) => ({
   alignItems: "flex-end",
   zIndex: theme.zIndex.drawer - 1,
-  background: "linear-gradient(180deg, #071126 0%, #050C1A 100%)",
-  borderBottom: "1px solid #192C46",
+  background: "#0D0D0D",
+  borderBottom: "1px solid #072a40",
   borderRadius: 0,
   boxShadow:
     "rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px",

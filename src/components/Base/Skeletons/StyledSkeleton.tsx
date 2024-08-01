@@ -2,11 +2,11 @@ import { FC } from "react";
 import { Skeleton, styled } from "@mui/material";
 
 export const CustomSkeleton = styled(Skeleton)`
-  background-color: #2536564a;
+  background-color: #072a404a;
 `;
 
 export const BaseSkeletonValue = styled(Skeleton)`
-  background-color: #8ea4cc26;
+  background-color: #7b9ea626;
 `;
 
 type StatsValueSkeletonProps = {
@@ -30,7 +30,7 @@ export const StatsValueSkeleton: FC<StatsValueSkeletonProps> = ({
       animation={animation}
       width={width}
       height={height}
-      sx={{ bgcolor: "#2536564a", marginTop }}
+      sx={{ bgcolor: "#072a404a", marginTop }}
     />
   );
 };

@@ -96,7 +96,7 @@ const DataText = styled(Box)`
 `;
 
 const HeaderWrapper = styled(DashGrid)`
-  background: #2c4066;
+  background: #072a40;
   border-radius: 8px;
   padding-top: 7px !important;
   padding-bottom: 7px !important;

@@ -40,7 +40,7 @@ export const VaultStrategyTitle = styled(Typography)`
 export const VaultStrategyDescription = styled(Box)`
   font-size: 14px;
   font-weight: 400;
-  color: #b7c8e5;
+  color: #7b9ea6;
   padding-bottom: 20px;
   p {
     margin: 0;
@@ -82,7 +82,7 @@ export const VaultIndicatorItemWrapper = styled(Box)`
 export const VaultIndicatorItemLabel = styled(Typography)`
   font-size: 14px;
   font-weight: 600;
-  color: #6d86b2;
+  color: #7b9ea6;
   text-align: left;
   padding-bottom: 4px;
   ${({ theme }) => theme.breakpoints.down("sm")} {
@@ -217,7 +217,7 @@ const VaultStrategyItem: FC<VaultStrategyItemPropsType> = ({
         style={{
           display: "inline-flex",
           fontSize: isMobile ? "12px" : "14px",
-          color: "#B7C8E5",
+          color: "#7B9EA6",
           textDecoration: "underline",
           marginBottom: "16px",
         }}

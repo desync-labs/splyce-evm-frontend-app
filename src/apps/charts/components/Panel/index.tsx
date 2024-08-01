@@ -9,7 +9,7 @@ const Panel = styled(Box)<{
   last?: boolean;
 }>`
   position: relative;
-  background-color: #1e2f4c;
+  background-color: #072a40;
   padding: 1.25rem;
   width: 100%;
   height: 100%;

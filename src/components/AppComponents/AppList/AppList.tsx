@@ -81,7 +81,7 @@ export const ListItemWrapper = styled(Box)`
 `;
 
 export const ListLabel = styled(Box)`
-  color: #6379a1;
+  color: #7b9ea6;
   font-weight: 600;
   font-size: 11px;
   line-height: 16px;

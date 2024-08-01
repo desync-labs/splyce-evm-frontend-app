@@ -7,7 +7,7 @@ export const TYPE = {
     return <Typography fontWeight={500} color={"#4F658C"} {...props} />;
   },
   link(props: TypographyProps) {
-    return <Typography fontWeight={500} color={"#253656"} {...props} />;
+    return <Typography fontWeight={500} color={"#072a40"} {...props} />;
   },
   black(props: TypographyProps) {
     return <Typography fontWeight={500} color={"#0E0F15"} {...props} />;

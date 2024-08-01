@@ -2,7 +2,7 @@ import { styled } from "@mui/material/styles";
 import { Typography } from "@mui/material";
 
 export const BaseSummary = styled(Typography)`
-  color: #b7c8e5;
+  color: #7b9ea6;
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
@@ -14,11 +14,11 @@ export const BaseSummary = styled(Typography)`
 `;
 
 export const NoResults = styled(Typography)`
-  color: #6d86b2;
+  color: #7b9ea6;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  background: #132340;
+  background: #051926;
   border-radius: 8px;
   padding: 16px 24px;
 `;

@@ -38,7 +38,7 @@ const ProposalIdTooltip = styled(({ className, ...props }: TooltipProps) => (
   },
   [`& .${tooltipClasses.tooltip}`]: {
     backgroundColor: "#0D1526",
-    border: "1px solid #1D2D49",
+    border: "1px solid #072a40",
   },
 }));
 
@@ -60,7 +60,7 @@ const ProposalItemProposalId = styled(Box)`
 `;
 
 const ProposalItemTimeLeft = styled(Box)`
-  color: #6379a1;
+  color: #7b9ea6;
   margin-top: -4px;
   font-size: 14px;
   &.in-progress {
@@ -82,7 +82,7 @@ export const ProposalItemStatus = styled(Box)`
   margin-top: 10px;
 
   background: rgba(99, 121, 161, 0.2);
-  color: #43fff1;
+  color: #a0f2c4;
 
   &.succeeded {
     color: #8af075;

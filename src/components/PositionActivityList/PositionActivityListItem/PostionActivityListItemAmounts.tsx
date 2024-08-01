@@ -10,7 +10,7 @@ import { getTokenLogoURL } from "utils/tokenLogo";
 import { formatNumber } from "utils/format";
 
 const ArrowIcon = styled(ArrowForwardRoundedIcon)`
-  color: #6d86b2;
+  color: #7b9ea6;
   width: 20px;
   ${({ theme }) => theme.breakpoints.down("sm")} {
     width: 18px;

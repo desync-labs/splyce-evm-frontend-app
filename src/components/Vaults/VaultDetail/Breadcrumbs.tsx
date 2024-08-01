@@ -27,13 +27,13 @@ const VaultBreadcrumbsLink = styled(Link)`
   font-weight: 600;
   line-height: 20px;
   ${({ theme }) => theme.breakpoints.down("sm")} {
-    color: #6d86b2;
+    color: #7b9ea6;
     font-size: 12px;
   }
 `;
 
 export const VaultBreadcrumbsCurrentPage = styled(Typography)`
-  color: #6d86b2;
+  color: #7b9ea6;
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;

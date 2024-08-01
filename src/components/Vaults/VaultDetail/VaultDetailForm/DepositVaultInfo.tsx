@@ -105,7 +105,7 @@ const DepositVaultInfo: FC<DepositVaultInfoProps> = ({
   return (
     <ManageVaultInfoWrapper>
       <SummaryVaultFormInfo>Summary</SummaryVaultFormInfo>
-      <Divider sx={{ borderColor: "#3D5580" }} />
+      <Divider sx={{ borderColor: "#072a40" }} />
       <VaultList>
         <AppListItem
           alignItems="flex-start"

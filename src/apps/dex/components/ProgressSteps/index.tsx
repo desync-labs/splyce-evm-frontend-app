@@ -12,7 +12,7 @@ const Circle = styled(Box)<{ confirmed?: boolean; disabled?: boolean }>`
   min-width: 20px;
   min-height: 20px;
   background-color: ${({ confirmed, disabled }) =>
-    disabled ? "#565A69" : confirmed ? "#27AE60" : "#253656"};
+    disabled ? "#565A69" : confirmed ? "#27AE60" : "#072a40"};
   border-radius: 50%;
   color: #ffffff;
   display: flex;
@@ -36,10 +36,10 @@ const Connector = styled(Box)<{ prevConfirmed?: boolean; disabled?: boolean }>`
     ${({ prevConfirmed, disabled }) =>
         disabled
           ? "#565A69"
-          : transparentize(0.5, prevConfirmed ? "#27AE60" : "#253656")}
+          : transparentize(0.5, prevConfirmed ? "#27AE60" : "#072a40")}
       0%,
     ${({ prevConfirmed, disabled }) =>
-        disabled ? "#565A69" : prevConfirmed ? "#253656" : "#565A69"}
+        disabled ? "#565A69" : prevConfirmed ? "#072a40" : "#565A69"}
       80%
   );
   opacity: 0.6;

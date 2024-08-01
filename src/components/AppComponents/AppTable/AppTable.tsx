@@ -7,7 +7,7 @@ export const AppTableHeaderRow = styled(MuiTableRow)`
     text-align: center;
     font-size: 11px;
     text-transform: uppercase;
-    color: #5977a0;
+    color: #65858c;
     padding: 0;
     border: none;
   }

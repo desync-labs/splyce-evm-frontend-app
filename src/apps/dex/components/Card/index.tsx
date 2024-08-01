@@ -23,7 +23,7 @@ export const LightGreyCard = styled(Card)`
 
 export const GreyCard = styled(Card)`
   background-color: #131f35;
-  border: 1px solid #253656;
+  border: 1px solid #072a40;
 `;
 
 export const OutlineCard = styled(Card)`
@@ -32,7 +32,7 @@ export const OutlineCard = styled(Card)`
 
 const BlueCardStyled = styled(Card)`
   background-color: #22354f;
-  color: #253656;
+  color: #072a40;
   border-radius: 12px;
   width: fit-content;
 `;

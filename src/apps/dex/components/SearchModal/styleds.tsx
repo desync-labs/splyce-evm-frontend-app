@@ -44,7 +44,7 @@ export const SearchInput = styled("input")`
   outline: none;
   width: 100%;
   color: #ffffff;
-  border: 1px solid #253656;
+  border: 1px solid #072a40;
   font-size: 20px;
   border-radius: 8px;
   padding: 15px 20px;

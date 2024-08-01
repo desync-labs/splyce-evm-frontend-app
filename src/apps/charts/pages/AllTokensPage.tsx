@@ -13,7 +13,7 @@ const NoTopTokens = styled(Box)`
   background: #131f35;
   border-radius: 8px;
   padding: 0.5rem 1.125rem;
-  color: #5977a0;
+  color: #65858c;
   text-transform: uppercase;
   font-size: 11px;
 `;

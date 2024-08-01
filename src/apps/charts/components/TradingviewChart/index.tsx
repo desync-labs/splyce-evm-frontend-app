@@ -56,7 +56,7 @@ const TradingViewChart: FC<TradingViewChartProps> = (props) => {
   const [chartCreated, setChartCreated] = useState<IChartApi | null>(null);
   const dataPrev = usePrevious(data);
 
-  const textColor = "#6379A1";
+  const textColor = "#7b9ea6";
 
   useEffect(() => {
     if (data !== dataPrev && chartCreated && type === CHART_TYPES.BAR) {

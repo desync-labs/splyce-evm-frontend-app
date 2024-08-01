@@ -57,7 +57,7 @@ const AlertMessage = styled(Alert, {
     }
   }
   & a {
-    color: #5a81ff;
+    color: #a8bfb0;
     font-weight: 700;
     text-decoration: underline;
     &:hover {

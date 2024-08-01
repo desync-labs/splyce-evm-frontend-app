@@ -80,7 +80,7 @@ const StableSwapAddLiquidity = () => {
                   {approvalPending ? (
                     <CircularProgress
                       size={20}
-                      sx={{ color: "#43fff1 !important" }}
+                      sx={{ color: "#a0f2c4 !important" }}
                     />
                   ) : (
                     "Approve Tokens for Add Liquidity"

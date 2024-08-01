@@ -6,10 +6,10 @@ import SearchSrc from "assets/svg/search.svg";
 
 export const BaseSearchTextField = styled(BaseTextField)`
   input {
-    background: #091433;
+    background: #051926;
     height: 38px;
-    color: #8ea4cc;
-    border: 1px solid #3d5580;
+    color: #7b9ea6;
+    border: 1px solid #072a40;
   }
 `;
 
@@ -35,8 +35,8 @@ export const BaseSortSelect = styled(Select)`
   width: auto;
   height: 40px;
   min-width: 100px;
-  background: #091433;
-  border: 1px solid #3d5580 !important;
+  background: #051926;
+  border: 1px solid #072a40 !important;
   border-radius: 8px;
 
   & .MuiSelect-select {
@@ -45,12 +45,12 @@ export const BaseSortSelect = styled(Select)`
 
   &:hover,
   &:focus {
-    border: 1px solid #5a81ff;
-    box-shadow: 0 0 8px #003cff;
+    border: 1px solid #a8bfb0;
+    box-shadow: 0 0 8px #a0f2c4;
   }
   &.Mui-focused .MuiOutlinedInput-notchedOutline {
-    border: 1px solid #5a81ff !important;
-    box-shadow: 0 0 8px #003cff !important;
+    border: 1px solid #a8bfb0 !important;
+    box-shadow: 0 0 8px #a0f2c4 !important;
   }
   fieldset {
     border: none !important;

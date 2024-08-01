@@ -4,16 +4,16 @@ import { AppTableRow } from "../../AppComponents/AppTable/AppTable";
 
 export const BaseTableContainer = styled(TableContainer)`
   border-radius: 12px;
-  background: #132340;
+  background: #051926;
 `;
 
 export const BaseTableHeaderRow = styled(TableRow)`
   height: 36px;
-  background: #2c4066;
+  background: #072a40;
 `;
 
 export const BaseTableCell = styled(TableCell)`
-  color: #8ea4cc;
+  color: #7b9ea6;
   font-size: 11px;
   font-weight: 600;
   line-height: 16px;

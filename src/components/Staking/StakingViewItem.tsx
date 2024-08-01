@@ -20,7 +20,7 @@ import BasePopover from "components/Base/Popover/BasePopover";
 const StakingViewItemWrapper = styled(Grid)`
   &.MuiGrid-item {
     padding: 16px 20px;
-    background: #1d2d49;
+    background: #072a40;
     border-radius: 8px;
     max-width: calc(50% - 6px);
     ${({ theme }) => theme.breakpoints.down("sm")} {
@@ -87,7 +87,7 @@ const Label = styled(Box)`
   font-weight: 600;
   font-size: 11px;
   line-height: 16px;
-  color: #6379a1;
+  color: #7b9ea6;
   text-transform: uppercase;
   padding-bottom: 5px;
   display: flex;

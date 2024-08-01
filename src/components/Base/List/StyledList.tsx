@@ -3,7 +3,7 @@ import { List, ListItem, styled } from "@mui/material";
 export const BaseListPreviewModal = styled(List)`
   padding: 0;
   & li {
-    border-bottom: 1px solid #3d5580;
+    border-bottom: 1px solid #072a40;
     padding: 16px;
 
     &.MuiListItemText-root {
@@ -11,7 +11,7 @@ export const BaseListPreviewModal = styled(List)`
       margin-bottom: 2px;
     }
     span {
-      color: #8ea4cc;
+      color: #7b9ea6;
       font-size: 12px;
       font-weight: 700;
     }

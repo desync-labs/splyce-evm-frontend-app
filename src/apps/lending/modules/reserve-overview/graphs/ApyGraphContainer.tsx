@@ -68,7 +68,7 @@ export const ApyGraphContainer: FC<ApyGraphContainerProps> = ({
       : []),
     {
       name: "variableBorrowRate",
-      color: "#5a81ff",
+      color: "#a8bfb0",
       text: "Borrow APR, variable",
     },
   ];

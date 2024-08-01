@@ -110,7 +110,7 @@ const ManageVaultInfo: FC<VaultManageInfoProps> = ({
   return (
     <ManageVaultInfoWrapper>
       <SummaryVaultFormInfo>Summary</SummaryVaultFormInfo>
-      <Divider sx={{ borderColor: "#3D5580" }} />
+      <Divider sx={{ borderColor: "#072a40" }} />
       <VaultList>
         <AppListItem
           secondaryAction={

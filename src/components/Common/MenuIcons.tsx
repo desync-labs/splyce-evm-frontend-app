@@ -20,8 +20,8 @@ import { ReactComponent as TutorialSrc } from "assets/svg/icons/tutorial.svg";
 
 import { styled } from "@mui/material/styles";
 
-const ACTIVE_HEX = "#43FFF1";
-const INACTIVE_HEX = "#6379A1";
+const ACTIVE_HEX = "#a0f2c4";
+const INACTIVE_HEX = "#7b9ea6";
 
 export const VaultManagement = styled(VaultManagementSrc)<{ isactive: string }>`
   & path {

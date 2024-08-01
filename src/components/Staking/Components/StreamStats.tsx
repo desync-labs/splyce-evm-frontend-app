@@ -42,7 +42,7 @@ const StatsTypographyDescription = styled(Typography)`
 
 const StatsBlocks = styled(Box)`
   padding: 15px 0 30px 0;
-  border-bottom: 1px solid #1d2d49;
+  border-bottom: 1px solid #072a40;
 `;
 
 const StatsBlock = styled(Box)`
@@ -56,7 +56,7 @@ const StatsLabel = styled(Box)`
   font-weight: 600;
   font-size: 11px;
   line-height: 16px;
-  color: #6379a1;
+  color: #7b9ea6;
   text-transform: uppercase;
   padding-bottom: 5px;
   display: flex;
@@ -94,7 +94,7 @@ const MyStatsValue = styled(StatsValue)`
 
   &.blue {
     strong {
-      color: #5a81ff;
+      color: #a8bfb0;
     }
   }
   &.green {
@@ -144,7 +144,7 @@ const CooldownInProgress = styled(Box)`
 `;
 
 const CooldownCountDown = styled(Box)`
-  color: #5a81ff;
+  color: #a8bfb0;
   font-size: 14px;
   padding: 10px 0;
 `;

@@ -91,7 +91,7 @@ import useAlertAndTransactionContext from "context/alertAndTransaction";
 
 import ChartsView from "components/Dashboard/ChartsView";
 
-import FathomAppLogoSrc from "assets/svg/Fathom-app-logo.svg";
+import SplyceAppLogoSrc from "assets/png/splyce-logo.png";
 import ExitSrc from "assets/svg/exit.svg";
 import MetamaskSrc from "assets/svg/metamask.svg";
 import WalletConnectSrc from "assets/svg/wallet-connect.svg";
@@ -144,7 +144,7 @@ const Drawer = styled(MuiDrawer, {
     position: "sticky",
     height: "100vh",
     whiteSpace: "nowrap",
-    background: "#132340",
+    background: "#051926",
     border: "none",
     borderRadius: 0,
     overflowY: "visible",
@@ -175,7 +175,7 @@ const MenuWrapper = styled("nav")<{ open: boolean }>`
   display: flex;
   flex-direction: column;
   gap: 12px;
-  border-right: 1px solid #2c4066;
+  border-right: 1px solid #072a40;
 `;
 
 const AccountInfoWrapper = styled(Box)`
@@ -232,7 +232,7 @@ const MainToolbar = styled(Toolbar)`
   align-items: center;
   justify-content: flex-start;
   padding: 0 1px;
-  background: linear-gradient(180deg, #071126 0%, #050c1a 100%);
+  background: #0d0d0d;
 
   ${({ theme }) => theme.breakpoints.down("sm")} {
     display: flex;
@@ -457,7 +457,7 @@ const MainLayout = () => {
               {open && (
                 <LogoLink to={"/"}>
                   <img
-                    src={FathomAppLogoSrc}
+                    src={SplyceAppLogoSrc}
                     alt={"logo"}
                     style={{
                       height: "none",

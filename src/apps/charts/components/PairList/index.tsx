@@ -73,14 +73,14 @@ const DashGrid = styled(Box)<{ fade?: boolean }>`
 `;
 
 export const HeaderWrapper = styled(DashGrid)`
-  background: #2c4066;
+  background: #072a40;
   border-radius: 8px;
   padding-top: 7px !important;
   padding-bottom: 7px !important;
 `;
 
 const ClickableText = styled(Typography)`
-  color: #5977a0;
+  color: #65858c;
 
   &:hover {
     cursor: pointer;
@@ -425,7 +425,7 @@ const PairList: FC<PairListProps> = (props) => {
           <Flex
             alignItems="center"
             justifyContent="center"
-            style={{ color: "#5977a0", gap: "4px" }}
+            style={{ color: "#65858c", gap: "4px" }}
           >
             <ClickableText
               onClick={() => {

@@ -5,7 +5,7 @@ import { RowFixed } from "apps/charts/components/Row";
 
 const StyleCheckbox = styled("input")`
   background: transparent;
-  border: 1px solid #253656;
+  border: 1px solid #072a40;
 
   :checked {
     background: #f35429;

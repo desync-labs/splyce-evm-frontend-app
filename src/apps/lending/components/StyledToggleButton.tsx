@@ -19,7 +19,7 @@ const CustomToggleButton = styled(ToggleButton)<ToggleButtonProps>(
     "&.Mui-selected, &.Mui-selected:hover": {
       backgroundColor: "transparent",
       border: "none",
-      borderBottom: "2px solid #43FFF1",
+      borderBottom: "2px solid #a0f2c4",
     },
 
     "&.Mui-selected, &.Mui-disabled": {

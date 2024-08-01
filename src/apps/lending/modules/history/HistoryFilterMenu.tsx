@@ -33,22 +33,22 @@ const FilterButton = styled(Button)`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #091433;
+  background: #051926;
   border-radius: 8px;
-  border: 1px solid #3d5580;
-  color: #b0c5e7;
+  border: 1px solid #072a40;
+  color: #7b9ea6;
 
   &.open {
-    background: #091433;
-    border: 1px solid #5a81ff;
-    box-shadow: 0 0 8px #003cff;
+    background: #051926;
+    border: 1px solid #a8bfb0;
+    box-shadow: 0 0 8px #a0f2c4;
   }
 
   &:hover,
   &:focus {
-    background: #091433;
-    border: 1px solid #5a81ff;
-    box-shadow: 0 0 8px #003cff;
+    background: #051926;
+    border: 1px solid #a8bfb0;
+    box-shadow: 0 0 8px #a0f2c4;
   }
 `;
 
@@ -231,7 +231,7 @@ export const HistoryFilterMenu: React.FC<HistoryFilterMenuProps> = ({
         <MenuItem
           onClick={() => handleFilterClick(undefined)}
           sx={{
-            background: allSelected ? "#2C4066" : "transparent",
+            background: allSelected ? "#072a40" : "transparent",
             display: "flex",
             justifyContent: "space-between",
             color: theme.palette.text.light,
@@ -269,7 +269,7 @@ export const HistoryFilterMenu: React.FC<HistoryFilterMenuProps> = ({
                   onClick={() => handleFilterClick(option)}
                   sx={{
                     background: currentFilter.includes(option)
-                      ? "#2C4066"
+                      ? "#072a40"
                       : "transparent",
                     display: "flex",
                     justifyContent: "space-between",

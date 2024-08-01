@@ -38,7 +38,7 @@ export const ButtonLight = styled(Base)`
   }
 
   :hover {
-    border: 1px solid #253656;
+    border: 1px solid #072a40;
     color: #fff;
   }
 `;
@@ -94,15 +94,15 @@ export const ButtonDark = styled(Base)`
 export const ButtonFaded = styled(Base)`
   height: auto;
   width: 100%;
-  background-color: #091433;
-  color: #8ea4cc;
+  background-color: #051926;
+  color: #7b9ea6;
   white-space: nowrap;
-  border: 1px solid #3d5580;
+  border: 1px solid #072a40;
   border-radius: 8px;
   padding: 6px 12px;
   :hover {
     box-shadow: rgb(0, 60, 255) 0 0 8px;
-    background-color: #091433;
+    background-color: #051926;
   }
   &.expanded {
     border-radius: 8px 8px 0 0;

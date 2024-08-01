@@ -9,8 +9,8 @@ import Link from "@mui/material/Link";
 const StyledSnackbar = styled(Snackbar)`
   & .MuiSnackbarContent-root {
     border-radius: 16px;
-    border: 1px solid #2c4066;
-    background: #132340;
+    border: 1px solid #072a40;
+    background: #051926;
     max-width: 600px;
     color: #fff;
     font-size: 14px;

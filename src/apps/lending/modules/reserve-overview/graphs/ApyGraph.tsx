@@ -272,7 +272,7 @@ export const ApyGraph = withTooltip<AreaProps, TooltipData>(
             >
               <Typography
                 variant="secondary12"
-                color="#b7c8e5"
+                color="#7B9EA6"
                 sx={{ mb: 1, mr: 1, fontWeight: 400 }}
               >
                 {formatDate(getDate(tooltipData), selectedTimeRange)}
@@ -284,7 +284,7 @@ export const ApyGraph = withTooltip<AreaProps, TooltipData>(
                   justifyContent="space-between"
                   alignItems="center"
                 >
-                  <Typography variant="caption" color="#b7c8e5" sx={{ mr: 1 }}>
+                  <Typography variant="caption" color="#7B9EA6" sx={{ mr: 1 }}>
                     {field.text}
                   </Typography>
                   <Typography variant="main12" color="#fff">

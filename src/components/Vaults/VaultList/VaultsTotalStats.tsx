@@ -28,7 +28,7 @@ const StatItemWrapper = styled(Box)`
   width: 100%;
   height: 80px;
   border-radius: 12px;
-  background: #1e2f4c;
+  background: #072a40;
   padding: 20px 24px;
   ${({ theme }) => theme.breakpoints.down("sm")} {
     width: 50%;
@@ -51,7 +51,7 @@ const StatItemInfo = styled(AppFlexBox)`
   }
 `;
 const StatItemLabel = styled(Box)`
-  color: #6d86b2;
+  color: #7b9ea6;
   font-size: 20px;
   font-weight: 600;
   line-height: 16px;

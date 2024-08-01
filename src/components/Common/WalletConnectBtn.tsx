@@ -5,7 +5,7 @@ import { FC, ReactNode, MouseEvent } from "react";
 
 export const WalletButton = styled(Button)`
   border-radius: 8px;
-  background: linear-gradient(104.04deg, #b3fff9 0%, #00dbcb 100%);
+  background: linear-gradient(104.04deg, #99cad8 0%, #9dfbc7 100%);
   text-transform: capitalize;
   font-size: 13px;
   line-height: 16px;
