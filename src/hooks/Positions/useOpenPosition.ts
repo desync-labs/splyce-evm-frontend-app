@@ -212,8 +212,9 @@ const useOpenPosition = (
        * PRICE OF COLLATERAL FROM DEX
        */
       const priceOfCollateralFromDex =
-        ["XDC", "ETH", "CGO"].includes(pool.poolName.toUpperCase()) ||
-        pool.poolName === "CollateralTokenAdapterJeju"
+        ["XDC", "ETH", "CGO", "SOL", "VNXAU"].includes(
+          pool.poolName.toUpperCase()
+        ) || pool.poolName === "CollateralTokenAdapterJeju"
           ? BigNumber(pool.collateralLastPrice)
               .multipliedBy(10 ** 18)
               .toNumber()

@@ -85,10 +85,18 @@ const usePositionFormAiAssist = (
     async (poolName: string) => {
       setLoadingPricePrediction(true);
 
+      let updatedPoolName = poolName;
+
+      if (poolName === "sol") {
+        updatedPoolName = "xdc";
+      } else if (poolName === "vnxau") {
+        updatedPoolName = "cgo";
+      }
+
       try {
         const baseUrl = process.env.REACT_APP_PRICE_PREDICTION_URL;
         const endpoints = Object.keys(PERIODS_RELATIONS).map(
-          (period) => `${baseUrl}/get-${poolName}-price-${period}`
+          (period) => `${baseUrl}/get-${updatedPoolName}-price-${period}`
         );
 
         const responses = await Promise.all(

@@ -81,7 +81,7 @@ const OpenPositionInfo = () => {
                   text={
                     <>
                       Collateral to be Locked - the amount of Collateral to be
-                      used to borrow FXD.
+                      used to borrow spUSD.
                     </>
                   }
                 />
@@ -114,13 +114,13 @@ const OpenPositionInfo = () => {
                       your collateral value with LTV - you will get how much you
                       can borrow maximum with a 0% safety buffer. For example,
                       if your collateral value is $100, with 75% LTV, you can
-                      maximum borrow 75 FXD, which gives you 0% Safety Buffer,
+                      maximum borrow 75 spUSD, which gives you 0% Safety Buffer,
                       and your position becomes very risky for liquidation.{" "}
                       <br />
                       <br />
                       We recommend at least 50% Safety Buffer. Using the example
-                      above, the recommended amount to borrow is 75 FXD * 50% =
-                      37.5 FXD.
+                      above, the recommended amount to borrow is 75 spUSD * 50%
+                      = 37.5 spUSD.
                     </>
                   }
                 />
@@ -130,17 +130,17 @@ const OpenPositionInfo = () => {
         </InfoListItem>
         <InfoListItem
           alignItems="flex-start"
-          secondaryAction={`${formatPercentage(Number(fxdToBeBorrowed))} FXD`}
+          secondaryAction={`${formatPercentage(Number(fxdToBeBorrowed))} spUSD`}
         >
           <ListItemText
             primary={
               <ListTitleWrapper>
-                Max FXD can be Borrowed
+                Max spUSD can be Borrowed
                 <BasePopover
                   id={"max-fxd-borrowed"}
                   text={
                     <>
-                      Max FXD can be Borrowed - how many FXD you can borrow
+                      Max spUSD can be Borrowed - how many spUSD you can borrow
                       providing Collateral with 0% Safety Buffer.
                     </>
                   }
@@ -153,9 +153,9 @@ const OpenPositionInfo = () => {
           alignItems="flex-start"
           secondaryAction={`${formatPercentage(
             Number(fxdAvailableToBorrow)
-          )} FXD`}
+          )} spUSD`}
         >
-          <ListItemText primary="Safety Buffer (FXD)" />
+          <ListItemText primary="Safety Buffer (spUSD)" />
         </InfoListItem>
         <InfoListItem
           alignItems={"flex-start"}

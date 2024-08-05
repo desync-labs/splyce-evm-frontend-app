@@ -21,7 +21,7 @@ const SUBGRAPH_URLS = {
 };
 
 let supportedChainIds = [ChainId.AXDC, ChainId.SEPOLIA];
-const NATIVE_ASSETS = ["ETH", "XDC"];
+const NATIVE_ASSETS = ["ETH", "XDC", "SOL"];
 
 let DEFAULT_RPCS: any = {
   [ChainId.AXDC]: APOTHEM_RPC,

@@ -51,7 +51,9 @@ const OpenNewPositionDialog: FC = () => {
       <DialogContent>
         <Box>
           <OpenPositionForm />
-          {["XDC", "CGO"].includes(pool?.poolName?.toUpperCase()) && (
+          {["XDC", "CGO", "SOL", "VNXAU"].includes(
+            pool?.poolName?.toUpperCase()
+          ) && (
             <PositionFormAiAssist
               pool={pool}
               borrowInput={fathomToken}

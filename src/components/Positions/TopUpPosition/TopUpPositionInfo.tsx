@@ -40,14 +40,14 @@ const TopUpPositionInfo = () => {
           alignItems="flex-start"
           secondaryAction={
             <>
-              {formatNumber(BigNumber(debtValue).toNumber())} FXD{" "}
+              {formatNumber(BigNumber(debtValue).toNumber())} spUSD{" "}
               <Box component="span" sx={{ color: "#29C20A" }}>
-                → {formatNumber(BigNumber(totalFathomToken).toNumber())} FXD
+                → {formatNumber(BigNumber(totalFathomToken).toNumber())} spUSD
               </Box>
             </>
           }
         >
-          <ListItemText primary="FXD Borrowed" />
+          <ListItemText primary="spUSD Borrowed" />
         </InfoListItem>
         <InfoListItem
           alignItems="flex-start"
@@ -113,13 +113,13 @@ const TopUpPositionInfo = () => {
                       your collateral value with LTV - you will get how much you
                       can borrow maximum with a 0% safety buffer. For example,
                       if your collateral value is $100, with 25% LTV, you can
-                      maximum borrow 75 FXD, which gives you 0% Safety Buffer,
+                      maximum borrow 75 spUSD, which gives you 0% Safety Buffer,
                       and your position becomes very risky for liquidation.{" "}
                       <br />
                       <br />
                       We recommend at least 50% Safety Buffer. Using the example
-                      above, the recommended amount to borrow is 75 FXD * 50% =
-                      37.5 FXD.
+                      above, the recommended amount to borrow is 75 spUSD * 50%
+                      = 37.5 spUSD.
                     </>
                   }
                 />

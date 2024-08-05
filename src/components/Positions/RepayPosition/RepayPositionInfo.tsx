@@ -38,7 +38,7 @@ const RepayPositionInfo = () => {
               {formatNumber(
                 BigNumber(lockedCollateral).multipliedBy(price).toNumber()
               )}{" "}
-              FXD{" "}
+              spUSD{" "}
               <Box component="span" sx={{ color: "#29C20A" }}>
                 →{" "}
                 {formatNumber(
@@ -47,12 +47,12 @@ const RepayPositionInfo = () => {
                     .minus(fathomToken)
                     .toNumber()
                 )}{" "}
-                FXD
+                spUSD
               </Box>
             </>
           }
         >
-          <ListItemText primary="FXD Borrowed" />
+          <ListItemText primary="spUSD Borrowed" />
         </InfoListItem>
         <InfoListItem
           alignItems="flex-start"
@@ -103,7 +103,7 @@ const RepayPositionInfo = () => {
           alignItems="flex-start"
           secondaryAction={`1 ${pool?.poolName} = ${formatNumberPrice(
             liquidationPrice
-          )} FXD`}
+          )} spUSD`}
         >
           <ListItemText
             primary={
