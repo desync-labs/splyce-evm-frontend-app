@@ -143,7 +143,7 @@ const PoolFinder = () => {
           <ColumnCenter>
             <IconWrapper>
               <AddIcon
-                sx={{ width: "20px", height: "20px", color: "#061023" }}
+                sx={{ width: "20px", height: "20px", color: "#071028" }}
               />
             </IconWrapper>
           </ColumnCenter>

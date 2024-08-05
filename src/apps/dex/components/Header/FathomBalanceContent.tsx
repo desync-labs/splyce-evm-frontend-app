@@ -79,7 +79,7 @@ const FathomBalanceContent: FC<FathomBalanceContent> = ({
         <CardNoise />
         <CardSection gap="md">
           <RowBetween>
-            <TYPE.white>Your FTHM Breakdown</TYPE.white>
+            <TYPE.white>Your SPLY Breakdown</TYPE.white>
             <StyledClose
               stroke="white"
               onClick={() => setShowFthmBalanceModal(false)}
@@ -115,7 +115,7 @@ const FathomBalanceContent: FC<FathomBalanceContent> = ({
         <CardSection gap="sm">
           <AutoColumn gap="md">
             <RowBetween>
-              <TYPE.white>FTHM price:</TYPE.white>
+              <TYPE.white>SPLY price:</TYPE.white>
               <TYPE.white>
                 <>
                   {fthmPrice ? "$" : ""}{" "}
@@ -137,7 +137,7 @@ const FathomBalanceContent: FC<FathomBalanceContent> = ({
             </RowBetween>
             {fthm && fthm.chainId === ChainId.XDC ? (
               <NavLink to={`/charts/token/${fthm.address}`}>
-                View FTHM Analytics
+                View SPLY Analytics
               </NavLink>
             ) : null}
           </AutoColumn>

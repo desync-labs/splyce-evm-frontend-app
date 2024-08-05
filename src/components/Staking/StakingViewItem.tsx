@@ -42,7 +42,7 @@ const HeaderWrapper = styled(Box)`
 
 const RewardsUnStakeWrapper = styled(Box)`
   margin-top: 20px;
-  background: #061023;
+  background: #071028;
   border-radius: 12px;
   align-items: center;
   padding: 20px 24px;

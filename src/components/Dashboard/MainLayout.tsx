@@ -1,21 +1,11 @@
 import { styled } from "@mui/material/styles";
-import {
-  CssBaseline,
-  Drawer as MuiDrawer,
-  Box,
-  Toolbar,
-  Divider,
-  IconButton,
-} from "@mui/material";
-import {
-  ArrowForward,
-  AccountBalanceWallet as AccountBalanceWalletIcon,
-} from "@mui/icons-material";
+import { CssBaseline, Box, Toolbar, IconButton } from "@mui/material";
+import { AccountBalanceWallet as AccountBalanceWalletIcon } from "@mui/icons-material";
 import truncateEthAddress from "truncate-eth-address";
 import { Link, Navigate, Route, Routes, useLocation } from "react-router-dom";
 
 import { AppGlobalStyles } from "components/AppComponents/AppGlobalStyles/AppGlobalStyles";
-import Copyright from "components/Footer/Footer";
+import Footer from "components/Footer/Footer";
 import AppBar from "components/AppComponents/AppBar/AppBar";
 import DashboardContent from "components/Dashboard/Dashboard";
 
@@ -40,14 +30,11 @@ import LendingView from "components/Dashboard/LendingView";
 import FXDView from "components/Dashboard/FxdView";
 
 import { Menu } from "components/Dashboard/Menu";
-import { ToggleDrawerButton } from "components/AppComponents/AppButton/AppButton";
 import { MainBox } from "components/AppComponents/AppBox/AppBox";
 import MobileConnector from "components/Dashboard/MobileConnector";
 import DesktopConnector from "components/Dashboard/DesktopConnector";
-import BottomLinks from "components/Dashboard/BottomLinks";
 import MobileMenu from "components/Dashboard/MobileMenu";
 
-import { drawerWidth } from "components/AppComponents/AppBar/AppBar";
 import TransactionErc20TokenModal from "components/Transaction/TransactionErc20TokenModal";
 import FthmInfoModal from "components/FthmInfo/FthmInfoModal";
 
@@ -93,7 +80,7 @@ import ChartsView from "components/Dashboard/ChartsView";
 
 import SplyceAppLogoSrc from "assets/png/splyce-logo.png";
 import ExitSrc from "assets/svg/exit.svg";
-import MetamaskSrc from "assets/svg/metamask.svg";
+import SolflareSrc from "assets/png/solflare-logo.webp";
 import WalletConnectSrc from "assets/svg/wallet-connect.svg";
 import FathomLogoMobileSrc from "assets/svg/Fathom-app-logo-mobile.svg";
 import MobileMenuIcon from "assets/svg/mobile-menu.svg";
@@ -136,46 +123,12 @@ import CookieConsent from "components/Common/CookieConsent";
 import MaintenanceModeBanner from "components/Common/MaintenanceBanner";
 import { FxdProvider } from "context/fxd";
 import useVH from "hooks/General/useVH";
+import { BaseFlexBox } from "../Base/Boxes/StyledBoxes";
 
-const Drawer = styled(MuiDrawer, {
-  shouldForwardProp: (prop) => prop !== "open",
-})(({ theme, open }) => ({
-  "& .MuiDrawer-paper": {
-    position: "sticky",
-    height: "100vh",
-    whiteSpace: "nowrap",
-    background: "#051926",
-    border: "none",
-    borderRadius: 0,
-    overflowY: "visible",
-    width: drawerWidth,
-    transition: theme.transitions.create("width", {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-    boxSizing: "border-box",
-    ...(!open && {
-      overflowX: "visible",
-      transition: theme.transitions.create("width", {
-        easing: theme.transitions.easing.sharp,
-        duration: theme.transitions.duration.leavingScreen,
-      }),
-      width: theme.spacing(7),
-      [theme.breakpoints.up("sm")]: {
-        width: theme.spacing(9),
-      },
-    }),
-  },
-}));
-
-const MenuWrapper = styled("nav")<{ open: boolean }>`
-  padding: ${({ open }) => (open ? "24px 12px" : "20px 8px")};
-  height: 100vh;
-  position: relative;
+const MenuWrapper = styled("nav")`
   display: flex;
-  flex-direction: column;
-  gap: 12px;
-  border-right: 1px solid #072a40;
+  flex-direction: row;
+  gap: 8px;
 `;
 
 const AccountInfoWrapper = styled(Box)`
@@ -190,8 +143,8 @@ export const AccountElement = styled("div")<{ active: string }>`
   display: flex;
   flex-direction: row;
   align-items: end;
-  background-color: #131f35;
-  border-radius: 12px;
+  background-color: #072a40;
+  border-radius: 8px;
   white-space: nowrap;
   cursor: pointer;
   color: #fff;
@@ -208,9 +161,10 @@ export const AccountElement = styled("div")<{ active: string }>`
 export const FTHMAmount = styled(AccountElement)`
   color: white;
   font-size: 1rem;
-  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  border-radius: 8px;
+  padding: 4px 12px;
   font-weight: 500;
-  background-color: #131f35;
+  background-color: #072a40;
 `;
 
 export const FTHMWrapper = styled("span")`
@@ -224,23 +178,6 @@ export const FTHMWrapper = styled("span")`
 
   :active {
     opacity: 0.9;
-  }
-`;
-
-const MainToolbar = styled(Toolbar)`
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 0 1px;
-  background: #0d0d0d;
-
-  ${({ theme }) => theme.breakpoints.down("sm")} {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 14px;
-    width: 100px;
-    margin-left: 14px;
   }
 `;
 
@@ -284,14 +221,10 @@ const MainLayout = () => {
     error,
     isMobile,
     isActive,
-    open,
     isMetamask,
     isWalletConnect,
-    toggleDrawer,
     mainBlockClickHandler,
     openMobileMenu,
-    drawerRef,
-    showToggleDrawerBtn,
     setOpenMobile,
     userBalance,
     showFthmBalanceModal,
@@ -334,14 +267,9 @@ const MainLayout = () => {
     <AppGlobalStyles>
       <Box sx={{ display: "flex" }} onClick={mainBlockClickHandler}>
         <CssBaseline />
-        <AppBar position="absolute" open={open}>
-          <Toolbar
-            sx={{
-              width: "100%",
-              justifyContent: isMobile ? "space-between" : "flex-end",
-            }}
-          >
-            {isMobile && (
+        <AppBar>
+          <Toolbar>
+            {isMobile ? (
               <MenuLogoWrapper>
                 <LogoLink to={"/"}>
                   <img
@@ -377,12 +305,36 @@ const MainLayout = () => {
                   Apps
                 </MobileMenuWrapper>
               </MenuLogoWrapper>
+            ) : (
+              <>
+                <LogoLink to={"/"}>
+                  <img
+                    src={SplyceAppLogoSrc}
+                    alt={"logo"}
+                    style={{
+                      height: "none",
+                      maxWidth: "100px",
+                    }}
+                  />
+                </LogoLink>
+                <MenuWrapper>
+                  <Menu />
+                </MenuWrapper>
+                <BaseFlexBox flexGrow={1}></BaseFlexBox>
+              </>
             )}
 
             <AccountInfoWrapper>
               <Web3Status />
 
-              {isMetamask && <img src={MetamaskSrc} alt={"metamask"} />}
+              {isMetamask && (
+                <img
+                  src={SolflareSrc}
+                  alt={"solflare"}
+                  width={22}
+                  height={22}
+                />
+              )}
               {isWalletConnect && (
                 <img src={WalletConnectSrc} alt={"wallet-connect"} />
               )}
@@ -410,7 +362,7 @@ const MainLayout = () => {
                           />
                         </TYPE.white>
                       )}
-                      FTHM
+                      SPLY
                     </FTHMAmount>
                     <CardNoise />
                   </FTHMWrapper>
@@ -423,7 +375,7 @@ const MainLayout = () => {
                   <Box
                     fontSize={"1rem"}
                     sx={{ flexShrink: 0 }}
-                    p="0.5rem 0.5rem 0.5rem 0.5rem"
+                    p="4px 12px"
                     fontWeight={500}
                   >
                     {formatNumber(Number(userBalance))}{" "}
@@ -451,37 +403,35 @@ const MainLayout = () => {
             </AccountInfoWrapper>
           </Toolbar>
         </AppBar>
-        {!isMobile && (
-          <Drawer variant="permanent" open={open} ref={drawerRef}>
-            <MainToolbar>
-              {open && (
-                <LogoLink to={"/"}>
-                  <img
-                    src={SplyceAppLogoSrc}
-                    alt={"logo"}
-                    style={{
-                      height: "none",
-                      maxWidth: "140px",
-                    }}
-                  />
-                </LogoLink>
-              )}
-              {showToggleDrawerBtn && (
-                <ToggleDrawerButton open={open} onClick={toggleDrawer}>
-                  <ArrowForward sx={{ fontSize: "0.9rem" }} />
-                </ToggleDrawerButton>
-              )}
-            </MainToolbar>
-            <Divider />
-            <MenuWrapper open={open}>
-              <Menu open={open} />
-              {!isMobile && open && <BottomLinks />}
-            </MenuWrapper>
-          </Drawer>
-        )}
+        {/*{!isMobile && (*/}
+        {/*  <Drawer variant="permanent" open={open} ref={drawerRef}>*/}
+        {/*    <MainToolbar>*/}
+        {/*      {open && (*/}
+        {/*        <LogoLink to={"/"}>*/}
+        {/*          <img*/}
+        {/*            src={SplyceAppLogoSrc}*/}
+        {/*            alt={"logo"}*/}
+        {/*            style={{*/}
+        {/*              height: "none",*/}
+        {/*              maxWidth: "140px",*/}
+        {/*            }}*/}
+        {/*          />*/}
+        {/*        </LogoLink>*/}
+        {/*      )}*/}
+        {/*      {showToggleDrawerBtn && (*/}
+        {/*        <ToggleDrawerButton open={open} onClick={toggleDrawer}>*/}
+        {/*          <ArrowForward sx={{ fontSize: "0.9rem" }} />*/}
+        {/*        </ToggleDrawerButton>*/}
+        {/*      )}*/}
+        {/*    </MainToolbar>*/}
+        {/*    <Divider />*/}
+        {/*    <MenuWrapper open={open}>*/}
+        {/*      <Menu open={open} />*/}
+        {/*    </MenuWrapper>*/}
+        {/*  </Drawer>*/}
+        {/*)}*/}
         <MainBox component="main">
           <Box>
-            <Toolbar />
             <AlertMessages scroll={scroll} />
             <TransactionStatus scroll={scroll} />
             <FxdProvider>
@@ -718,7 +668,7 @@ const MainLayout = () => {
               </Routes>
             </FxdProvider>
           </Box>
-          <Copyright />
+          <Footer />
         </MainBox>
       </Box>
       {isMobile && openMobile && <MobileMenu setOpenMobile={setOpenMobile} />}

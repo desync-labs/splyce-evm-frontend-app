@@ -98,7 +98,7 @@ const InputPanel = styled(Box)`
   flex-flow: row nowrap;
   position: relative;
   border-radius: 8px;
-  background-color: #061023;
+  background-color: #071028;
   z-index: 1;
 
   &#swap-currency-input {
@@ -121,8 +121,8 @@ const InputPanel = styled(Box)`
 const Container = styled(Box)<{ hideInput: boolean }>`
   width: 100%;
   border-radius: ${({ hideInput }) => (hideInput ? "8px" : "20px")};
-  border: 1px solid #061023;
-  background-color: #061023;
+  border: 1px solid #071028;
+  background-color: #071028;
 `;
 
 const StyledTokenName = styled("span")<{ active?: boolean }>`

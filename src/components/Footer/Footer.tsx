@@ -1,41 +1,88 @@
-import Link from "@mui/material/Link";
-import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material/styles";
-import { Box, Divider } from "@mui/material";
+import { Box } from "@mui/material";
 
-const Footer = styled(Typography)`
+import TelegramSrc from "assets/svg/socials/telegram.svg";
+import TwitterSrc from "assets/svg/socials/twitter.svg";
+import LinkedInSrc from "assets/svg/socials/linkedln.svg";
+
+const FooterWrapper = styled(Box)`
   display: flex;
-  align-items: start;
-  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   gap: 4px;
-  padding-bottom: 10px;
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.7);
+  background: #0d0d0d;
+  border-top: 1px solid #072a40;
+  padding: 20px 24px;
 `;
 
-const TokensWrapper = styled("div")`
+const LinksWrapper = styled(Box)`
   display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 10px;
-  line-height: 18px;
+  flex-direction: row;
+  gap: 16px;
+
   a {
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.7);
-    :hover {
-      text-decoration: underline;
+    font-size: 13px;
+    font-weight: 500;
+    color: #7b9ea6;
+    opacity: 0.8;
+    display: flex;
+    justify-content: start;
+    padding: 0;
+
+    &:hover {
+      opacity: 1;
     }
   }
 `;
 
-export const FooterDivider = styled(Divider)`
-  border: 1px solid #9fadc6;
+const SocialLinksWrapper = styled(Box)`
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  padding: 0;
+
+  & a {
+    height: 20px;
+  }
+
+  & img {
+    height: 20px;
+    width: 20px;
+  }
 `;
 
-const Copyright = function Copyright(props: any) {
+// const Copyright = styled(Box)`
+//   font-size: 13px;
+//   font-weight: 400;
+//   color: #7b9ea6;
+//   opacity: 0.8;
+// `;
+
+const Footer = () => {
   return (
-    <Box>
-      <TokensWrapper>
+    <FooterWrapper>
+      <LinksWrapper>
+        <a href={"https://splyce.finance"} rel="noreferrer" target={"_blank"}>
+          splyce.fi
+        </a>
+        <a href={"https://docs.fathom.fi"} rel="noreferrer" target={"_blank"}>
+          Docs
+        </a>
+        <a
+          href={"https://docs.fathom.fi/privacy-policy"}
+          rel="noreferrer"
+          target={"_blank"}
+        >
+          Privacy Policy
+        </a>
+        <a
+          href={"https://docs.fathom.fi/terms-of-service"}
+          rel="noreferrer"
+          target={"_blank"}
+        >
+          Terms of Service
+        </a>
         <a
           href={"https://docs.fathom.fi/fxd-deployments"}
           target={"_blank"}
@@ -43,7 +90,6 @@ const Copyright = function Copyright(props: any) {
         >
           FXD
         </a>
-        <FooterDivider orientation="vertical" flexItem />
         <a
           href={"https://docs.fathom.fi/fthm-deployments"}
           target={"_blank"}
@@ -51,16 +97,35 @@ const Copyright = function Copyright(props: any) {
         >
           FTHM
         </a>
-      </TokensWrapper>
-      <Footer {...props}>
-        {"Copyright©"}
-        <Link color="inherit" fontSize="inherit" href="https://fathom.fi/">
-          Fathom App
-        </Link>
-        {new Date().getFullYear()}.
-      </Footer>
-    </Box>
+      </LinksWrapper>
+      {/*<Copyright>*/}
+      {/*  {"Copyright©"}*/}
+      {/*  <Link color="inherit" fontSize="inherit" href="https://fathom.fi/">*/}
+      {/*    Fathom App*/}
+      {/*  </Link>*/}
+      {/*  {new Date().getFullYear()}.*/}
+      {/*</Copyright>*/}
+      <SocialLinksWrapper>
+        <a href={"https://t.me/fathom_fi"} rel="noreferrer" target={"_blank"}>
+          <img src={TelegramSrc} alt={"telegram"} />
+        </a>
+        <a
+          href={"https://twitter.com/Fathom_fi"}
+          rel="noreferrer"
+          target={"_blank"}
+        >
+          <img src={TwitterSrc} alt={"twitter"} />
+        </a>
+        <a
+          href={"https://www.linkedin.com/company/fathom-protocol/"}
+          rel="noreferrer"
+          target={"_blank"}
+        >
+          <img src={LinkedInSrc} alt={"linked-in"} />
+        </a>
+      </SocialLinksWrapper>
+    </FooterWrapper>
   );
 };
 
-export default Copyright;
+export default Footer;

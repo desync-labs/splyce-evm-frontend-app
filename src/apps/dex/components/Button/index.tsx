@@ -130,7 +130,7 @@ export const ButtonSecondary = styled(Base)<{
 `;
 
 export const ButtonOutlined = styled(Base)`
-  border: 1px solid #061023;
+  border: 1px solid #071028;
   background-color: transparent;
   color: #ffffff;
 

@@ -52,7 +52,7 @@ export const ChartTitle = styled(Typography)`
 
 const CustomTooltipPaper = styled(Paper)`
   border-radius: 8px;
-  background: #2a3e5a;
+  background: #072a40;
   box-shadow: 0 12px 32px 0 rgba(0, 7, 21, 0.5);
   padding: 10px;
   ${({ theme }) => theme.breakpoints.down("sm")} {

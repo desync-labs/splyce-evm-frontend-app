@@ -182,12 +182,13 @@ export const RightNetwork = styled(MuiBox)`
 
 export const MainBox = styled(MuiBox)`
   background: #0d0d0d;
-  min-height: calc(var(--vh, 1vh) * 100);
+  min-height: calc(var(--vh, 1vh) * 100 - 49px);
   overflow: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
+  margin-top: 49px;
 `;
 
 export const WarningBox = styled(Box)`

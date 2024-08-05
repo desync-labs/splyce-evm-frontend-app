@@ -19,7 +19,7 @@ const MobileConnectorWrapper = styled(Box)`
 `;
 
 const Connector = styled("button")`
-  background-color: #061023;
+  background-color: #071028;
   padding: 1rem;
   outline: none;
   border-radius: 12px;

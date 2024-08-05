@@ -87,7 +87,7 @@ const StyledListUrlText = styled(TYPE.main)<{ active: boolean }>`
 
 const RowWrapper = styled(Row)<{ bgColor: string; active: boolean }>`
   background-color: ${({ bgColor, active }) =>
-    active ? bgColor ?? "transparent" : "#061023"};
+    active ? bgColor ?? "transparent" : "#071028"};
   transition: 200ms;
   align-items: center;
   padding: 1rem;
@@ -393,7 +393,7 @@ export function ManageLists({
       </PaddedColumn>
       {tempList && (
         <PaddedColumn style={{ paddingTop: 0 }}>
-          <Card bgcolor={"#061023"} padding="12px 20px">
+          <Card bgcolor={"#071028"} padding="12px 20px">
             <RowBetween>
               <RowFixed>
                 {tempList.logoURI && (

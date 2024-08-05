@@ -1,10 +1,8 @@
 import { Snackbar, styled, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
-import {
-  ButtonPrimary,
-  ButtonSecondary,
-} from "components/AppComponents/AppButton/AppButton";
 import Link from "@mui/material/Link";
+import { BaseButtonSecondary } from "components/Base/Buttons/StyledButtons";
+import { ButtonPrimary } from "components/AppComponents/AppButton/AppButton";
 
 const StyledSnackbar = styled(Snackbar)`
   & .MuiSnackbarContent-root {
@@ -73,9 +71,9 @@ const CookieConsent = () => {
           <ButtonPrimary onClick={handleAccept} size="small">
             Accept
           </ButtonPrimary>
-          <ButtonSecondary onClick={handleDecline} size="small">
+          <BaseButtonSecondary onClick={handleDecline} size="small">
             Reject
-          </ButtonSecondary>
+          </BaseButtonSecondary>
         </>
       }
     />

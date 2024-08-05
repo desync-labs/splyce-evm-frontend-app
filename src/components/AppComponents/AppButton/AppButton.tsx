@@ -34,7 +34,7 @@ export const ButtonPrimary = styled(MuiButton, {
     lineHeight: "16px",
     fontWeight: "bold",
     color: "#00332F",
-    border: "1px solid #B3FFF9",
+    border: "1px solid transparent",
     height: "40px",
     "&:hover": {
       background: "transparent",
@@ -71,14 +71,14 @@ export const ButtonSecondary = styled(MuiButton)`
   line-height: 20px;
   padding: 8px 16px;
   gap: 8px;
-  border: 1px solid #009E92;
+  border: 1px solid #a0f2c4;
   border-radius: 8px;
   height: 40px;
   &:hover {
     background: transparent;
     color: #B3FFF9;
     border: 1px solid #B3FFF9;
-    svg: {
+    svg {
       color: #B3FFF9;
     }, 
   }
@@ -100,7 +100,7 @@ export const ButtonSecondaryLink = styled("a")`
   line-height: 20px;
   padding: 8px 16px;
   gap: 8px;
-  border: 1px solid #009E92;
+  border: 1px solid #a0f2c4;
   border-radius: 8px;
   height: 40px;
   &:hover {

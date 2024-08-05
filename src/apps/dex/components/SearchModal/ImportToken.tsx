@@ -105,7 +105,7 @@ export const ImportToken: FC<ImportProps> = ({
             chainId && inactiveTokenList?.[chainId]?.[token.address]?.list;
           return (
             <Card
-              bgcolor={"#061023"}
+              bgcolor={"#071028"}
               key={"import" + token.address}
               className=".token-warning-container"
             >

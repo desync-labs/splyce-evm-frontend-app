@@ -41,7 +41,7 @@ const Footer = styled(Box)`
   left: 0;
   right: 0;
   width: 100%;
-  border-top: 1px solid #061023;
+  border-top: 1px solid #071028;
   padding: 20px;
   text-align: center;
   z-index: 9;
@@ -129,7 +129,7 @@ const ManageTokens: FC<ManageTokensProps> = ({
             <TYPE.error error={true}>Enter valid token address</TYPE.error>
           )}
           {searchToken && (
-            <Card bgcolor="#061023" padding="10px 0">
+            <Card bgcolor="#071028" padding="10px 0">
               <ImportRow
                 token={searchToken}
                 showImportView={() =>

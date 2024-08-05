@@ -16,7 +16,6 @@ import { COUNT_PER_PAGE } from "utils/Constants";
 import useConnector from "context/connector";
 import BigNumber from "bignumber.js";
 import debounce from "lodash.debounce";
-import { ChainId } from "connectors/networks";
 
 const useOpenPositionList = (
   setPositionCurrentPage: Dispatch<number>,
@@ -48,11 +47,10 @@ const useOpenPositionList = (
   const poolsData = useMemo(() => {
     if (!poolsLoading && poolsItems && poolsItems.pools) {
       return poolsItems.pools.map((poolItem: ICollateralPool) => {
-        if (
-          poolItem.poolName.toUpperCase() === "XDC" &&
-          chainId === ChainId.SEPOLIA
-        ) {
-          return { ...poolItem, poolName: "ETH" };
+        if (poolItem.poolName.toUpperCase() === "XDC") {
+          return { ...poolItem, poolName: "SOL" };
+        } else if (poolItem.poolName.toUpperCase() === "CGO") {
+          return { ...poolItem, poolName: "VNXAU" };
         } else {
           return poolItem;
         }
@@ -155,11 +153,12 @@ const useOpenPositionList = (
 
           const renamedPoolName = positions.map(
             (positionItem: IOpenPosition) => {
-              if (
-                positionItem.collateralPoolName.toUpperCase() === "XDC" &&
-                chainId === ChainId.SEPOLIA
+              if (positionItem.collateralPoolName.toUpperCase() === "XDC") {
+                return { ...positionItem, collateralPoolName: "SOL" };
+              } else if (
+                positionItem.collateralPoolName.toUpperCase() === "CGO"
               ) {
-                return { ...positionItem, collateralPoolName: "ETH" };
+                return { ...positionItem, collateralPoolName: "VNXAU" };
               } else {
                 return positionItem;
               }

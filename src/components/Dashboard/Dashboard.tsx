@@ -18,8 +18,8 @@ const DashboardContent = () => {
   return (
     <BasePageContainer>
       <BasePageHeader
-        title={"FXD"}
-        description={`FXD is overcollateralized, decentralized, and softly pegged stablecoin.`}
+        title={"spUSD"}
+        description={`spUSD is overcollateralized, decentralized, and softly pegged stablecoin.`}
       />
       <ProtocolStats />
       <PoolsListView

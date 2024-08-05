@@ -22,7 +22,7 @@ const Wrapper = styled(Box)`
 `;
 
 const ToggleWrapper = styled(RowBetween)`
-  background-color: #061023;
+  background-color: #071028;
   border-radius: 8px;
   padding: 6px;
 `;

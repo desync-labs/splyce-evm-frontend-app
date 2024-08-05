@@ -27,7 +27,7 @@ export const SuccessIconWrapper = styled(Box)`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #2a3e5a;
+  background: #072a40;
   height: 60px;
   width: 60px;
   border-radius: 50%;

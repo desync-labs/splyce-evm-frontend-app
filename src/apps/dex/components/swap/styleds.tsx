@@ -63,7 +63,7 @@ export const ErrorText = styled(Typography)<{ severity?: 0 | 1 | 2 | 3 | 4 }>`
 export const StyledBalanceMaxMini = styled("button")`
   height: 22px;
   width: 22px;
-  background-color: #061023;
+  background-color: #071028;
   border: none;
   border-radius: 50%;
   padding: 0.2rem;

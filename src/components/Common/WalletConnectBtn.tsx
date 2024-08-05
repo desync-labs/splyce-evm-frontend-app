@@ -11,7 +11,7 @@ export const WalletButton = styled(Button)`
   line-height: 16px;
   font-weight: bold;
   color: #00332f;
-  border: 1px solid #b3fff9;
+  border: 1px solid transparent;
   height: 40px;
   padding: 8px 12px 8px 12px;
   &:hover {

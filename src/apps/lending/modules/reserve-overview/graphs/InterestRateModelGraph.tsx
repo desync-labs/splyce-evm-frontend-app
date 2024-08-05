@@ -179,7 +179,7 @@ export const InterestRateModelGraph = withTooltip<AreaProps, TooltipData>(
     const tooltipStyles = {
       ...defaultStyles,
       padding: "10px",
-      background: "#2a3e5a",
+      background: "#072a40",
       boxShadow: "0 12px 32px 0 rgba(0, 7, 21, 0.5)",
       borderRadius: "8px",
       fontSize: "12px",

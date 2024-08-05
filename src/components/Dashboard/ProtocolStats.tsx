@@ -30,7 +30,7 @@ const ProtocolStats = () => {
       <BasePageStatsItem
         title={"Total Issued"}
         helpText={
-          "The total amount of FXD has been issued through borrowing from protocol and is currently in circulation."
+          "The total amount of spUSD has been issued through borrowing from protocol and is currently in circulation."
         }
         value={
           isLoading ? (
@@ -40,7 +40,7 @@ const ProtocolStats = () => {
               marginTop={isMobile ? "0" : "8px"}
             />
           ) : (
-            formatNumber(totalBorrowed) + " FXD"
+            formatNumber(totalBorrowed) + " spUSD"
           )
         }
         xs={12}
@@ -51,7 +51,7 @@ const ProtocolStats = () => {
       <BasePageStatsItem
         title={"TVL"}
         helpText={
-          "TVL, or Total Value Locked, signifies the total amount of assets currently deposited in the platform and used to borrow FXD."
+          "TVL, or Total Value Locked, signifies the total amount of assets currently deposited in the platform and used to borrow spUSD."
         }
         value={
           isLoading ? (
@@ -70,7 +70,7 @@ const ProtocolStats = () => {
         isMobileRow={true}
       />
       <BasePageStatsItem
-        title={"FXD Price"}
+        title={"spUSD Price"}
         value={
           isLoading ? (
             <StatsValueSkeleton

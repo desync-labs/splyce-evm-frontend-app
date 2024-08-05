@@ -22,10 +22,10 @@ const BaseWrapper = styled(Box)<{ disable?: boolean }>`
   align-items: center;
   :hover {
     cursor: ${({ disable }) => !disable && "pointer"};
-    background-color: ${({ disable }) => !disable && "#061023"};
+    background-color: ${({ disable }) => !disable && "#071028"};
   }
 
-  background-color: ${({ disable }) => disable && "#061023"};
+  background-color: ${({ disable }) => disable && "#071028"};
   opacity: ${({ disable }) => disable && "0.4"};
 `;
 

@@ -1,23 +1,14 @@
 import PropTypes from "prop-types";
 import { makeStyles } from "tss-react/mui";
 import { FC, useState, memo } from "react";
-
-import {
-  ExpandLess as IconExpandLess,
-  ExpandMore as IconExpandMore,
-} from "@mui/icons-material";
-
+import { ListItemText } from "@mui/material";
 import AppMenuItemComponent from "components/MenuItem/AppMenuItemComponent";
-import { Collapse, ListItemIcon, ListItemText, List } from "@mui/material";
 
 // React runtime PropTypes
 export const AppMenuItemPropTypes = {
   name: PropTypes.string.isRequired,
   link: PropTypes.string,
-  Icon: PropTypes.any,
-  items: PropTypes.array,
   isActive: PropTypes.bool,
-  showText: PropTypes.bool,
   target: PropTypes.string,
 };
 
@@ -33,56 +24,59 @@ export type AppMenuItemProps = AppMenuItemPropsWithoutItems & {
   items?: AppMenuItemProps[];
 };
 
-const useStyles = makeStyles<{ isActive: boolean; showText: boolean }>()(
-  (theme, { isActive, showText }) => ({
+const useStyles = makeStyles<{ isActive: boolean }>()(
+  (theme, { isActive }) => ({
     menuItem: {
-      margin: "0 auto",
-      padding: "8px 16px",
-      width: showText ? "100%" : "40px",
+      width: "fit-content",
+      minWidth: "64px",
       borderRadius: "8px",
-      justifyContent: showText ? "flex-start" : "center",
+      justifyContent: "center",
+      padding: "6px 8px",
       "&.active": {
-        backgroundColor: isActive ? "#072a40" : "transparent",
-
-        "& .MuiListItemIcon-root": {
-          color: isActive
-            ? theme.palette.primary.main
-            : theme.palette.secondary.main,
+        "&::after": {
+          transform: isActive ? "scaleX(1)" : "scaleX(0)",
+          transformOrigin: "bottom left",
         },
       },
       "&:hover": {
-        background: "#072a40",
-        borderRadius: "8px",
+        backgroundColor: "transparent",
+        "&::after": {
+          transform: "scaleX(1)",
+          transformOrigin: "bottom left",
+        },
       },
-      "& .MuiListItemText-inset": {
-        paddingLeft: "30px",
+      "&::after": {
+        content: '""',
+        position: "absolute",
+        height: "2px",
+        width: "100%",
+        left: 0,
+        bottom: "-10px",
+        backgroundColor: "#a0f2c4",
+        transition: "transform 0.25s ease-out",
+        transform: "scaleX(0)",
       },
-    },
-    menuItemIcon: {
-      color: isActive ? theme.palette.primary.main : "#415D83",
-      minWidth: "0",
-      marginRight: showText ? "16px" : "0",
     },
     menuItemText: {
       "> span": {
-        fontSize: "14px",
+        fontSize: "12px",
         fontStyle: "normal",
         fontWeight: "600",
-        lineHeight: "20px",
+        lineHeight: "16px",
       },
+      flex: "none",
       margin: "0",
+      textAlign: "center",
       color: isActive ? "#fff" : "#7B9EA6",
     },
   })
 );
 
-const AppMenuItem: FC<AppMenuItemProps> = memo((props) => {
-  const { name, link, Icon, items = [], isActive, showText } = props;
-  const isExpandable = items && items.length > 0 && showText;
+const AppMenuItem: FC<AppMenuItemProps> = (props) => {
+  const { name, link, isActive } = props;
 
   const { classes } = useStyles({
     isActive: isActive as boolean,
-    showText: showText as boolean,
   });
   const [open, setOpen] = useState(false);
 
@@ -97,40 +91,11 @@ const AppMenuItem: FC<AppMenuItemProps> = memo((props) => {
       onClick={handleClick}
       target={props.target}
     >
-      {/* Display an icon if any */}
-      {!!Icon && (
-        <ListItemIcon className={classes.menuItemIcon}>{Icon}</ListItemIcon>
-      )}
-      {showText && (
-        <ListItemText
-          className={classes.menuItemText}
-          primary={name}
-          inset={!Icon}
-        />
-      )}
-      {/* Display the expand menu if the item has children */}
-      {isExpandable && !open && <IconExpandMore sx={{ pt: "6px" }} />}
-      {isExpandable && open && <IconExpandLess sx={{ pt: "6px" }} />}
+      <ListItemText className={classes.menuItemText} primary={name} />
     </AppMenuItemComponent>
   );
 
-  const MenuItemChildren =
-    isExpandable || !showText ? (
-      <Collapse in={open || !showText} timeout="auto" unmountOnExit>
-        <List component="div" disablePadding>
-          {items.map((item, index) => (
-            <AppMenuItem {...item} key={index} />
-          ))}
-        </List>
-      </Collapse>
-    ) : null;
-
-  return (
-    <>
-      {showText ? MenuItemRoot : Icon ? MenuItemRoot : null}
-      {MenuItemChildren}
-    </>
-  );
-});
+  return <>{MenuItemRoot}</>;
+};
 
 export default memo(AppMenuItem);

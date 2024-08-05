@@ -31,7 +31,7 @@ export const MenuItem = styled(RowBetween)<{
   cursor: ${({ disabled }) => !disabled && "pointer"};
   pointer-events: ${({ disabled }) => disabled && "none"};
   :hover {
-    background-color: ${({ disabled }) => !disabled && "#061023"};
+    background-color: ${({ disabled }) => !disabled && "#071028"};
   }
   opacity: ${({ disabled, selected }) => (disabled || selected ? 0.5 : 1)};
 `;
@@ -70,7 +70,7 @@ export const SearchInput = styled("input")`
 export const Separator = styled(Box)`
   width: 100%;
   height: 1px;
-  background-color: #061023;
+  background-color: #071028;
 `;
 
 export const SeparatorDark = styled(Box)`

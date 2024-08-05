@@ -31,9 +31,9 @@ let DEFAULT_RPCS: any = {
 
 let NETWORK_SETTINGS: { [n: number]: any } = {
   [ChainId.AXDC]: {
-    chainName: "Apothem",
+    chainName: "Solana",
     chainId: `0x${ChainId.AXDC.toString(16)}`,
-    nativeCurrency: { name: "Apothem", decimals: 18, symbol: "AXDC" },
+    nativeCurrency: { name: "Solana", decimals: 18, symbol: "SOL" },
     rpcUrls: [APOTHEM_RPC],
     logoName: "WXDC",
   },
@@ -55,9 +55,9 @@ if (process.env.REACT_APP_ENV === "prod") {
 
   NETWORK_SETTINGS = {
     [ChainId.XDC]: {
-      chainName: "XDC",
+      chainName: "Solana",
       chainId: `0x${ChainId.XDC.toString(16)}`,
-      nativeCurrency: { name: "XDC", decimals: 18, symbol: "XDC" },
+      nativeCurrency: { name: "Solana", decimals: 18, symbol: "SOL" },
       rpcUrls: [XDC_RPC],
       blockExplorerUrls: ["https://explorer.xinfin.network"],
       logoName: "WXDC",

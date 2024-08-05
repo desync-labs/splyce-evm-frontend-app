@@ -107,7 +107,7 @@ export const ImportList: FC<ImportProps> = ({
       <SectionBreak />
       <PaddedColumn gap="md" sx={{ height: "calc(100% - 65px)" }}>
         <FlexColumn>
-          <Card bgcolor="#061023" padding="12px 20px">
+          <Card bgcolor="#071028" padding="12px 20px">
             <RowBetween>
               <RowFixed>
                 {list.logoURI && (

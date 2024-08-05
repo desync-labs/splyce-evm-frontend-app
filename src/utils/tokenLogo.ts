@@ -16,6 +16,18 @@ export const getTokenLogoURL = (address: string) => {
   let findToken;
   const addressLowerCase = address?.toLowerCase();
 
+  if (
+    addressLowerCase === "xdc" ||
+    addressLowerCase === "wxdc" ||
+    addressLowerCase === "sol"
+  ) {
+    return "/icons/tokens/solana.png";
+  }
+
+  if (addressLowerCase === "vnxau") {
+    return `/icons/tokens/cgo.png`;
+  }
+
   if (TOKEN_LIST_LOGOS.includes(addressLowerCase)) {
     return `/icons/tokens/${addressLowerCase}.svg`;
   }

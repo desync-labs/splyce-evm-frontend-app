@@ -52,7 +52,7 @@ const Footer = styled(Box)`
   width: 100%;
   padding: 20px 0;
   background-color: #072a40;
-  border-top: 1px solid #061023;
+  border-top: 1px solid #071028;
   z-index: 9;
 `;
 

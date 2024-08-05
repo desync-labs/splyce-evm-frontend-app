@@ -208,8 +208,8 @@ export const getDesignTokens = () => {
       divider: "#072a40",
       action: {
         active: "#EBEBEF8F",
-        hover: "#2a3e5a",
-        selected: "#2a3e5a",
+        hover: "#072a40",
+        selected: "#072a40",
         disabled: "#EBEBEF4D",
         disabledBackground: "#EBEBEF1F",
         focus: "#EBEBEF1F",

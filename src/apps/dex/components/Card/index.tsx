@@ -13,12 +13,12 @@ export default Card;
 
 export const LightCard = styled(Card)<{ padding?: string }>`
   padding: ${({ padding }) => (padding ? padding : "1.25rem")};
-  border: 1px solid #061023;
+  border: 1px solid #071028;
   background-color: #131f35;
 `;
 
 export const LightGreyCard = styled(Card)`
-  background-color: #061023;
+  background-color: #071028;
 `;
 
 export const GreyCard = styled(Card)`

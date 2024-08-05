@@ -31,7 +31,7 @@ const Section = styled(AutoColumn)`
 `;
 
 const BottomSection = styled(Section)`
-  background-color: #061023;
+  background-color: #071028;
 
   ${({ theme }) => theme.breakpoints.down("sm")} {
     position: absolute;

@@ -484,7 +484,7 @@ const AddLiquidity = () => {
                     sx={{
                       width: "20px",
                       height: "20px",
-                      color: "#061023",
+                      color: "#071028",
                     }}
                   />
                 </IconWrapper>

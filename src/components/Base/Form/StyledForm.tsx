@@ -235,7 +235,7 @@ export const BaseFormTextField = styled(MuiTextField)`
   textarea:disabled {
     height: 46px;
     background: unset;
-    border: 1px solid #072a40;
+    border: 1px solid #566e99;
     color: #566e99;
     -webkit-text-fill-color: unset;
     cursor: not-allowed;

@@ -93,7 +93,7 @@ const StyledMenu = styled(Box)`
 const MenuFlyout = styled(Box)`
   min-width: 320px;
   border-radius: 12px;
-  background: #2a3e5a;
+  background: #072a40;
   box-shadow: 0 12px 32px 0 rgba(0, 7, 21, 0.5);
   padding: 8px;
   display: flex;

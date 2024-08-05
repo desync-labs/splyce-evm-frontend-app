@@ -593,7 +593,7 @@ const Swap = () => {
                 >
                   {approval === ApprovalState.PENDING ? (
                     <AutoRow gap="6px" justify="center">
-                      Approving <Loader stroke="#061023" />
+                      Approving <Loader stroke="#071028" />
                     </AutoRow>
                   ) : approval === ApprovalState.APPROVED ? (
                     "Approved"

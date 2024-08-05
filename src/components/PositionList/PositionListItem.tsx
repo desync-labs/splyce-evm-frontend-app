@@ -59,7 +59,7 @@ const PositionListItem: FC<PositionListItemProps> = ({
         </Stack>
       </TableCell>
       <TableCell>${formatPercentage(position.liquidationPrice)}</TableCell>
-      <TableCell>{formatNumber(position.debtValue)} FXD</TableCell>
+      <TableCell>{formatNumber(position.debtValue)} spUSD</TableCell>
       <TableCell>
         {formatNumberPrice(position.lockedCollateral)}{" "}
         {position.collateralPoolName}

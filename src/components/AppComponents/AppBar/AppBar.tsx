@@ -9,22 +9,20 @@ interface AppBarProps extends MuiAppBarProps {
 
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open",
-})<AppBarProps>(({ theme, open }) => ({
-  alignItems: "flex-end",
-  zIndex: theme.zIndex.drawer - 1,
+})<AppBarProps>(({ theme }) => ({
+  position: "fixed",
+  top: 0,
   background: "#0D0D0D",
   borderBottom: "1px solid #072a40",
   borderRadius: 0,
-  boxShadow:
-    "rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px",
-  ...(open && {
-    marginLeft: drawerWidth,
-    width: `calc(100% - ${drawerWidth}px)`,
-    transition: theme.transitions.create(["width", "margin"], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  }),
+  zIndex: theme.zIndex.drawer - 1,
+
+  "& .MuiToolbar-root": {
+    minHeight: "48px",
+    width: "100%",
+    justifyContent: "space-between",
+    gap: "16px",
+  },
 }));
 
 export default AppBar;

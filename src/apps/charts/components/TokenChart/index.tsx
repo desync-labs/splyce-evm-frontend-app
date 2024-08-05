@@ -329,7 +329,7 @@ const TokenChart: FC<TokenChartProps> = (props) => {
                 border: "none",
                 borderRadius: 8,
                 color: "white",
-                backgroundColor: "#2a3e5a",
+                backgroundColor: "#072a40",
               }}
               wrapperStyle={{ top: -70, left: -10, zIndex: 22 }}
             />
@@ -395,7 +395,7 @@ const TokenChart: FC<TokenChartProps> = (props) => {
                   border: "none",
                   borderRadius: 8,
                   color: "white",
-                  backgroundColor: "#2a3e5a",
+                  backgroundColor: "#072a40",
                 }}
                 wrapperStyle={{ top: -70, left: -10, zIndex: 22 }}
               />
@@ -462,7 +462,7 @@ const TokenChart: FC<TokenChartProps> = (props) => {
                 border: "none",
                 borderRadius: 8,
                 color: "white",
-                backgroundColor: "#2a3e5a",
+                backgroundColor: "#072a40",
               }}
               wrapperStyle={{ top: -70, left: -10, zIndex: 22 }}
             />

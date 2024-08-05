@@ -82,8 +82,8 @@ const PoolsListItem: FC<PoolsListItemPropsType> = ({
           />
         </PriceWrapper>
       </TableCell>
-      <TableCell>{formatNumber(pool.totalBorrowed)} FXD</TableCell>
-      <TableCell>{formatNumber(pool.totalAvailable)} FXD</TableCell>
+      <TableCell>{formatNumber(pool.totalBorrowed)} spUSD</TableCell>
+      <TableCell>{formatNumber(pool.totalAvailable)} spUSD</TableCell>
       <TableCell align="right">
         <OpenPositionButton onClick={() => setSelectedPool(pool)}>
           <AddCircleIcon

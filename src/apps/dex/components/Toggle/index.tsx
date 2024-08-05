@@ -28,7 +28,7 @@ const StyledToggle = styled("button")<{
 }>`
   border-radius: 12px;
   border: none;
-  background: #061023;
+  background: #071028;
   display: flex;
   width: fit-content;
   cursor: pointer;
