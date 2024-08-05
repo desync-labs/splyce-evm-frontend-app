@@ -67,7 +67,9 @@ const TopUpPositionDialog: FC<ClosePositionDialogPropsType> = ({
             setTopUpPosition={setTopUpPosition}
             setClosePosition={setClosePosition}
           />
-          {["XDC", "CGO"].includes(pool?.poolName?.toUpperCase()) && (
+          {["XDC", "CGO", "SOL", "VNXAU"].includes(
+            pool?.poolName?.toUpperCase()
+          ) && (
             <PositionFormAiAssist
               pool={pool}
               borrowInput={totalFathomToken}
@@ -84,7 +86,7 @@ const TopUpPositionDialog: FC<ClosePositionDialogPropsType> = ({
               />
               <Typography>
                 Resulting in lowering safety buffer - consider provide more
-                collateral or borrow less FXD.
+                collateral or borrow less spUSD.
               </Typography>
             </BaseWarningBox>
           )}

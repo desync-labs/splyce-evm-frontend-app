@@ -77,7 +77,7 @@ const OpenNewPositionDialog: FC = () => {
                   target={"_blank"}
                   rel="noreferrer"
                 >
-                  Apply for being added to the whitelist to borrow FXD.
+                  Apply for being added to the whitelist to borrow spUSD.
                 </a>
               </Typography>
             </BaseWarningBox>
@@ -100,7 +100,7 @@ const OpenNewPositionDialog: FC = () => {
               />
               <Typography>
                 Safety Buffer is moved into the danger zone. We recommend
-                borrowing a lesser amount of FXD. Otherwise, your position may
+                borrowing a lesser amount of spUSD. Otherwise, your position may
                 be at risk of liquidation if the price of collateral will drop.
               </Typography>
             </BaseWarningBox>

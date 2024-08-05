@@ -84,7 +84,7 @@ const TopUpPositionForm: FC<ClosePositionDialogPropsType> = ({
           rules={{
             validate: (value) => {
               if (BigNumber(value).isGreaterThan(availableFathomInPool)) {
-                return "Not enough FXD in pool";
+                return "Not enough spUSD in pool";
               }
 
               if (validateMaxBorrowAmount()) {
@@ -152,7 +152,7 @@ const TopUpPositionForm: FC<ClosePositionDialogPropsType> = ({
                             component={"span"}
                             sx={{ fontSize: "12px", paddingLeft: "6px" }}
                           >
-                            Enter the desired FXD.
+                            Enter the desired spUSD.
                           </Box>
                         </BaseFormInputErrorWrapper>
                       )}

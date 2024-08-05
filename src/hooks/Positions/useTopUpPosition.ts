@@ -112,8 +112,9 @@ const useTopUpPosition = (
      * PRICE OF COLLATERAL FROM DEX
      */
     const priceOfCollateralFromDex =
-      ["XDC", "CGO", "ETH"].includes(pool.poolName.toUpperCase()) ||
-      pool.poolName === "CollateralTokenAdapterJeju"
+      ["XDC", "CGO", "ETH", "SOL", "VNXAU"].includes(
+        pool.poolName.toUpperCase()
+      ) || pool.poolName === "CollateralTokenAdapterJeju"
         ? BigNumber(pool.collateralLastPrice)
             .multipliedBy(10 ** 18)
             .toNumber()
@@ -353,7 +354,8 @@ const useTopUpPosition = (
         if (BigNumber(fathomToken).isGreaterThan(0)) {
           if (
             pool.poolName.toUpperCase() === "XDC" ||
-            pool.poolName.toUpperCase() === "ETH"
+            pool.poolName.toUpperCase() === "ETH" ||
+            pool.poolName.toUpperCase() === "SOL"
           ) {
             blockNumber = await positionService.topUpPositionAndBorrow(
               account,

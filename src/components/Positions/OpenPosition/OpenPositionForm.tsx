@@ -60,7 +60,7 @@ const OpenPositionForm = () => {
             min: FXD_MINIMUM_BORROW_AMOUNT,
             validate: (value) => {
               if (BigNumber(value).isGreaterThan(availableFathomInPool)) {
-                return "Not enough FXD in pool";
+                return "Not enough spUSD in pool";
               }
 
               if (validateMaxBorrowAmount()) {
@@ -127,7 +127,7 @@ const OpenPositionForm = () => {
                             component={"span"}
                             sx={{ fontSize: "12px", paddingLeft: "6px" }}
                           >
-                            Enter the desired FXD.
+                            Enter the desired spUSD.
                           </Box>
                         </BaseFormInputErrorWrapper>
                       )}
