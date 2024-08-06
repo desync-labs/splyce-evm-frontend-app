@@ -20,6 +20,9 @@ spec:
     helm:
       valueFiles:
         - values.yaml
+      parameters:
+        - name: image.tag
+          value: latest
   syncPolicy:
     automated:
       prune: true

@@ -16,7 +16,7 @@ spec:
   source:
     path: "k8s"
     repoURL: 'git@github.com:Into-the-Fathom/splyce-frontend-app.git'
-    targetRevision: ci-cd
+    targetRevision: dev
     helm:
       valueFiles:
         - values-dev.yaml
