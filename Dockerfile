@@ -19,7 +19,7 @@ RUN npm install react-scripts@3.4.3 -g
 COPY . ./
 
 # Set Node.js options to increase memory limit
-ENV NODE_OPTIONS="--max-old-space-size=4096"
+ENV NODE_OPTIONS="--max-old-space-size=8192"
 
 # Build the application
 RUN npm run build:dev
