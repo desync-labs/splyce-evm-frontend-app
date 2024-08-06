@@ -41,11 +41,10 @@ jobs:
         run: docker push intothefathom/splyce-frontend-app:${{ github.sha }}
 
       - name: Sync Argo CD
-        uses: argoproj/argocd-action@v1.1
+        uses: argoproj/argocd-action@v2.5.3
         with:
-          apiUrl: ${{ secrets.ARGOCD_API_URL }}
-          authToken: ${{ secrets.ARGOCD_AUTH_TOKEN }}
-          appName: 'splyce-frontend-app'
-          revision: 'dev'
-          parameters: image.tag=${{ github.sha }}
-          waitSync: true
+          api-url: ${{ secrets.ARGOCD_API_URL }}
+          auth-token: ${{ secrets.ARGOCD_AUTH_TOKEN }}
+          app: 'splyce-frontend-app'
+          sync-options: >
+            --parameter image.tag=${{ github.sha }}
