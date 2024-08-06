@@ -88,14 +88,14 @@ const Footer = () => {
           target={"_blank"}
           rel="noreferrer"
         >
-          FXD
+          spUSD
         </a>
         <a
           href={"https://docs.fathom.fi/fthm-deployments"}
           target={"_blank"}
           rel="noreferrer"
         >
-          FTHM
+          SPLY
         </a>
       </LinksWrapper>
       {/*<Copyright>*/}

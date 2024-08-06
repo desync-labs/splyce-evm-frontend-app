@@ -2,7 +2,6 @@ import { memo, useMemo } from "react";
 import { useLocation } from "react-router-dom";
 
 import {
-  DISPLAY_CHARTS,
   DISPLAY_FXD,
   DISPLAY_GOVERNANCE,
   DISPLAY_LENDING,
@@ -20,10 +19,10 @@ export const Menu = memo(() => {
     () => location.pathname.includes("fxd"),
     [location.pathname]
   );
-  const isStableSwapActive = useMemo(
-    () => location.pathname.includes("/stable-swap"),
-    [location.pathname]
-  );
+  // const isStableSwapActive = useMemo(
+  //   () => location.pathname.includes("/stable-swap"),
+  //   [location.pathname]
+  // );
   const isDAOActive = useMemo(
     () => location.pathname.includes("/dao"),
     [location.pathname]
@@ -43,10 +42,10 @@ export const Menu = memo(() => {
     [location.pathname]
   );
 
-  const isChartsActive = useMemo(
-    () => location.pathname.includes("charts"),
-    [location.pathname]
-  );
+  // const isChartsActive = useMemo(
+  //   () => location.pathname.includes("charts"),
+  //   [location.pathname]
+  // );
 
   const appMenuItems = [];
 
@@ -58,13 +57,13 @@ export const Menu = memo(() => {
     });
   }
 
-  if (!chainId || DISPLAY_STABLE_SWAP.includes(chainId)) {
-    appMenuItems.push({
-      name: "Stable Swap",
-      link: "/stable-swap",
-      isActive: isStableSwapActive,
-    });
-  }
+  // if (!chainId || DISPLAY_STABLE_SWAP.includes(chainId)) {
+  //   appMenuItems.push({
+  //     name: "Stable Swap",
+  //     link: "/stable-swap",
+  //     isActive: isStableSwapActive,
+  //   });
+  // }
 
   if (!chainId || DISPLAY_LENDING.includes(chainId)) {
     appMenuItems.push({
@@ -90,13 +89,13 @@ export const Menu = memo(() => {
   //   });
   // }
 
-  if (!chainId || DISPLAY_CHARTS.includes(chainId)) {
-    appMenuItems.push({
-      name: "Charts",
-      link: "/charts",
-      isActive: isChartsActive,
-    });
-  }
+  // if (!chainId || DISPLAY_CHARTS.includes(chainId)) {
+  //   appMenuItems.push({
+  //     name: "Charts",
+  //     link: "/charts",
+  //     isActive: isChartsActive,
+  //   });
+  // }
 
   if (!chainId || DISPLAY_GOVERNANCE.includes(chainId)) {
     appMenuItems.push({
