@@ -151,7 +151,7 @@ const useVaultOpenDeposit = (vault: IVault, onClose: () => void) => {
         (type === VaultType.TRADEFI
           ? formattedDepositLimit.toNumber()
           : MAX_PERSONAL_DEPOSIT) / 1000
-      }k ${token.symbol} limit has been exceeded.`;
+      }k Splyce USD limit has been exceeded.`;
     } else {
       return false;
     }
@@ -177,7 +177,7 @@ const useVaultOpenDeposit = (vault: IVault, onClose: () => void) => {
       if (BigNumber(value).isGreaterThan(formattedMaxDepositLimit)) {
         return `Deposit value exceeds the maximum allowed limit ${formatNumber(
           formattedMaxDepositLimit.toNumber()
-        )} ${token.symbol}`;
+        )} Splyce USD`;
       }
       if (
         BigNumber(value).isGreaterThan(
@@ -188,9 +188,7 @@ const useVaultOpenDeposit = (vault: IVault, onClose: () => void) => {
           BigNumber(depositLimit)
             .dividedBy(10 ** 18)
             .toNumber() / 1000
-        }k ${
-          token.symbol
-        } limit has been exceeded. Please reduce the amount to continue.`;
+        }k Splyce USD limit has been exceeded. Please reduce the amount to continue.`;
       }
 
       return true;

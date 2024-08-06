@@ -200,7 +200,7 @@ const VaultListItemManageModal: FC<VaultManageProps> = ({
                   <Box flexDirection="column">
                     <Typography width="100%">
                       First-time connect? Please allow token approval in your
-                      MetaMask
+                      Solflare
                     </Typography>
                   </Box>
                 </BaseInfoBox>

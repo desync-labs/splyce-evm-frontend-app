@@ -103,7 +103,7 @@ const ManageVaultInfo: FC<VaultManageInfoProps> = ({
   onSubmit,
   withdrawLimitExceeded,
 }) => {
-  const { token, shareToken, sharesSupply } = vaultItemData;
+  const { shareToken, sharesSupply } = vaultItemData;
   const { balancePosition, balanceShares } = vaultPosition;
   const { account } = useConnector();
 
@@ -119,10 +119,7 @@ const ManageVaultInfo: FC<VaultManageInfoProps> = ({
                 BigNumber(balancePosition)
                   .dividedBy(10 ** 18)
                   .toNumber()
-              ) +
-                " " +
-                token?.name +
-                " "}
+              ) + " spUSD "}
               <Box
                 component="span"
                 sx={{
@@ -136,10 +133,7 @@ const ManageVaultInfo: FC<VaultManageInfoProps> = ({
                         .dividedBy(10 ** 18)
                         .plus(BigNumber(formToken || "0"))
                         .toNumber()
-                    ) +
-                    " " +
-                    token?.name +
-                    " "
+                    ) + " spUSD "
                   : formatPercentage(
                       Math.max(
                         BigNumber(balancePosition)
@@ -148,15 +142,12 @@ const ManageVaultInfo: FC<VaultManageInfoProps> = ({
                           .toNumber(),
                         0
                       )
-                    ) +
-                    " " +
-                    token?.name +
-                    " "}
+                    ) + " spUSD"}
               </Box>
             </>
           }
         >
-          <ListItemText primary={token?.name + " Deposited"} />
+          <ListItemText primary={"Splyce USD Deposited"} />
         </AppListItem>
         <AppListItem
           secondaryAction={
@@ -290,7 +281,7 @@ const ManageVaultInfo: FC<VaultManageInfoProps> = ({
           <InfoIcon />
           <Box flexDirection="column">
             <Typography width="100%">
-              First-time connect? Please allow token approval in your MetaMask
+              First-time connect? Please allow token approval in your Solflare
             </Typography>
           </Box>
         </InfoBoxV2>

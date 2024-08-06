@@ -24,7 +24,7 @@ const DepositVaultInfo: FC<VaultDepositInfoProps> = ({
   sharedToken,
   performanceFee,
 }) => {
-  const { token, shareToken, sharesSupply } = vaultItemData;
+  const { shareToken, sharesSupply } = vaultItemData;
   const formattedApr = useApr(vaultItemData);
 
   return (
@@ -36,14 +36,14 @@ const DepositVaultInfo: FC<VaultDepositInfoProps> = ({
           alignItems="flex-start"
           secondaryAction={
             <>
-              0 {token.name + " "}
+              0 Splyce USD{" "}
               <Box component="span" sx={{ color: "#29C20A" }}>
-                → {formatPercentage(Number(deposit || "0")) + " " + token.name}
+                → {formatPercentage(Number(deposit || "0")) + " Splyce USD"}
               </Box>
             </>
           }
         >
-          <ListItemText primary={token.name + " Deposited"} />
+          <ListItemText primary={"Splyce USD Deposited"} />
         </AppListItem>
         <AppListItem
           alignItems="flex-start"

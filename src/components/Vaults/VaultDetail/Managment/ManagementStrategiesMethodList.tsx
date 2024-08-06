@@ -192,7 +192,7 @@ const ManagementStrategiesMethodList: FC<
   );
   const [currentStrategyName, setCurrentStrategyName] = useState<string>(
     strategyTitle[strategiesIds[0].toLowerCase()] ||
-      `FXD: Direct Incentive - Educational Strategy 1`
+      `spUSD: Direct Incentive - Educational Strategy 1`
   );
   const { isMobile } = useSharedContext();
   const { library, account } = useConnector();
@@ -216,7 +216,7 @@ const ManagementStrategiesMethodList: FC<
     const index = strategiesIds.findIndex((id) => id === value);
     setCurrentStrategyName(
       strategyTitle[value.toLowerCase()] ||
-        `FXD: Direct Incentive - Educational Strategy ${index + 1}`
+        `spUSD: Direct Incentive - Educational Strategy ${index + 1}`
     );
   };
 
@@ -242,7 +242,9 @@ const ManagementStrategiesMethodList: FC<
                 {strategyTitle[id.toLowerCase()] ? (
                   strategyTitle[id.toLowerCase()]
                 ) : (
-                  <>FXD: Direct Incentive - Educational Strategy {index + 1}</>
+                  <>
+                    spUSD: Direct Incentive - Educational Strategy {index + 1}
+                  </>
                 )}{" "}
                 {`(${formatHashShorten(id)})`}
               </MenuItem>

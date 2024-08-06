@@ -98,8 +98,8 @@ const ManageVaultForm: FC<VaultManageFormProps> = ({
               <BaseFormLabelRow>
                 <BaseFormInputLabel>
                   {formType === FormType.DEPOSIT
-                    ? `Deposit ${token?.name}`
-                    : `Withdraw ${token?.name}`}
+                    ? `Deposit Splyce USD`
+                    : `Withdraw Splyce USD`}
                 </BaseFormInputLabel>
                 <AppFlexBox sx={{ width: "auto", justifyContent: "flex-end" }}>
                   <BaseFormWalletBalance>
@@ -110,12 +110,10 @@ const ManageVaultForm: FC<VaultManageFormProps> = ({
                             .dividedBy(10 ** 18)
                             .toNumber()
                         ) +
-                        " " +
-                        token?.name
+                        " Splyce USD"
                       : "Vault Available: " +
                         formatNumber(formattedBalanceToken) +
-                        " " +
-                        token?.name}
+                        " Splyce USD"}
                   </BaseFormWalletBalance>
                 </AppFlexBox>
               </BaseFormLabelRow>

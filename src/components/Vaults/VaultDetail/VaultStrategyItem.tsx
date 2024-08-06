@@ -201,7 +201,7 @@ const VaultStrategyItem: FC<VaultStrategyItemPropsType> = ({
     if (strategyTitle[strategyData.id.toLowerCase()]) {
       return strategyTitle[strategyData.id.toLowerCase()];
     } else {
-      return `FXD: Direct Incentive - Educational Strategy ${index + 1}`;
+      return `spUSD: Direct Incentive - Educational Strategy ${index + 1}`;
     }
   }, [strategyData.id, index]);
 
@@ -230,8 +230,8 @@ const VaultStrategyItem: FC<VaultStrategyItemPropsType> = ({
         ) : (
           <>
             <p>
-              The strategy enhances returns for FXD Vault investors by ensuring
-              continuous earnings. Here's what makes it stand out:
+              The strategy enhances returns for spUSD Vault investors by
+              ensuring continuous earnings. Here's what makes it stand out:
             </p>
             <DescriptionList>
               <li>

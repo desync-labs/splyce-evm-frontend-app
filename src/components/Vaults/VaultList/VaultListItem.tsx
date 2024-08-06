@@ -245,8 +245,8 @@ const VaultListItem: FC<VaultListItemProps> = ({
                       .toNumber(),
                     0
                   )
-                )}{" "}
-            {token.symbol}
+                )}
+            {" spUSD"}
           </VaultAvailable>
         </TableCell>
         <TableCell
@@ -276,7 +276,7 @@ const VaultListItem: FC<VaultListItemProps> = ({
                       .toNumber()
                   )
                 : 0}
-              {" " + token.symbol}
+              {" spUSD"}
             </Box>
           </VaultStacked>
         </TableCell>

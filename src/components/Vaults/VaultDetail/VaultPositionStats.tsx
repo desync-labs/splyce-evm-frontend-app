@@ -88,9 +88,7 @@ const VaultPositionStats = () => {
                   BigNumber(vault?.balanceTokens || 0)
                     .dividedBy(10 ** 18)
                     .toNumber()
-                ) +
-                  " " +
-                  vault?.token?.symbol}
+                ) + " spUSD"}
                 <UsdValue>
                   {"$" +
                     formatNumber(
@@ -118,8 +116,8 @@ const VaultPositionStats = () => {
               />
             ) : (
               <>
-                {formatNumber(getVaultDepositLimit().toNumber())}{" "}
-                {vault?.token?.symbol}
+                {formatNumber(getVaultDepositLimit().toNumber())}
+                {" spUSD"}
                 <UsdValue>
                   {"$" +
                     formatNumber(
@@ -152,9 +150,7 @@ const VaultPositionStats = () => {
                   BigNumber(vaultPosition?.balancePosition || 0)
                     .dividedBy(10 ** 18)
                     .toNumber()
-                ) +
-                  " " +
-                  vault?.token?.symbol}
+                ) + " spUSD"}
                 <UsdValue>
                   {"$" +
                     formatNumber(
@@ -184,9 +180,7 @@ const VaultPositionStats = () => {
                 />
               ) : BigNumber(balanceEarned).isGreaterThan(0) ? (
                 <>
-                  {formatNumber(Number(balanceEarned)) +
-                    " " +
-                    vault?.token?.symbol}
+                  {formatNumber(Number(balanceEarned)) + " spUSD"}
                   <UsdValue>
                     {"$" +
                       formatNumber(
@@ -199,7 +193,7 @@ const VaultPositionStats = () => {
                 </>
               ) : (
                 <>
-                  0 {vault?.token?.symbol}
+                  0 spUSD
                   <UsdValue>$0</UsdValue>
                 </>
               )}

@@ -24,7 +24,7 @@ export const getTokenLogoURL = (address: string) => {
     return "/icons/tokens/solana.png";
   }
 
-  if (addressLowerCase === "vnxau") {
+  if (addressLowerCase === "vnxau" || addressLowerCase === "cgo") {
     return `/icons/tokens/cgo.png`;
   }
 

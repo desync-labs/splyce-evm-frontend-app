@@ -75,7 +75,7 @@ const PositionActivityListItemAmounts: FC<{
             alt={"logo"}
           />
           <TokenAmount>
-            {formatNumber(Number(transaction.debtAmount))} FXD
+            {formatNumber(Number(transaction.debtAmount))} spUSD
           </TokenAmount>
         </PositionActivityListItemAmountsItemWrapper>
 
@@ -132,7 +132,7 @@ const PositionActivityListItemAmounts: FC<{
             alt={"logo"}
           />
           <TokenAmount>
-            +{formatNumber(Number(transaction.debtAmount))} FXD
+            +{formatNumber(Number(transaction.debtAmount))} spUSD
           </TokenAmount>
         </PositionActivityListItemAmountsItemWrapper>
       </PositionActivityListItemAmountsWrapper>
@@ -170,7 +170,7 @@ const PositionActivityListItemAmounts: FC<{
             alt={"logo"}
           />
           <TokenAmount>
-            {formatNumber(Number(transaction.debtAmount))} FXD
+            {formatNumber(Number(transaction.debtAmount))} spUSD
           </TokenAmount>
         </PositionActivityListItemAmountsItemWrapper>
       </PositionActivityListItemAmountsWrapper>
@@ -200,7 +200,7 @@ const PositionActivityListItemAmounts: FC<{
       <PositionActivityListItemAmountsItemWrapper>
         <img width={20} height={20} src={getTokenLogoURL("FXD")} alt={"logo"} />
         <TokenAmount>
-          +{formatNumber(Number(transaction.debtAmount))} FXD
+          +{formatNumber(Number(transaction.debtAmount))} spUSD
         </TokenAmount>
       </PositionActivityListItemAmountsItemWrapper>
     </PositionActivityListItemAmountsWrapper>
