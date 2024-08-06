@@ -25,7 +25,6 @@ type ITitleItem = { title: string; index: number; type: VaultType };
 
 export const getDefaultVaultTitle = (
   vaultType: VaultType = VaultType.INCENTIVE,
-  asset = "spUSD",
   vaultId: string
 ) => {
   const vaultTitles: { [key: string]: ITitleItem } = sessionStorage.getItem(
