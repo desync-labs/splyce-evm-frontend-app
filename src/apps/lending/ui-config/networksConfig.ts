@@ -69,7 +69,7 @@ export const networkConfigs: Record<string, BaseNetworkConfig> = {
      * This need until we have no production market.
      */
     isTestnet: true,
-    networkLogoPath: "./icons/networks/xdc.png",
+    networkLogoPath: "./icons/tokens/sol.svg",
     ratesHistoryApiUrl: "https://dev-lending.fathom.fi/data/rates-history",
   },
   [FathomLendingXdc.CHAIN_ID]: {

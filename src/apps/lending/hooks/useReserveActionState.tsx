@@ -64,7 +64,7 @@ export const useReserveActionState = ({
                   }}
                   sx={{ "&:hover": { textDecoration: "underline" } }}
                 >
-                  {networkName} Faucet
+                  Solana Faucet
                 </Link>
               </Warning>
             ) : (

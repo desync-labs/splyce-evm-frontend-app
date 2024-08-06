@@ -130,7 +130,10 @@ export const ReserveTopDetailsWrapper: FC<ReserveTopDetailsProps> = memo(
               <Box sx={{ display: "flex", alignItems: "center" }}>
                 <MarketLogo size={20} logo={network.networkLogoPath} />
                 <Typography variant="subheader1" sx={{ color: "common.white" }}>
-                  {market.marketTitle} Market
+                  {market.marketTitle === "XDC Apothem"
+                    ? "Solana"
+                    : market.marketTitle}{" "}
+                  Market
                 </Typography>
               </Box>
             </Box>

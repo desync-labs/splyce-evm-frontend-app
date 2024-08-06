@@ -23,9 +23,9 @@ export function fetchIconSymbolAndName({
     currentMarket === CustomMarket.proto_mainnet_v3
       ? {
           "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee": {
-            name: "XDC",
-            symbol: "XDC",
-            iconSymbol: "XDC",
+            name: "SOLANA",
+            symbol: "SOL",
+            iconSymbol: "SOL",
           },
         }
       : {
@@ -41,6 +41,44 @@ export function fetchIconSymbolAndName({
     return {
       symbol,
       ...underlyingAssetMap[lowerUnderlyingAsset],
+    };
+  }
+
+  if (symbol === "CGO") {
+    return {
+      iconSymbol: "VNXAU",
+      name: "VNX Gold",
+      symbol: "VNXAU",
+    };
+  } else if (symbol === "EURS") {
+    return {
+      iconSymbol: "EURC",
+      name: "EURC",
+      symbol: "EURC",
+    };
+  } else if (symbol === "USDTx") {
+    return {
+      iconSymbol: "USDC",
+      name: "USDC",
+      symbol: "USDC",
+    };
+  } else if (symbol === "WXDC") {
+    return {
+      iconSymbol: "SOL",
+      name: "Wrapped SOLANA",
+      symbol: "WSOL",
+    };
+  } else if (symbol === "FXD") {
+    return {
+      iconSymbol: "FXD",
+      name: "Splyce USD",
+      symbol: "spUSD",
+    };
+  } else if (symbol === "FTHM") {
+    return {
+      iconSymbol: "FTHM",
+      name: "Splyce Protocol Token",
+      symbol: "SPLY",
     };
   }
 
