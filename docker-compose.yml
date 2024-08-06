@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  splyce-app-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: splyce-app-frontend
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
