@@ -177,7 +177,7 @@ const VaultDetailInfoTabAbout = () => {
           }
           chartDataArray={earnedHistoryArr}
           valueLabel="Earnings"
-          valueUnits={` ${vault?.token?.name}`}
+          valueUnits={" Splyce USD"}
           isLoading={!isReportsLoaded}
         />
       )}

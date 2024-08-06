@@ -99,7 +99,7 @@ const DepositVaultInfo: FC<DepositVaultInfoProps> = ({
   onSubmit,
 }) => {
   const { isTfVaultType, isUserKycPassed } = useVaultContext();
-  const { token, shareToken, sharesSupply } = vaultItemData;
+  const { shareToken, sharesSupply } = vaultItemData;
   const { account } = useConnector();
 
   return (
@@ -111,14 +111,14 @@ const DepositVaultInfo: FC<DepositVaultInfoProps> = ({
           alignItems="flex-start"
           secondaryAction={
             <>
-              0 {token?.name + " "}
+              0 spUSD{" "}
               <Box component="span" sx={{ color: "#29C20A" }}>
-                → {formatPercentage(Number(deposit || "0")) + " " + token?.name}
+                → {formatPercentage(Number(deposit || "0")) + " spUSD"}
               </Box>
             </>
           }
         >
-          <ListItemText primary={token?.name + " Deposited"} />
+          <ListItemText primary={"Splyce USD Deposited"} />
         </AppListItem>
         <AppListItem
           alignItems="flex-start"
@@ -180,7 +180,7 @@ const DepositVaultInfo: FC<DepositVaultInfoProps> = ({
           <InfoIcon />
           <Box flexDirection="column">
             <Typography width="100%">
-              First-time connect? Please allow token approval in your MetaMask
+              First-time connect? Please allow token approval in your Solflare
             </Typography>
           </Box>
         </InfoBoxV2>

@@ -105,7 +105,7 @@ const VaultDetailInfoTabStrategies = () => {
     isReportsLoaded,
     urlParams,
   } = useVaultContext();
-  const { strategies, balanceTokens, token } = vault;
+  const { strategies, balanceTokens } = vault;
   const location = useLocation();
 
   const [activeStrategy, setActiveStrategy] = useState<string>("");
@@ -183,7 +183,7 @@ const VaultDetailInfoTabStrategies = () => {
                     strategyTitle[strategy.id.toLowerCase()]
                   ) : (
                     <>
-                      FXD: Direct Incentive - Educational Strategy {index + 1}
+                      spUSD: Direct Incentive - Educational Strategy {index + 1}
                     </>
                   )}
                 </Button>
@@ -197,7 +197,7 @@ const VaultDetailInfoTabStrategies = () => {
               reports={reports[strategy.id] || []}
               historicalApr={historicalApr[strategy.id] || []}
               vaultBalanceTokens={balanceTokens}
-              tokenName={token.name}
+              tokenName={"Splyce USD"}
               performanceFee={performanceFee}
               index={index}
               isShow={activeStrategy === strategy.id}

@@ -380,7 +380,8 @@ export const AppFlexBox = styled(Box)`
 
 export const EmptyVaultsWrapper = styled(Box)`
   width: 100%;
-  background: rgb(19, 35, 64);
+  background: #051926;
+  border: 1px solid #072a40;
   border-radius: 12px;
   padding: 16px;
 `;

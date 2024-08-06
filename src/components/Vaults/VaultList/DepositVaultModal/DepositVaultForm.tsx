@@ -85,7 +85,7 @@ const DepositVaultForm: FC<VaultDepositFormProps> = ({
           render={({ field: { onChange, value }, fieldState: { error } }) => (
             <BaseFormInputWrapper>
               <BaseFormLabelRow>
-                <BaseFormInputLabel>Deposit {token?.name}</BaseFormInputLabel>
+                <BaseFormInputLabel>Deposit Splyce USD</BaseFormInputLabel>
                 <AppFlexBox sx={{ width: "auto", justifyContent: "flex-end" }}>
                   <BaseFormWalletBalance>
                     Balance:{" "}
@@ -93,9 +93,7 @@ const DepositVaultForm: FC<VaultDepositFormProps> = ({
                       BigNumber(walletBalance)
                         .dividedBy(10 ** 18)
                         .toNumber()
-                    ) +
-                      " " +
-                      token?.name}
+                    ) + " Splyce USD"}
                   </BaseFormWalletBalance>
                 </AppFlexBox>
               </BaseFormLabelRow>

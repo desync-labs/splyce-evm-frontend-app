@@ -25,7 +25,7 @@ type ITitleItem = { title: string; index: number; type: VaultType };
 
 export const getDefaultVaultTitle = (
   vaultType: VaultType = VaultType.INCENTIVE,
-  asset = "FXD",
+  asset = "spUSD",
   vaultId: string
 ) => {
   const vaultTitles: { [key: string]: ITitleItem } = sessionStorage.getItem(
@@ -49,7 +49,7 @@ export const getDefaultVaultTitle = (
         .map((item) => item.index as number);
       index = indexes.length ? Math.max(...indexes) : 0;
       index++;
-      title = `DeFi vault (${asset}) #${index}`;
+      title = `DeFi vault (Splyce USD) #${index}`;
       break;
     case VaultType.TRADEFI:
       indexes = Object.values(vaultTitles)
@@ -57,7 +57,7 @@ export const getDefaultVaultTitle = (
         .map((item) => item.index as number);
       index = indexes.length ? Math.max(...indexes) : 0;
       index++;
-      title = `TradeFi vault (${asset}) #${index}`;
+      title = `TradeFi vault (Splyce USD) #${index}`;
       break;
     case VaultType.INCENTIVE:
       indexes = Object.values(vaultTitles)
@@ -65,7 +65,7 @@ export const getDefaultVaultTitle = (
         .map((item) => item.index as number);
       index = indexes.length ? Math.max(...indexes) : 0;
       index++;
-      title = `Incentive vault (${asset}) #${index}`;
+      title = `Incentive vault (Splyce USD) #${index}`;
       break;
     default:
       indexes = Object.values(vaultTitles)
@@ -74,7 +74,7 @@ export const getDefaultVaultTitle = (
       index = indexes.length ? Math.max(...indexes) : 0;
       index++;
       type = VaultType.INCENTIVE;
-      title = `Incentive vault (${asset}) #${index}`;
+      title = `Incentive vault (Splyce USD) #${index}`;
       break;
   }
 
@@ -93,16 +93,16 @@ export const getDefaultVaultDescription = (
       return (
         <>
           This vault functions as a pool of funds with an automated management
-          of various DeFi product strategies. Users can deposit FXD into this
+          of various DeFi product strategies. Users can deposit spUSD into this
           vault, which distributes funds between strategies such as yield
           farming, lending, borrowing, etc. In return, the user receives a vault
-          share token. Note that this token is not 1:1 equivalent with FXD
-          deposited. The FXD vault only charges performance fees as a percentage
-          of the strategies manager's fees. Strategies managers can set
-          individual management fees, but only for gain. Note that the vault
+          share token. Note that this token is not 1:1 equivalent with spUSD
+          deposited. The spUSD vault only charges performance fees as a
+          percentage of the strategies manager's fees. Strategies managers can
+          set individual management fees, but only for gain. Note that the vault
           smart contracts have been carefully audited. Nevertheless, as always
           in DeFi, users are exposed to smart contract risk. The vault smart
-          contracts themselves are non-custodial. Fathom is not responsible for
+          contracts themselves are non-custodial. Splyce is not responsible for
           the security of strategies created by a 3-rd party or in partnership
           with a 3-rd party.
         </>
@@ -111,16 +111,16 @@ export const getDefaultVaultDescription = (
       return (
         <>
           This vault functions as a pool of funds with an automated management
-          of various TradeFi product strategies. Users can deposit FXD into this
-          vault, which distributes funds between strategies such as
+          of various TradeFi product strategies. Users can deposit spUSD into
+          this vault, which distributes funds between strategies such as
           commodity-backed cash alterfiative. In return, the user receives a
-          vault share token. Note that this token is not 1:1 equivalent with FXD
-          deposited. The FXD vault only charges performance fees as a percentage
-          of the strategies manager's fees. Strategies managers can set
-          individual management fees, but only for gain. Note that the vault
+          vault share token. Note that this token is not 1:1 equivalent with
+          spUSD deposited. The spUSD vault only charges performance fees as a
+          percentage of the strategies manager's fees. Strategies managers can
+          set individual management fees, but only for gain. Note that the vault
           smart contracts have been carefully audited. Nevertheless, as always
           in DeFi, users are exposed to smart contract risk. The vault smart
-          contracts themselves are non-custodial. Fathom is not responsible for
+          contracts themselves are non-custodial. Splyce is not responsible for
           the security of strategies created by a 3-rd party or in partnership
           with a 3-rd party.
         </>
@@ -129,16 +129,16 @@ export const getDefaultVaultDescription = (
       return (
         <>
           This vault functions as a pool of funds with an automated management
-          of various incentive strategies. Users can deposit FXD into this
+          of various incentive strategies. Users can deposit spUSD into this
           vault, which distributes funds between strategies created to
-          incentivize users to participate in the Fathom protocol. In return,
+          incentivize users to participate in the Splyce protocol. In return,
           the user receives a vault share token. Note that this token is not 1:1
-          equivalent with FXD deposited. The FXD vault only charges performance
-          fees as a percentage of the strategies manager's fees. Strategies
-          managers can set individual management fees, but only for gain. Note
-          that the vault smart contracts have been carefully audited.
+          equivalent with spUSD deposited. The spUSD vault only charges
+          performance fees as a percentage of the strategies manager's fees.
+          Strategies managers can set individual management fees, but only for
+          gain. Note that the vault smart contracts have been carefully audited.
           Nevertheless, as always in DeFi, users are exposed to smart contract
-          risk. The vault smart contracts themselves are non-custodial. Fathom
+          risk. The vault smart contracts themselves are non-custodial. Splyce
           is not responsible for the security of strategies created by a 3-rd
           party or in partnership with a 3-rd party.
         </>
@@ -147,16 +147,16 @@ export const getDefaultVaultDescription = (
       return (
         <>
           This vault functions as a pool of funds with an automated management
-          of various incentive strategies. Users can deposit FXD into this
+          of various incentive strategies. Users can deposit spUSD into this
           vault, which distributes funds between strategies created to
-          incentivize users to participate in the Fathom protocol. In return,
+          incentivize users to participate in the Splyce protocol. In return,
           the user receives a vault share token. Note that this token is not 1:1
-          equivalent with FXD deposited. The FXD vault only charges performance
-          fees as a percentage of the strategies manager's fees. Strategies
-          managers can set individual management fees, but only for gain. Note
-          that the vault smart contracts have been carefully audited.
+          equivalent with spUSD deposited. The spUSD vault only charges
+          performance fees as a percentage of the strategies manager's fees.
+          Strategies managers can set individual management fees, but only for
+          gain. Note that the vault smart contracts have been carefully audited.
           Nevertheless, as always in DeFi, users are exposed to smart contract
-          risk. The vault smart contracts themselves are non-custodial. Fathom
+          risk. The vault smart contracts themselves are non-custodial. Splyce
           is not responsible for the security of strategies created by a 3-rd
           party or in partnership with a 3-rd party.
         </>
@@ -221,7 +221,7 @@ vaultDescription["0x5a51e6d4c58f1585d74ce71cf709c4f939c3dac2".toLowerCase()] = (
   <>
     <ul>
       <li>
-        <strong>1. Sponsorship and Management:</strong> <br /> Fathom Vault is a
+        <strong>1. Sponsorship and Management:</strong> <br /> Splyce Vault is a
         decentralized finance (DeFi) vault technology platform. The vault is
         sponsored by TradeFlow Capital, a licensed asset manager responsible for
         attracting stablecoin investors and reinvesting the funds in trade
@@ -232,35 +232,35 @@ vaultDescription["0x5a51e6d4c58f1585d74ce71cf709c4f939c3dac2".toLowerCase()] = (
       <li>
         <strong>2. Know Your Customer (KYC) and Terms Agreement: </strong>{" "}
         <br />
-        All participants in the Fathom Vault must undergo and pass the KYC
+        All participants in the Splyce Vault must undergo and pass the KYC
         process conducted by TradeFlow Capital. By participating, investors
-        agree to the terms and conditions set forth by TradeFlow Capital. Fathom
+        agree to the terms and conditions set forth by TradeFlow Capital. Splyce
         Vault is not involved in the KYC process and does not have access to or
         control over the information provided by investors for KYC purposes.
       </li>
       <li>
-        <strong>3. Liability Disclaimer:</strong> <br /> Fathom Vault operates
+        <strong>3. Liability Disclaimer:</strong> <br /> Splyce Vault operates
         solely as a technology platform facilitating the operation of the vault.
-        Fathom Vault does not manage, control, or influence the investment
+        Splyce Vault does not manage, control, or influence the investment
         decisions made by TradeFlow Capital. All investment activities,
         including but not limited to the reinvestment in trade finance deals,
         are conducted by TradeFlow Capital under their regulatory and compliance
         framework.
       </li>
       <li>
-        <strong>4. Limitation of Liability:</strong> <br /> Fathom Vault, its
+        <strong>4. Limitation of Liability:</strong> <br /> Splyce Vault, its
         affiliates, and its technology partners shall not be liable for any
         direct, indirect, incidental, special, or consequential damages arising
         from or in connection with the use of the platform, including but not
         limited to investment losses, loss of profits, or loss of data.
         Investors acknowledge and agree that their participation in the vault is
-        at their own risk and that Fathom Vault provides no guarantees or
+        at their own risk and that Splyce Vault provides no guarantees or
         warranties regarding the performance of the investments managed by
         TradeFlow Capital.
       </li>
       <li>
         <strong>5. Indemnification:</strong> <br /> Investors agree to
-        indemnify, defend, and hold harmless Fathom Vault, its affiliates,
+        indemnify, defend, and hold harmless Splyce Vault, its affiliates,
         officers, directors, employees, and agents from and against any claims,
         liabilities, damages, losses, and expenses, including reasonable
         attorney's fees, arising out of or in any way connected with their use
@@ -292,7 +292,7 @@ vaultTitle["0xbf4adcc0a8f2c7e29f934314ce60cf5de38bfe8f".toLowerCase()] =
 vaultTitle["0x3c8e9896933b374e638f9a5c309535409129aaa2".toLowerCase()] =
   "Education Vault";
 vaultTitle["0x5a51e6d4c58f1585d74ce71cf709c4f939c3dac2".toLowerCase()] =
-  "TradeFi Vault (FXD) #1";
+  "TradeFi Vault (spUSD) #1";
 vaultTitle["0x7e5c3caD163963d7AFef7143a19919310243AC21".toLowerCase()] =
   "TradeFi Vault (AutoTest)";
 

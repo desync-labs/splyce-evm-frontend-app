@@ -85,7 +85,7 @@ const InputTokenLabelSymbol = styled("div")`
 const InputTokenLabel = ({ tokenSymbol }: { tokenSymbol: string }) => {
   return (
     <InputTokenLabelRow>
-      <img src={getTokenLogoURL(tokenSymbol)} alt={tokenSymbol} />
+      <img src={getTokenLogoURL("FXD")} alt={tokenSymbol} />
       <InputTokenLabelSymbol>{tokenSymbol}</InputTokenLabelSymbol>
     </InputTokenLabelRow>
   );
@@ -215,7 +215,7 @@ const VaultProfitCalculator = () => {
               .dividedBy(10 ** 18)
               .toNumber()
           )}`}</CalculatorUsdIndicator>
-          <InputTokenLabel tokenSymbol={token?.symbol || ""} />
+          <InputTokenLabel tokenSymbol={"spUSD"} />
         </CalculatorInputWrapper>
         <CalculatorInputWrapper>
           <AppFormLabelRow>
@@ -225,7 +225,7 @@ const VaultProfitCalculator = () => {
             disabled
             id="outlined-helperText"
             placeholder={"0"}
-            value={`+ ${estimatedEarning} ${token?.symbol}`}
+            value={`+ ${estimatedEarning} spUSD`}
             type="string"
           />
           <CalculatorUsdIndicator>{`$${formatNumber(

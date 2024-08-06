@@ -85,7 +85,7 @@ const RepayPositionForm: FC<ClosePositionDialogPropsType> = ({
           Total debt:
         </Box>
         <Box sx={{ fontWeight: 600, fontSize: isMobile ? "12px" : "14px" }}>
-          {formatPercentage(Number(debtValue))} FXD
+          {formatPercentage(Number(debtValue))} spUSD
         </Box>
       </Stack>
       <BaseFormInputWrapper>
@@ -93,7 +93,7 @@ const RepayPositionForm: FC<ClosePositionDialogPropsType> = ({
           <BaseFormInputLabel>Repaying</BaseFormInputLabel>
           {balance && (
             <BaseFormWalletBalance>
-              Balance: {formatPercentage(Number(balance))} FXD
+              Balance: {formatPercentage(Number(balance))} spUSD
             </BaseFormWalletBalance>
           )}
         </BaseFormLabelRow>

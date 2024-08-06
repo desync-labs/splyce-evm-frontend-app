@@ -178,7 +178,7 @@ const useVaultManageDeposit = (
     if (BigNumber(value).isGreaterThan(maxDepositLimit)) {
       return `Deposit value exceeds the maximum allowed limit ${formatNumber(
         maxDepositLimit.toNumber()
-      )} ${token.symbol}`;
+      )} spUSD`;
     }
 
     const formattedDeposit = BigNumber(depositLimit).dividedBy(10 ** 18);
@@ -191,9 +191,9 @@ const useVaultManageDeposit = (
             .isGreaterThan(formattedDeposit);
 
     if (rule) {
-      return `The ${formattedDeposit.toNumber() / 1000}k ${
-        token.symbol
-      } limit has been exceeded. Please reduce the amount to continue.`;
+      return `The ${
+        formattedDeposit.toNumber() / 1000
+      }k spUSD limit has been exceeded. Please reduce the amount to continue.`;
     }
 
     return true;
@@ -216,7 +216,7 @@ const useVaultManageDeposit = (
         type === VaultType.TRADEFI
           ? formattedDepositLimit.toNumber()
           : MAX_PERSONAL_DEPOSIT / 1000
-      }k ${token.symbol} limit has been exceeded.`;
+      }k spUSD limit has been exceeded.`;
     } else {
       return false;
     }
@@ -233,13 +233,13 @@ const useVaultManageDeposit = (
         BigNumber(maxBalanceToken).minus(value).isGreaterThan(0) &&
         BigNumber(maxBalanceToken).minus(value).isLessThan(minimumDeposit)
       ) {
-        return `After withdraw ${formatNumber(Number(value))} ${
-          token.name
-        }  you will have ${formatNumber(
+        return `After withdraw ${formatNumber(
+          Number(value)
+        )} spUSD  you will have ${formatNumber(
           BigNumber(maxBalanceToken).minus(value).toNumber()
-        )} ${token.name} less then minimum allowed deposit ${
+        )} spUSD less then minimum allowed deposit ${
           minimumDeposit / 1000
-        }k ${token.name}, you can do full withdraw instead.`;
+        }k spUSD, you can do full withdraw instead.`;
       }
       return false;
     } else {

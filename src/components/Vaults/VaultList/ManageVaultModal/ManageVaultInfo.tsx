@@ -30,7 +30,7 @@ const ManageVaultInfo: FC<VaultManageInfoProps> = ({
   formSharedToken,
   performanceFee,
 }) => {
-  const { token, shareToken, sharesSupply } = vaultItemData;
+  const { shareToken, sharesSupply } = vaultItemData;
   const { balancePosition, balanceShares } = vaultPosition;
   const formattedApr = useApr(vaultItemData);
 
@@ -47,10 +47,7 @@ const ManageVaultInfo: FC<VaultManageInfoProps> = ({
                 BigNumber(balancePosition)
                   .dividedBy(10 ** 18)
                   .toNumber()
-              ) +
-                " " +
-                token.name +
-                " "}
+              ) + " Splyce USD"}
               <Box
                 component="span"
                 sx={{
@@ -64,10 +61,7 @@ const ManageVaultInfo: FC<VaultManageInfoProps> = ({
                         .dividedBy(10 ** 18)
                         .plus(BigNumber(formToken || "0"))
                         .toNumber()
-                    ) +
-                    " " +
-                    token.name +
-                    " "
+                    ) + " Splyce USD"
                   : formatPercentage(
                       Math.max(
                         BigNumber(balancePosition)
@@ -76,15 +70,12 @@ const ManageVaultInfo: FC<VaultManageInfoProps> = ({
                           .toNumber(),
                         0
                       )
-                    ) +
-                    " " +
-                    token.name +
-                    " "}
+                    ) + " Splyce USD"}
               </Box>
             </>
           }
         >
-          <ListItemText primary={token.name + " Deposited"} />
+          <ListItemText primary={"Splyce USD Deposited"} />
         </AppListItem>
         <AppListItem
           alignItems="flex-start"

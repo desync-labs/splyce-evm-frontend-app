@@ -242,8 +242,13 @@ export const VAULTS = gql`
     $skip: Int!
     $shutdown: Boolean
     $chainId: String
+    $id_in: [String!]
   ) {
-    vaults(first: $first, skip: $skip, where: { shutdown: $shutdown }) {
+    vaults(
+      first: $first
+      skip: $skip
+      where: { shutdown: $shutdown, id_in: $id_in }
+    ) {
       id
       token {
         id

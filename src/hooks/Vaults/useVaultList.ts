@@ -56,6 +56,11 @@ const useVaultList = () => {
     fetchMore,
   } = useQuery(VAULTS, {
     variables: {
+      id_in: [
+        "0x50d150069a0fce09e6ded55a75aec67d2be79037",
+        "0x328acd424290fda135da973bc090f42efc514d1c",
+        "0x7a03cead6757fff3bc623f9c76ff61981ffe8f8a",
+      ],
       first: COUNT_PER_PAGE_VAULT,
       skip: 0,
       shutdown: isShutdown,
