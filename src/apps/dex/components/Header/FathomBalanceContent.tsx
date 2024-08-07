@@ -25,7 +25,7 @@ import {
 } from "apps/dex/components/earn/styled";
 
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
-import tokenLogo from "apps/dex/assets/images/token-logo.svg";
+import { getTokenLogoURL } from "utils/tokenLogo";
 
 const ContentWrapper = styled(AutoColumn)`
   width: 100%;
@@ -95,7 +95,7 @@ const FathomBalanceContent: FC<FathomBalanceContent> = ({
                 justify="center"
                 style={{ marginBottom: "20px" }}
               >
-                <FthmTokenAnimated width="48px" src={tokenLogo} />{" "}
+                <FthmTokenAnimated width="48px" src={getTokenLogoURL("FTHM")} />{" "}
                 <TYPE.white fontSize={48} fontWeight={600}>
                   {total?.toFixed(2, { groupSeparator: "," })}
                 </TYPE.white>
