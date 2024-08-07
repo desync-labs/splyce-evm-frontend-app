@@ -79,7 +79,9 @@ export const IncentivesTooltipContent: FC<IncentivesTooltipContentProps> = ({
                   sx={{ fontSize: "20px", mr: 1 }}
                 />
                 <Typography variant={typographyVariant}>
-                  {incentive.rewardTokenSymbol}
+                  {incentive.rewardTokenSymbol === "FTHM"
+                    ? "SPLY"
+                    : incentive.rewardTokenSymbol}
                 </Typography>
               </Box>
             }

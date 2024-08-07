@@ -60,6 +60,16 @@ const PositionActivityListItemAmountsItemWrapper = styled(Box)`
 const PositionActivityListItemAmounts: FC<{
   transaction: IFxdTransaction;
 }> = ({ transaction }) => {
+  const showSolanaTokenSymbol = (token: string) => {
+    if (token.toUpperCase() === "XDC") {
+      return "SOL";
+    }
+    if (token.toUpperCase() === "CGO") {
+      return "VNXAU";
+    }
+    return token.toUpperCase();
+  };
+
   if (
     [PositionActivityState.REPAY, PositionActivityState.CLOSED].includes(
       transaction.activityState
@@ -94,7 +104,7 @@ const PositionActivityListItemAmounts: FC<{
           />
           <TokenAmount>
             +{formatNumber(Math.abs(Number(transaction.collateralAmount)))}{" "}
-            {transaction.position?.collateralPoolName?.toUpperCase()}
+            {showSolanaTokenSymbol(transaction.position?.collateralPoolName)}
           </TokenAmount>
         </PositionActivityListItemAmountsItemWrapper>
       </PositionActivityListItemAmountsWrapper>
@@ -118,7 +128,7 @@ const PositionActivityListItemAmounts: FC<{
           <TokenAmount>
             {!BigNumber(transaction.collateralAmount).isEqualTo(0) ? "-" : ""}
             {formatNumber(Number(transaction.collateralAmount))}{" "}
-            {transaction.position?.collateralPoolName?.toUpperCase()}
+            {showSolanaTokenSymbol(transaction.position?.collateralPoolName)}
           </TokenAmount>
         </PositionActivityListItemAmountsItemWrapper>
 
@@ -155,7 +165,7 @@ const PositionActivityListItemAmounts: FC<{
           />
           <TokenAmount>
             -{formatNumber(Number(transaction.collateralAmount))}{" "}
-            {transaction.position?.collateralPoolName?.toUpperCase()}
+            {showSolanaTokenSymbol(transaction.position?.collateralPoolName)}
           </TokenAmount>
         </PositionActivityListItemAmountsItemWrapper>
 
@@ -191,7 +201,7 @@ const PositionActivityListItemAmounts: FC<{
         />
         <TokenAmount>
           -{formatNumber(Number(transaction.collateralAmount))}{" "}
-          {transaction.position?.collateralPoolName?.toUpperCase()}
+          {showSolanaTokenSymbol(transaction.position?.collateralPoolName)}
         </TokenAmount>
       </PositionActivityListItemAmountsItemWrapper>
 

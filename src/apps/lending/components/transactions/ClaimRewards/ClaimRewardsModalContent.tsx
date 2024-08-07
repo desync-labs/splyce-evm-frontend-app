@@ -100,7 +100,10 @@ export const ClaimRewardsModalContent = ({
         userIncentives.push({
           assets: incentive.assets,
           incentiveControllerAddress: incentive.incentiveControllerAddress,
-          symbol: incentive.rewardTokenSymbol,
+          symbol:
+            incentive.rewardTokenSymbol === "FTHM"
+              ? "SPLY"
+              : incentive.rewardTokenSymbol,
           balance: rewardBalance,
           balanceUsd: rewardBalanceUsd.toString(),
           rewardTokenAddress,

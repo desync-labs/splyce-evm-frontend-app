@@ -61,7 +61,7 @@ export const networkConfigs: Record<string, BaseNetworkConfig> = {
       "https://rpc.apothem.network",
       "https://apothem.xdcrpc.com",
     ],
-    baseAssetSymbol: "XDC",
+    baseAssetSymbol: "SOL",
     wrappedBaseAssetSymbol: "WXDC",
     baseAssetDecimals: 18,
     explorerLink: "https://explorer.apothem.network",
