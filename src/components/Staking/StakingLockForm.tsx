@@ -131,7 +131,7 @@ const StakingLockForm: FC = () => {
               <AppFormLabel>Staking amount</AppFormLabel>
               {fthmBalance ? (
                 <WalletBalance>
-                  Available: {formatPercentage(Number(fthmBalance))} FTHM
+                  Available: {formatPercentage(Number(fthmBalance))} SPLY
                 </WalletBalance>
               ) : null}
               <AppFormInputWrapper>
@@ -151,7 +151,7 @@ const StakingLockForm: FC = () => {
                         <>
                           <InfoIcon sx={{ float: "left", fontSize: "18px" }} />
                           <Box component={"span"} sx={{ fontSize: "12px" }}>
-                            You do not have enough FTHM
+                            You do not have enough SPLY
                           </Box>
                         </>
                       )}
@@ -295,7 +295,7 @@ const StakingLockForm: FC = () => {
                 {approvalPending ? (
                   <CircularProgress size={20} />
                 ) : (
-                  "Approve FTHM"
+                  "Approve SPLY"
                 )}
               </ButtonPrimary>
             ) : (
@@ -326,7 +326,7 @@ const StakingLockForm: FC = () => {
                     <Box>
                       <FTHMBalance data-testid="dao-FTHM-balance">
                         <strong>{formatNumber(Number(fthmBalance))}</strong>{" "}
-                        FTHM
+                        SPLY
                       </FTHMBalance>
                       <USDBalance>
                         {formatCurrency(
@@ -348,7 +348,8 @@ const StakingLockForm: FC = () => {
                     />
                     <Box>
                       <FTHMBalance data-testid="dao-FXD-balance">
-                        <strong>{formatNumber(Number(fxdBalance))}</strong> FXD
+                        <strong>{formatNumber(Number(fxdBalance))}</strong>{" "}
+                        spUSD
                       </FTHMBalance>
                       <USDBalance>
                         {formatCurrency(
@@ -370,7 +371,7 @@ const StakingLockForm: FC = () => {
                     />
                     <Box>
                       <FTHMBalance data-testid="dao-XDC-balance">
-                        <strong>{formatNumber(Number(xdcBalance))}</strong> XDC
+                        <strong>{formatNumber(Number(xdcBalance))}</strong> SOL
                       </FTHMBalance>
                       <USDBalance>
                         {formatCurrency(

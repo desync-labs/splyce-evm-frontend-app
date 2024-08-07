@@ -176,10 +176,10 @@ const StreamStats: FC = () => {
 
   return (
     <Box sx={{ padding: isMobile ? "10px" : "0 10px" }}>
-      <FTHMStreamHeader>FTHM Stream</FTHMStreamHeader>
+      <FTHMStreamHeader>SPLY Stream</FTHMStreamHeader>
       <StatsTypography>Network Stats</StatsTypography>
       <StatsTypographyDescription>
-        FTHM stream rewards in FTHM and vFTHM as Voting power.
+        SPLY stream rewards in SPLY and vSPLY as Voting power.
       </StatsTypographyDescription>
 
       <StatsBlocks>
@@ -206,7 +206,7 @@ const StreamStats: FC = () => {
                 <strong>
                   {formatNumber(protocolStatsInfo.totalStakeFTHM / 10 ** 18)}
                 </strong>
-                FTHM
+                SPLY
                 <span>
                   $
                   {formatCompact(
@@ -229,7 +229,7 @@ const StreamStats: FC = () => {
                 <strong>
                   {formatNumber(protocolStatsInfo.oneDayRewards / 10 ** 18)}
                 </strong>
-                FTHM
+                SPLY
                 <span>
                   $
                   {formatCompact(
@@ -256,7 +256,7 @@ const StreamStats: FC = () => {
               {stake && (
                 <MyStatsValue>
                   <strong>
-                    {formatPercentage(stake.totalStaked / 10 ** 18)} FTHM
+                    {formatPercentage(stake.totalStaked / 10 ** 18)} SPLY
                   </strong>
                   <span>
                     $
@@ -276,11 +276,11 @@ const StreamStats: FC = () => {
                 {stake && (
                   <MyStatsValue>
                     <strong>
-                      {formatPercentage(stake.accruedVotes / 10 ** 18)} vFTHM
+                      {formatPercentage(stake.accruedVotes / 10 ** 18)} vSPLY
                     </strong>
                   </MyStatsValue>
                 )}
-                <span>(1 staked FTHM for 365 days = 1 vFTHM)</span>
+                <span>(1 staked SPLY for 365 days = 1 vSPLY)</span>
               </MyStatsBlock>
             )}
 
@@ -298,7 +298,7 @@ const StreamStats: FC = () => {
                     </CooldownCountDown>
                     <MyStatsValue>
                       <strong>
-                        {formatPercentage(stake.claimedAmount / 10 ** 18)} FTHM
+                        {formatPercentage(stake.claimedAmount / 10 ** 18)} SPLY
                       </strong>
                       {BigNumber(cooldownInUsd).isGreaterThan(1 / 10 ** 6) ? (
                         <span>${formatPercentage(cooldownInUsd)}</span>
@@ -321,7 +321,7 @@ const StreamStats: FC = () => {
                             {formatPercentage(
                               Number(stake.claimedAmount) / 10 ** 18
                             )}{" "}
-                            FTHM
+                            SPLY
                           </strong>
                           {BigNumber(cooldownInUsd).isGreaterThan(
                             1 / 10 ** 6
@@ -357,7 +357,7 @@ const StreamStats: FC = () => {
                             .dividedBy(10 ** 18)
                             .toNumber()
                         )}{" "}
-                        FTHM
+                        SPLY
                       </strong>
                       {BigNumber(totalRewards).isGreaterThan(0.0001) ? (
                         <span>${formatPercentage(totalrewardsInUsd)} </span>
@@ -383,11 +383,11 @@ const StreamStats: FC = () => {
                 {stake && (
                   <MyStatsValue>
                     <strong>
-                      {formatNumber(stake.accruedVotes / 10 ** 18)} vFTHM
+                      {formatNumber(stake.accruedVotes / 10 ** 18)} vSPLY
                     </strong>
                   </MyStatsValue>
                 )}
-                <span>(1 staked FTHM for 365 days = 1 vFTHM)</span>
+                <span>(1 staked SPLY for 365 days = 1 vSPLY)</span>
               </MyStatsBlock>
             )}
 
@@ -405,7 +405,7 @@ const StreamStats: FC = () => {
                     </CooldownCountDown>
                     <MyStatsValue>
                       <strong>
-                        {formatPercentage(stake.claimedAmount / 10 ** 18)} FTHM
+                        {formatPercentage(stake.claimedAmount / 10 ** 18)} SPLY
                       </strong>
                       <span>${formatPercentage(cooldownInUsd)}</span>
                     </MyStatsValue>
@@ -425,7 +425,7 @@ const StreamStats: FC = () => {
                           {formatPercentage(
                             Number(stake.claimedAmount) / 10 ** 18
                           )}{" "}
-                          FTHM
+                          SPLY
                         </strong>
                         <span>${formatPercentage(cooldownInUsd)}</span>
                       </MyStatsValue>
