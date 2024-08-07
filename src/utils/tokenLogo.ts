@@ -28,6 +28,10 @@ export const getTokenLogoURL = (address: string) => {
     return `/icons/tokens/cgo.png`;
   }
 
+  if (addressLowerCase === "sply") {
+    return `/icons/tokens/fthm.svg`;
+  }
+
   if (TOKEN_LIST_LOGOS.includes(addressLowerCase)) {
     return `/icons/tokens/${addressLowerCase}.svg`;
   }

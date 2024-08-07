@@ -1,8 +1,8 @@
 import { AppDialog } from "components/AppComponents/AppDialog/AppDialog";
 import { FC, useCallback } from "react";
 import { DialogContent } from "@mui/material";
-import MetamaskSrc from "assets/svg/metamask.svg";
-import WalletConnect from "assets/svg/wallet-connect.svg";
+import SolflareSrc from "assets/png/solflare-logo.webp";
+import PhantomSrc from "assets/svg/phantom.png";
 import { styled } from "@mui/material/styles";
 import useConnector from "context/connector";
 
@@ -59,12 +59,12 @@ const DesktopConnector: FC<DesktopConnectorPropsType> = ({ onClose }) => {
     >
       <ConnectorDialogContent>
         <Connector onClick={metamaskConnect}>
-          <img src={MetamaskSrc} alt={"metamask"} />
-          Metamask
+          <img src={SolflareSrc} alt={"metamask"} />
+          Solflare
         </Connector>
         <Connector onClick={walletConnectConnect}>
-          <img src={WalletConnect} alt={"wallet-connect"} />
-          Wallet Connect
+          <img src={PhantomSrc} alt={"wallet-connect"} />
+          Phantom
         </Connector>
       </ConnectorDialogContent>
     </AppDialog>

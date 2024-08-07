@@ -5,7 +5,6 @@ import {
   DISPLAY_FXD,
   DISPLAY_GOVERNANCE,
   DISPLAY_LENDING,
-  DISPLAY_STABLE_SWAP,
   DISPLAY_VAULTS,
 } from "connectors/networks";
 import useConnector from "context/connector";
@@ -13,7 +12,7 @@ import AppMenuItem from "components/MenuItem/AppMenuItem";
 
 export const Menu = memo(() => {
   const location = useLocation();
-  const { allowStableSwap, chainId } = useConnector();
+  const { chainId } = useConnector();
 
   const isDashboardActive = useMemo(
     () => location.pathname.includes("fxd"),
@@ -105,9 +104,9 @@ export const Menu = memo(() => {
     });
   }
 
-  if (!allowStableSwap && (!chainId || DISPLAY_STABLE_SWAP.includes(chainId))) {
-    appMenuItems.splice(1, 1);
-  }
+  // if (!allowStableSwap && (!chainId || DISPLAY_STABLE_SWAP.includes(chainId))) {
+  //   appMenuItems.splice(1, 1);
+  // }
 
   return (
     <>

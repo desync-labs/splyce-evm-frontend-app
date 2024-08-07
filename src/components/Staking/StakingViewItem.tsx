@@ -235,7 +235,7 @@ const StakingViewItem: FC<StakingViewItemPropsType> = ({
                 {lockPosition.nVoteToken
                   ? `${formatPercentage(
                       lockPosition.nVoteToken / 10 ** 18
-                    )} vFTHM`
+                    )} vSPLY`
                   : "None"}
               </Value>
             </Grid>
