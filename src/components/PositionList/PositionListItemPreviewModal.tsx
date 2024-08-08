@@ -152,7 +152,7 @@ const PositionListItemPreviewModal: FC<PositionListItemPreviewModalProps> = ({
             <ListItemLabel primary={"Liquidation price"} />
           </BaseListItem>
           <BaseListItem
-            secondaryAction={<>{formatNumber(position.debtValue)} FXD</>}
+            secondaryAction={<>{formatNumber(position.debtValue)} spUSD</>}
           >
             <ListItemLabel primary={"Borrowed"} />
           </BaseListItem>{" "}

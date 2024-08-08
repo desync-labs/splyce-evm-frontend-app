@@ -130,14 +130,14 @@ const PositionsList: FC<PositionsListProps> = ({
                             multiply your collateral value with LTV - you will
                             get how much you can borrow maximum with a 0% safety
                             buffer. For example, if your collateral value is
-                            $100, with 25% LTV, you can maximum borrow 75 FXD,
+                            $100, with 25% LTV, you can maximum borrow 75 spUSD,
                             which gives you 0% Safety Buffer, and your position
                             becomes very risky for liquidation.
                             <br />
                             <br />
                             We recommend at least 50% Safety Buffer. Using the
                             example above, the recommended amount to borrow is
-                            75 FXD * 50% = 37.5 FXD.
+                            75 spUSD * 50% = 37.5 spUSD.
                           </>
                         }
                       />

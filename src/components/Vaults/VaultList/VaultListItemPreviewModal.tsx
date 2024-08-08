@@ -222,8 +222,8 @@ const VaultListItemPreviewModal: FC<VaultListItemPreviewModalProps> = ({
                           .toNumber(),
                         0
                       )
-                    )}{" "}
-                {token.symbol}
+                    )}
+                {" spUSD"}
               </>
             }
           >
@@ -253,7 +253,7 @@ const VaultListItemPreviewModal: FC<VaultListItemPreviewModalProps> = ({
                           .toNumber()
                       )
                     : 0}
-                  {" " + token.symbol}
+                  {" spUSD"}
                 </Box>
               </VaultStacked>
             }
