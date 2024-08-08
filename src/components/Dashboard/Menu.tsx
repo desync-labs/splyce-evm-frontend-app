@@ -1,4 +1,4 @@
-import { memo, useMemo } from "react";
+import { Fragment, memo, useMemo } from "react";
 import { useLocation } from "react-router-dom";
 
 import {
@@ -7,12 +7,21 @@ import {
   DISPLAY_LENDING,
   DISPLAY_VAULTS,
 } from "connectors/networks";
+import {
+  FxdIcon,
+  GovernanceIcon,
+  LendingIcon,
+  VaultIcon,
+} from "components/Common/MenuIcons";
 import useConnector from "context/connector";
 import AppMenuItem from "components/MenuItem/AppMenuItem";
+import useSharedContext from "context/shared";
+import AppMenuItemMobile from "../MenuItem/AppMenuItemMobile";
 
 export const Menu = memo(() => {
   const location = useLocation();
   const { chainId } = useConnector();
+  const { isMobile } = useSharedContext();
 
   const isDashboardActive = useMemo(
     () => location.pathname.includes("fxd"),
@@ -53,6 +62,7 @@ export const Menu = memo(() => {
       name: "Stablecoin",
       link: "/fxd",
       isActive: isDashboardActive,
+      Icon: <FxdIcon isactive={isDashboardActive ? "true" : ""} />,
     });
   }
 
@@ -69,6 +79,7 @@ export const Menu = memo(() => {
       name: "Lending",
       link: "/lending",
       isActive: isLendingActive,
+      Icon: <LendingIcon isactive={isLendingActive ? "true" : ""} />,
     });
   }
 
@@ -77,6 +88,7 @@ export const Menu = memo(() => {
       name: "Vaults",
       link: "/vaults",
       isActive: isVaultActive,
+      Icon: <VaultIcon isactive={isVaultActive ? "true" : ""} />,
     });
   }
 
@@ -101,6 +113,7 @@ export const Menu = memo(() => {
       name: "DAO",
       link: "/dao/staking",
       isActive: isDAOActive,
+      Icon: <GovernanceIcon isactive={isDAOActive ? "true" : ""} />,
     });
   }
 
@@ -111,7 +124,13 @@ export const Menu = memo(() => {
   return (
     <>
       {appMenuItems.map((item) => (
-        <AppMenuItem {...item} key={item.name} />
+        <Fragment key={item.name}>
+          {isMobile ? (
+            <AppMenuItemMobile {...item} />
+          ) : (
+            <AppMenuItem {...item} />
+          )}
+        </Fragment>
       ))}
     </>
   );

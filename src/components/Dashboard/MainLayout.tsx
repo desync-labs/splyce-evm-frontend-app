@@ -277,10 +277,7 @@ const MainLayout = () => {
                     alt={"logo"}
                     style={{
                       width: "24px",
-                      background: "#80FFF6",
                       height: "24px",
-                      borderRadius: "6px",
-                      padding: "4px",
                     }}
                   />
                 </LogoLink>

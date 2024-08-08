@@ -14,12 +14,24 @@ const FooterWrapper = styled(Box)`
   background: #0d0d0d;
   border-top: 1px solid #072a40;
   padding: 20px 24px;
+
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+  }
 `;
 
 const LinksWrapper = styled(Box)`
   display: flex;
   flex-direction: row;
   gap: 16px;
+
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 16px;
+  }
 
   a {
     font-size: 13px;
@@ -42,13 +54,26 @@ const SocialLinksWrapper = styled(Box)`
   gap: 16px;
   padding: 0;
 
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    gap: 20px;
+  }
+
   & a {
     height: 20px;
+
+    ${({ theme }) => theme.breakpoints.down("sm")} {
+      height: 28px;
+    }
   }
 
   & img {
     height: 20px;
     width: 20px;
+
+    ${({ theme }) => theme.breakpoints.down("sm")} {
+      height: 28px;
+      width: 28px;
+    }
   }
 `;
 

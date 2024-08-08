@@ -9,13 +9,13 @@ interface AppBarProps extends MuiAppBarProps {
 
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open",
-})<AppBarProps>(({ theme }) => ({
+})<AppBarProps>(() => ({
   position: "fixed",
   top: 0,
   background: "#0D0D0D",
   borderBottom: "1px solid #072a40",
   borderRadius: 0,
-  zIndex: theme.zIndex.drawer - 1,
+  zIndex: 99,
 
   "& .MuiToolbar-root": {
     minHeight: "48px",

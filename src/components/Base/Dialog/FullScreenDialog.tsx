@@ -5,8 +5,8 @@ import { FC, ReactNode, useEffect, useState } from "react";
 const FullScreenDialog = styled(Dialog, {
   shouldForwardProp: (prop) => prop !== "offset",
 })<{ offset?: number }>`
-  top: ${({ offset = 116 }) => `${offset}px`};
-  height: ${({ offset = 116 }) => `calc(100% - ${offset}px)`};
+  top: ${({ offset = 109 }) => `${offset}px`};
+  height: ${({ offset = 109 }) => `calc(100% - ${offset}px)`};
   z-index: 100;
 
   & .MuiDialog-paper {
@@ -15,7 +15,7 @@ const FullScreenDialog = styled(Dialog, {
     border-radius: 0;
   }
   & .MuiBackdrop-root {
-    top: ${({ offset = 116 }) => `${offset}px`};
+    top: ${({ offset = 109 }) => `${offset}px`};
   },
 `;
 
@@ -45,7 +45,7 @@ const BaseDialogFullScreen: FC<BaseDialogFullScreenProps> = ({
   useEffect(() => {
     if (isOpen) {
       let scroll =
-        116 -
+        109 -
         (tabVisible ? 0 : 60) -
         (document.documentElement.scrollTop || document.body.scrollTop);
       scroll = scroll < 0 ? 0 : scroll;
