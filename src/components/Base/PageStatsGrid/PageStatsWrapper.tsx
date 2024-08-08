@@ -55,7 +55,7 @@ const BasePageStatsWrapper: FC<BasePageStatsWrapperProps> = ({
           (block.firstChild as HTMLElement).style.height = `${maxHeight}px`;
           (block as HTMLElement).style.height = `${maxHeight + 12}px`;
         });
-      }, 500);
+      });
     }
 
     return () => {
