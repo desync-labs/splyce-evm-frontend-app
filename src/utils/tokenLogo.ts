@@ -29,7 +29,7 @@ export const getTokenLogoURL = (address: string) => {
   }
 
   if (addressLowerCase === "sply" || addressLowerCase === "fthm") {
-    return `/icons/tokens/fthm.svg`;
+    return `/icons/tokens/sply.png`;
   }
 
   if (addressLowerCase === "fxd" || addressLowerCase === "spusd") {
