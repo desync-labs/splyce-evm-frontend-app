@@ -60,7 +60,7 @@ export const Menu = memo(() => {
   if (!chainId || DISPLAY_FXD.includes(chainId)) {
     appMenuItems.push({
       name: "Stablecoin",
-      link: "/fxd",
+      link: "/spusd",
       isActive: isDashboardActive,
       Icon: <FxdIcon isactive={isDashboardActive ? "true" : ""} />,
     });

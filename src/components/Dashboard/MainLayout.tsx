@@ -434,20 +434,20 @@ const MainLayout = () => {
             <FxdProvider>
               <Routes>
                 {!chainId || DISPLAY_FXD.includes(chainId) ? (
-                  <Route path="/fxd" element={<FXDView />}>
+                  <Route path="/spusd" element={<FXDView />}>
                     <>
-                      <Route path="/fxd" element={<DashboardContent />} />
+                      <Route path="/spusd" element={<DashboardContent />} />
                       {process.env.REACT_APP_FXD_TRANSACTIONS_ENABLED ===
                         "true" &&
                         (account || isConnected) && (
                           <Route
-                            path="/fxd/transactions"
+                            path="/spusd/transactions"
                             element={<PositionsTransactionList />}
                           />
                         )}
                       <Route
                         path="*"
-                        element={<Navigate to="/fxd" replace />}
+                        element={<Navigate to="/spusd" replace />}
                       />
                     </>
                   </Route>
@@ -661,7 +661,7 @@ const MainLayout = () => {
                     ></Route>
                   </Route>
                 ) : null}
-                <Route path="*" element={<Navigate to="/fxd" replace />} />
+                <Route path="*" element={<Navigate to="/spusd" replace />} />
               </Routes>
             </FxdProvider>
           </Box>

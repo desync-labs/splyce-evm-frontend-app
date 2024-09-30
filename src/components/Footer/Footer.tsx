@@ -91,35 +91,19 @@ const Footer = () => {
         <a href={"https://splyce.finance"} rel="noreferrer" target={"_blank"}>
           splyce.fi
         </a>
-        <a href={"https://docs.fathom.fi"} rel="noreferrer" target={"_blank"}>
+        <a href={"#"} rel="noreferrer" target={"_blank"}>
           Docs
         </a>
-        <a
-          href={"https://docs.fathom.fi/privacy-policy"}
-          rel="noreferrer"
-          target={"_blank"}
-        >
+        <a href={"#"} rel="noreferrer" target={"_blank"}>
           Privacy Policy
         </a>
-        <a
-          href={"https://docs.fathom.fi/terms-of-service"}
-          rel="noreferrer"
-          target={"_blank"}
-        >
+        <a href={"#"} rel="noreferrer" target={"_blank"}>
           Terms of Service
         </a>
-        <a
-          href={"https://docs.fathom.fi/fxd-deployments"}
-          target={"_blank"}
-          rel="noreferrer"
-        >
+        <a href={"#"} target={"_blank"} rel="noreferrer">
           spUSD
         </a>
-        <a
-          href={"https://docs.fathom.fi/fthm-deployments"}
-          target={"_blank"}
-          rel="noreferrer"
-        >
+        <a href={"#"} target={"_blank"} rel="noreferrer">
           SPLY
         </a>
       </LinksWrapper>
@@ -131,21 +115,17 @@ const Footer = () => {
       {/*  {new Date().getFullYear()}.*/}
       {/*</Copyright>*/}
       <SocialLinksWrapper>
-        <a href={"https://t.me/fathom_fi"} rel="noreferrer" target={"_blank"}>
+        <a href={"#"} rel="noreferrer" target={"_blank"}>
           <img src={TelegramSrc} alt={"telegram"} />
         </a>
         <a
-          href={"https://twitter.com/Fathom_fi"}
+          href={"https://x.com/splycefi?s=21&t=GTHQKPCsYjg0opJNZEmJRw"}
           rel="noreferrer"
           target={"_blank"}
         >
           <img src={TwitterSrc} alt={"twitter"} />
         </a>
-        <a
-          href={"https://www.linkedin.com/company/fathom-protocol/"}
-          rel="noreferrer"
-          target={"_blank"}
-        >
+        <a href={"#"} rel="noreferrer" target={"_blank"}>
           <img src={LinkedInSrc} alt={"linked-in"} />
         </a>
       </SocialLinksWrapper>
