@@ -3,7 +3,7 @@ import { FC, ReactNode } from "react";
 
 import { ConnectWalletButton } from "apps/lending/components/WalletConnection/ConnectWalletButton";
 
-import { ReactComponent as FathomLogo } from "apps/lending/assets/Fathom-logo.svg";
+import SplyceAppLogoSrc from "assets/png/splyce-logo.png";
 
 interface ConnectWalletPaperProps extends PaperProps {
   loading?: boolean;
@@ -32,7 +32,12 @@ export const ConnectWalletPaper: FC<ConnectWalletPaperProps> = ({
       }}
     >
       <>
-        <FathomLogo style={{ margin: "40px 0" }} />
+        <img
+          src={SplyceAppLogoSrc}
+          width={160}
+          style={{ margin: "40px 0" }}
+          alt={"Splyce logo"}
+        />
         {loading ? (
           <CircularProgress />
         ) : (

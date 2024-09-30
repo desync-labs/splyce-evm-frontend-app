@@ -277,7 +277,6 @@ const useVaultList = () => {
             ? vaultTitle[vault.id.toLowerCase()]
             : getDefaultVaultTitle(
                 vaultType[vault.id.toLowerCase()] || VaultType.DEFAULT,
-                vault.token.name,
                 vault.id.toLowerCase()
               ),
           type: vaultType[vault.id.toLowerCase()] || VaultType.DEFAULT,

@@ -1,29 +1,36 @@
-import { memo, useMemo } from "react";
+import { Fragment, memo, useMemo } from "react";
 import { useLocation } from "react-router-dom";
 
 import {
-  DISPLAY_CHARTS,
   DISPLAY_FXD,
   DISPLAY_GOVERNANCE,
   DISPLAY_LENDING,
-  DISPLAY_STABLE_SWAP,
   DISPLAY_VAULTS,
 } from "connectors/networks";
+import {
+  FxdIcon,
+  GovernanceIcon,
+  LendingIcon,
+  VaultIcon,
+} from "components/Common/MenuIcons";
 import useConnector from "context/connector";
 import AppMenuItem from "components/MenuItem/AppMenuItem";
+import useSharedContext from "context/shared";
+import AppMenuItemMobile from "../MenuItem/AppMenuItemMobile";
 
 export const Menu = memo(() => {
   const location = useLocation();
-  const { allowStableSwap, chainId } = useConnector();
+  const { chainId } = useConnector();
+  const { isMobile } = useSharedContext();
 
   const isDashboardActive = useMemo(
     () => location.pathname.includes("fxd"),
     [location.pathname]
   );
-  const isStableSwapActive = useMemo(
-    () => location.pathname.includes("/stable-swap"),
-    [location.pathname]
-  );
+  // const isStableSwapActive = useMemo(
+  //   () => location.pathname.includes("/stable-swap"),
+  //   [location.pathname]
+  // );
   const isDAOActive = useMemo(
     () => location.pathname.includes("/dao"),
     [location.pathname]
@@ -43,34 +50,36 @@ export const Menu = memo(() => {
     [location.pathname]
   );
 
-  const isChartsActive = useMemo(
-    () => location.pathname.includes("charts"),
-    [location.pathname]
-  );
+  // const isChartsActive = useMemo(
+  //   () => location.pathname.includes("charts"),
+  //   [location.pathname]
+  // );
 
   const appMenuItems = [];
 
   if (!chainId || DISPLAY_FXD.includes(chainId)) {
     appMenuItems.push({
       name: "Stablecoin",
-      link: "/fxd",
+      link: "/spusd",
       isActive: isDashboardActive,
+      Icon: <FxdIcon isactive={isDashboardActive ? "true" : ""} />,
     });
   }
 
-  if (!chainId || DISPLAY_STABLE_SWAP.includes(chainId)) {
-    appMenuItems.push({
-      name: "Stable Swap",
-      link: "/stable-swap",
-      isActive: isStableSwapActive,
-    });
-  }
+  // if (!chainId || DISPLAY_STABLE_SWAP.includes(chainId)) {
+  //   appMenuItems.push({
+  //     name: "Stable Swap",
+  //     link: "/stable-swap",
+  //     isActive: isStableSwapActive,
+  //   });
+  // }
 
   if (!chainId || DISPLAY_LENDING.includes(chainId)) {
     appMenuItems.push({
       name: "Lending",
       link: "/lending",
       isActive: isLendingActive,
+      Icon: <LendingIcon isactive={isLendingActive ? "true" : ""} />,
     });
   }
 
@@ -79,6 +88,7 @@ export const Menu = memo(() => {
       name: "Vaults",
       link: "/vaults",
       isActive: isVaultActive,
+      Icon: <VaultIcon isactive={isVaultActive ? "true" : ""} />,
     });
   }
 
@@ -90,30 +100,37 @@ export const Menu = memo(() => {
   //   });
   // }
 
-  if (!chainId || DISPLAY_CHARTS.includes(chainId)) {
-    appMenuItems.push({
-      name: "Charts",
-      link: "/charts",
-      isActive: isChartsActive,
-    });
-  }
+  // if (!chainId || DISPLAY_CHARTS.includes(chainId)) {
+  //   appMenuItems.push({
+  //     name: "Charts",
+  //     link: "/charts",
+  //     isActive: isChartsActive,
+  //   });
+  // }
 
   if (!chainId || DISPLAY_GOVERNANCE.includes(chainId)) {
     appMenuItems.push({
       name: "DAO",
       link: "/dao/staking",
       isActive: isDAOActive,
+      Icon: <GovernanceIcon isactive={isDAOActive ? "true" : ""} />,
     });
   }
 
-  if (!allowStableSwap && (!chainId || DISPLAY_STABLE_SWAP.includes(chainId))) {
-    appMenuItems.splice(1, 1);
-  }
+  // if (!allowStableSwap && (!chainId || DISPLAY_STABLE_SWAP.includes(chainId))) {
+  //   appMenuItems.splice(1, 1);
+  // }
 
   return (
     <>
       {appMenuItems.map((item) => (
-        <AppMenuItem {...item} key={item.name} />
+        <Fragment key={item.name}>
+          {isMobile ? (
+            <AppMenuItemMobile {...item} />
+          ) : (
+            <AppMenuItem {...item} />
+          )}
+        </Fragment>
       ))}
     </>
   );

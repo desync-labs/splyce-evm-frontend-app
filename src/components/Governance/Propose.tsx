@@ -174,7 +174,7 @@ const Propose: FC<ProposeProps> = ({ onClose }) => {
                   </BalanceBox>
                 )}
                 {!account && <BalanceBox component="span">0</BalanceBox>}
-                <CurrencyBox component="span">vFTHM</CurrencyBox>
+                <CurrencyBox component="span">vSPLY</CurrencyBox>
               </Stack>
             </Grid>
             <Box

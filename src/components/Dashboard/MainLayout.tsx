@@ -79,10 +79,10 @@ import useAlertAndTransactionContext from "context/alertAndTransaction";
 import ChartsView from "components/Dashboard/ChartsView";
 
 import SplyceAppLogoSrc from "assets/png/splyce-logo.png";
+import SplyceAppLogoMobileSrc from "assets/png/splyce-logo-mobile.png";
 import ExitSrc from "assets/svg/exit.svg";
 import SolflareSrc from "assets/png/solflare-logo.webp";
 import WalletConnectSrc from "assets/svg/wallet-connect.svg";
-import FathomLogoMobileSrc from "assets/svg/Fathom-app-logo-mobile.svg";
 import MobileMenuIcon from "assets/svg/mobile-menu.svg";
 import MobileMenuIconActive from "assets/svg/mobile-menu-active.svg";
 import { formatNumber } from "utils/format";
@@ -273,14 +273,11 @@ const MainLayout = () => {
               <MenuLogoWrapper>
                 <LogoLink to={"/"}>
                   <img
-                    src={FathomLogoMobileSrc}
+                    src={SplyceAppLogoMobileSrc}
                     alt={"logo"}
                     style={{
                       width: "24px",
-                      background: "#80FFF6",
                       height: "24px",
-                      borderRadius: "6px",
-                      padding: "4px",
                     }}
                   />
                 </LogoLink>
@@ -437,20 +434,20 @@ const MainLayout = () => {
             <FxdProvider>
               <Routes>
                 {!chainId || DISPLAY_FXD.includes(chainId) ? (
-                  <Route path="/fxd" element={<FXDView />}>
+                  <Route path="/spusd" element={<FXDView />}>
                     <>
-                      <Route path="/fxd" element={<DashboardContent />} />
+                      <Route path="/spusd" element={<DashboardContent />} />
                       {process.env.REACT_APP_FXD_TRANSACTIONS_ENABLED ===
                         "true" &&
                         (account || isConnected) && (
                           <Route
-                            path="/fxd/transactions"
+                            path="/spusd/transactions"
                             element={<PositionsTransactionList />}
                           />
                         )}
                       <Route
                         path="*"
-                        element={<Navigate to="/fxd" replace />}
+                        element={<Navigate to="/spusd" replace />}
                       />
                     </>
                   </Route>
@@ -664,7 +661,7 @@ const MainLayout = () => {
                     ></Route>
                   </Route>
                 ) : null}
-                <Route path="*" element={<Navigate to="/fxd" replace />} />
+                <Route path="*" element={<Navigate to="/spusd" replace />} />
               </Routes>
             </FxdProvider>
           </Box>

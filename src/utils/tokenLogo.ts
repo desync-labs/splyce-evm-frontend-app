@@ -21,11 +21,19 @@ export const getTokenLogoURL = (address: string) => {
     addressLowerCase === "wxdc" ||
     addressLowerCase === "sol"
   ) {
-    return "/icons/tokens/solana.png";
+    return "/icons/tokens/sol.svg";
   }
 
   if (addressLowerCase === "vnxau" || addressLowerCase === "cgo") {
     return `/icons/tokens/cgo.png`;
+  }
+
+  if (addressLowerCase === "sply" || addressLowerCase === "fthm") {
+    return `/icons/tokens/sply.png`;
+  }
+
+  if (addressLowerCase === "fxd" || addressLowerCase === "spusd") {
+    return `/icons/tokens/fxd.svg`;
   }
 
   if (TOKEN_LIST_LOGOS.includes(addressLowerCase)) {

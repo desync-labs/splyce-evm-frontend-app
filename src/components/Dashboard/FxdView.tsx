@@ -17,12 +17,12 @@ const FXDView: FC = () => {
   const location = useLocation();
 
   const isFXDActive = useMemo(
-    () => ["/fxd"].includes(location.pathname),
+    () => ["/spusd"].includes(location.pathname),
     [location.pathname]
   );
 
   const isTransactionsActive = useMemo(() => {
-    return location.pathname.includes("/fxd/transactions");
+    return location.pathname.includes("/spusd/transactions");
   }, [location.pathname]);
 
   return (
@@ -30,13 +30,16 @@ const FXDView: FC = () => {
       {process.env.REACT_APP_FXD_TRANSACTIONS_ENABLED === "true" &&
         localStorage.getItem("isConnected") && (
           <NestedRouteNav>
-            <NestedRouteLink className={isFXDActive ? "active" : ""} to="/fxd">
+            <NestedRouteLink
+              className={isFXDActive ? "active" : ""}
+              to="/spusd"
+            >
               <DashboardIcon isactive={isFXDActive ? "true" : ""} />
               Overview
             </NestedRouteLink>
             <NestedRouteLink
               className={isTransactionsActive ? "active" : ""}
-              to="/fxd/transactions"
+              to="/spusd/transactions"
             >
               <TransactionsIcon
                 isactive={isTransactionsActive ? "active" : ""}

@@ -36,9 +36,9 @@ const ProposeNotices: FC<ProposeNoticesProps> = ({
     ) {
       return (
         <>
-          You have less than {formatNumber(minimumVBalance)} vFTHM, and you can
+          You have less than {formatNumber(minimumVBalance)} vSPLY, and you can
           not create a new proposal. <br />
-          So please, stake your FTHM tokens in{" "}
+          So please, stake your SPLY tokens in{" "}
           <Link to={"/dao/staking"}>Staking</Link> to get voting power and
           awesome rewards.
         </>
@@ -47,7 +47,7 @@ const ProposeNotices: FC<ProposeNoticesProps> = ({
       return (
         <>
           To create a proposal, you need to have {formatNumber(minimumVBalance)}{" "}
-          vFTHM.
+          vSPLY.
           <br />
           Now you have{" "}
           {formatNumber(
@@ -55,7 +55,7 @@ const ProposeNotices: FC<ProposeNoticesProps> = ({
               .dividedBy(10 ** 18)
               .toNumber()
           )}{" "}
-          vFTHM
+          vSPLY
         </>
       );
     }

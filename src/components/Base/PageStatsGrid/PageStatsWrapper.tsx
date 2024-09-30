@@ -6,11 +6,13 @@ import useWindowResize from "hooks/General/useWindowResize";
 
 interface BasePageStatsWrapperProps {
   isLoading?: boolean;
+  isValueGreaterZero?: boolean;
   children: ReactNode;
 }
 
 const BasePageStatsWrapper: FC<BasePageStatsWrapperProps> = ({
   isLoading = false,
+  isValueGreaterZero = false,
   children,
 }) => {
   const container = useRef<HTMLElement>(null);
@@ -20,7 +22,12 @@ const BasePageStatsWrapper: FC<BasePageStatsWrapperProps> = ({
 
   useEffect(() => {
     let timer: ReturnType<typeof setTimeout>;
-    if (container.current && !isLoading) {
+    if (
+      container.current &&
+      !isLoading &&
+      !fetchPricesInProgress &&
+      isValueGreaterZero
+    ) {
       timer = setTimeout(() => {
         const blocks = (container.current as HTMLElement).querySelectorAll(
           ".page-stats-item"
@@ -54,7 +61,14 @@ const BasePageStatsWrapper: FC<BasePageStatsWrapperProps> = ({
     return () => {
       timer && clearTimeout(timer);
     };
-  }, [container, isLoading, fetchPricesInProgress, width, height]);
+  }, [
+    container,
+    isLoading,
+    fetchPricesInProgress,
+    width,
+    height,
+    isValueGreaterZero,
+  ]);
 
   return (
     <Box ref={container}>

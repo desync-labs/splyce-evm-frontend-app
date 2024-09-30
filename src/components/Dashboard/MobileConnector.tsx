@@ -2,7 +2,7 @@ import { Dispatch, FC, useCallback } from "react";
 import { styled } from "@mui/material/styles";
 import { Box } from "@mui/material";
 
-import WalletConnect from "assets/svg/wallet-connect.svg";
+import SolflareSrc from "assets/png/solflare-logo.webp";
 import useConnector from "context/connector";
 
 const MobileConnectorWrapper = styled(Box)`
@@ -56,8 +56,8 @@ const MobileConnector: FC<MobileConnectorPropsType> = ({
   return (
     <MobileConnectorWrapper>
       <Connector onClick={walletConnectConnect}>
-        <img src={WalletConnect} alt={"wallet-connect"} />
-        Wallet Connect
+        <img src={SolflareSrc} alt={"wallet-connect"} />
+        Solflare
       </Connector>
     </MobileConnectorWrapper>
   );

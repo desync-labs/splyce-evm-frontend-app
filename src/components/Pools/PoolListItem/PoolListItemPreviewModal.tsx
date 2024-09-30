@@ -187,14 +187,14 @@ const PoolListItemPreviewModal: FC<PoolListItemPreviewModalProps> = ({
           </BaseListItem>
           <BaseListItem
             secondaryAction={
-              <>{formatNumber(Number(pool.totalBorrowed))} FXD</>
+              <>{formatNumber(Number(pool.totalBorrowed))} spUSD</>
             }
           >
             <ListItemLabel primary={"Borrowed"} />
           </BaseListItem>{" "}
           <BaseListItem
             secondaryAction={
-              <>{formatNumber(Number(pool.totalAvailable))} FXD</>
+              <>{formatNumber(Number(pool.totalAvailable))} spUSD</>
             }
           >
             <ListItemLabel primary={"Available"} />

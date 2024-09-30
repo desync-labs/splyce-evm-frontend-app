@@ -295,7 +295,7 @@ export const SupplyAssetsList = () => {
                 <Warning severity="info">
                   Your {networkName} wallet is empty. Get free test assets at{" "}
                   <Link href={ROUTES.faucet} style={{ fontWeight: 400 }}>
-                    {networkName} Faucet
+                    Solana Faucet
                   </Link>
                 </Warning>
               ) : (

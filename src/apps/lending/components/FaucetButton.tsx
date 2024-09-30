@@ -28,9 +28,7 @@ export const FaucetButton = () => {
         variant="outlined"
         size="small"
       >
-        <Typography variant="buttonS">
-          {currentNetworkConfig.name} Faucet
-        </Typography>
+        <Typography variant="buttonS">Solana Faucet</Typography>
       </Button>
     </DarkTooltip>
   );

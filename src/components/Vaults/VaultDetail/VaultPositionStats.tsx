@@ -72,7 +72,10 @@ const VaultPositionStats = () => {
   return (
     <Box pb={isMobile ? "20px" : "24px"}>
       <VaultPositionTitle variant="h1">Your Position</VaultPositionTitle>
-      <BasePageStatsWrapper isLoading={isLoading}>
+      <BasePageStatsWrapper
+        isLoading={isLoading}
+        isValueGreaterZero={BigNumber(balanceEarned).isGreaterThan(0)}
+      >
         <BasePageStatsItem
           title={"Total Deposited"}
           value={

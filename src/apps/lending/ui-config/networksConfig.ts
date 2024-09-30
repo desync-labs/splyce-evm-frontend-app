@@ -61,7 +61,7 @@ export const networkConfigs: Record<string, BaseNetworkConfig> = {
       "https://rpc.apothem.network",
       "https://apothem.xdcrpc.com",
     ],
-    baseAssetSymbol: "XDC",
+    baseAssetSymbol: "SOL",
     wrappedBaseAssetSymbol: "WXDC",
     baseAssetDecimals: 18,
     explorerLink: "https://explorer.apothem.network",
@@ -69,7 +69,7 @@ export const networkConfigs: Record<string, BaseNetworkConfig> = {
      * This need until we have no production market.
      */
     isTestnet: true,
-    networkLogoPath: "./icons/networks/xdc.png",
+    networkLogoPath: "./icons/tokens/sol.svg",
     ratesHistoryApiUrl: "https://dev-lending.fathom.fi/data/rates-history",
   },
   [FathomLendingXdc.CHAIN_ID]: {
