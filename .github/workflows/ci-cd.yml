@@ -51,13 +51,18 @@ jobs:
 
       - name: Set Argo CD secrets
         id: set-secrets
+        shell: bash
         run: |
           if [[ $GITHUB_REF == refs/heads/main ]]; then
-            echo "::set-output name=ARGOCD_API_URL::${{ secrets.ARGOCD_API_URL_PROD }}"
-            echo "::set-output name=ARGOCD_AUTH_TOKEN::${{ secrets.ARGOCD_AUTH_TOKEN_PROD }}"
+            {
+              echo "ARGOCD_API_URL=${{ secrets.ARGOCD_API_URL_PROD }}"
+              echo "ARGOCD_AUTH_TOKEN=${{ secrets.ARGOCD_AUTH_TOKEN_PROD }}"
+            } >> "$GITHUB_OUTPUT"
           else
-            echo "::set-output name=ARGOCD_API_URL::${{ secrets.ARGOCD_API_URL_DEV }}"
-            echo "::set-output name=ARGOCD_AUTH_TOKEN::${{ secrets.ARGOCD_AUTH_TOKEN_DEV }}"
+            {
+              echo "ARGOCD_API_URL=${{ secrets.ARGOCD_API_URL_DEV }}"
+              echo "ARGOCD_AUTH_TOKEN=${{ secrets.ARGOCD_AUTH_TOKEN_DEV }}"
+            } >> "$GITHUB_OUTPUT"
           fi
 
       - name: Sync Argo CD and wait for completion
