@@ -31,9 +31,9 @@ jobs:
         run: |
           export NODE_OPTIONS=--max-old-space-size=8192
           if [[ $GITHUB_REF == refs/heads/main ]]; then
-            npm run prod
+            npm run build:prod
           else
-            npm run dev
+            npm run build:dev
           fi
 
       - name: Docker login
