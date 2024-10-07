@@ -16,6 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       IMAGE_NAME: splyce-frontend-app
+      IMAGE_REPOSITORY: intothefathom/splyce-frontend-app
 
     steps:
       - name: Checkout code
@@ -43,13 +44,13 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t intothefathom/${{ env.IMAGE_NAME }}:${{ github.sha }} .
-          docker tag intothefathom/${{ env.IMAGE_NAME }}:${{ github.sha }} intothefathom/${{ env.IMAGE_NAME }}:latest
+          docker build -t ${{ env.IMAGE_REPOSITORY }}:${{ github.sha }} .
+          docker tag ${{ env.IMAGE_REPOSITORY }}:${{ github.sha }} ${{ env.IMAGE_REPOSITORY }}:latest
 
       - name: Push Docker image
         run: |
-          docker push intothefathom/${{ env.IMAGE_NAME }}:${{ github.sha }}
-          docker push intothefathom/${{ env.IMAGE_NAME }}:latest
+          docker push ${{ env.IMAGE_REPOSITORY }}:${{ github.sha }}
+          docker push ${{ env.IMAGE_REPOSITORY }}:latest
 
       - name: Set Argo CD secrets
         id: set-secrets
@@ -73,15 +74,15 @@ jobs:
             -e ARGOCD_AUTH_TOKEN=${{ steps.set-secrets.outputs.ARGOCD_AUTH_TOKEN }} \
             argoproj/argocd:v2.6.15 \
             /bin/sh -c \
-            "argocd app set ${{ env.APP_NAME }} \
+            "argocd app set ${{ env.ARGOCD_APP_NAME }} \
             --server ${{ steps.set-secrets.outputs.ARGOCD_API_URL }} \
             --grpc-web \
             --parameter image.tag=${{ github.sha }} && \
-            argocd app wait ${{ env.APP_NAME }} \
+            argocd app wait ${{ env.ARGOCD_APP_NAME }} \
             --server ${{ steps.set-secrets.outputs.ARGOCD_API_URL }} \
             --grpc-web \
             --operation && \
-            argocd app sync ${{ env.APP_NAME }} \
+            argocd app sync ${{ env.ARGOCD_APP_NAME }} \
             --server ${{ steps.set-secrets.outputs.ARGOCD_API_URL }} \
             --grpc-web \
             --timeout 180"
