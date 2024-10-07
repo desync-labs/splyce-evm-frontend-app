@@ -15,7 +15,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      APP_NAME: splyce-frontend-app
       IMAGE_NAME: splyce-frontend-app
 
     steps:
