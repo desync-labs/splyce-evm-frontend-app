@@ -15,7 +15,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      IMAGE_REPOSITORY: intothefathom/splyce-frontend-app
+      ARGOCD_APP_NAME: ${{ vars.ARGOCD_APP_NAME }}
+      IMAGE_REPOSITORY: ${{ vars.IMAGE_REPOSITORY }}
 
     steps:
       - name: Checkout code
@@ -23,7 +24,7 @@ jobs:
 
       - name: Print ENV
         run: |
-          echo ${{ vars.ARGOCD_APP_NAME }}
+          echo ${{ env.ARGOCD_APP_NAME }}
           echo ${{ env.IMAGE_REPOSITORY }}
 
       - name: Set up Node.js
