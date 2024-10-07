@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       APP_NAME: splyce-frontend-app
-      
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -44,7 +44,7 @@ jobs:
       - name: Build Docker image
         run: |
           docker build -t intothefathom/${{ env.APP_NAME }}:${{ github.sha }} .
-          docker tag intothefathom/${{ env.APP_NAME }}:${{ github.sha }} intothefathom/splyce-frontend-app:latest
+          docker tag intothefathom/${{ env.APP_NAME }}:${{ github.sha }} intothefathom/${{ env.APP_NAME }}:latest
 
       - name: Push Docker image
         run: |
