@@ -15,12 +15,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      IMAGE_NAME: splyce-frontend-app
       IMAGE_REPOSITORY: intothefathom/splyce-frontend-app
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
+      - name: Print ENV
+        run: |
+          echo ${{ env.ARGOCD_APP_NAME }}
+          echo ${{ env.IMAGE_REPOSITORY }}
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
