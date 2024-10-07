@@ -23,7 +23,7 @@ jobs:
 
       - name: Print ENV
         run: |
-          echo ${{ env.ARGOCD_APP_NAME }}
+          echo ${{ vars.ARGOCD_APP_NAME }}
           echo ${{ env.IMAGE_REPOSITORY }}
 
       - name: Set up Node.js
