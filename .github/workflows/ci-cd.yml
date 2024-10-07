@@ -16,6 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       APP_NAME: splyce-frontend-app
+      IMAGE_NAME: splyce-frontend-app
 
     steps:
       - name: Checkout code
@@ -43,13 +44,13 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t intothefathom/${{ env.APP_NAME }}:${{ github.sha }} .
-          docker tag intothefathom/${{ env.APP_NAME }}:${{ github.sha }} intothefathom/${{ env.APP_NAME }}:latest
+          docker build -t intothefathom/${{ env.IMAGE_NAME }}:${{ github.sha }} .
+          docker tag intothefathom/${{ env.IMAGE_NAME }}:${{ github.sha }} intothefathom/${{ env.IMAGE_NAME }}:latest
 
       - name: Push Docker image
         run: |
-          docker push intothefathom/${{ env.APP_NAME }}:${{ github.sha }}
-          docker push intothefathom/${{ env.APP_NAME }}:latest
+          docker push intothefathom/${{ env.IMAGE_NAME }}:${{ github.sha }}
+          docker push intothefathom/${{ env.IMAGE_NAME }}:latest
 
       - name: Set Argo CD secrets
         id: set-secrets
