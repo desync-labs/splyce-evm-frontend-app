@@ -14,6 +14,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      BRANCH_NAME: ${{ github.event.pull_request.base.ref != '' && github.event.pull_request.base.ref || github.ref_name || 'dev' }}
 
     steps:
       - name: Checkout code
@@ -36,40 +38,54 @@ jobs:
             npm run build:dev
           fi
 
+      - name: Set secrets
+        id: set-secrets
+        shell: bash
+        run: |
+          if [[ "${{ env.BRANCH_NAME }}" == "master" ]]; then
+            {
+              echo "IMAGE_REPOSITORY=${{ vars.IMAGE_REPOSITORY_PROD }}"
+              echo "ARGOCD_APP_NAME=${{ vars.ARGOCD_APP_NAME_PROD }}"
+              echo "ARGOCD_API_URL=${{ secrets.ARGOCD_API_URL_PROD }}"
+              echo "ARGOCD_AUTH_TOKEN=${{ secrets.ARGOCD_AUTH_TOKEN_PROD }}"
+            } >> "$GITHUB_OUTPUT"
+          else
+            {
+              echo "IMAGE_REPOSITORY=${{ vars.IMAGE_REPOSITORY_DEV }}"
+              echo "ARGOCD_APP_NAME=${{ vars.ARGOCD_APP_NAME_DEV }}"
+              echo "ARGOCD_API_URL=${{ secrets.ARGOCD_API_URL_DEV }}"
+              echo "ARGOCD_AUTH_TOKEN=${{ secrets.ARGOCD_AUTH_TOKEN_DEV }}"
+            } >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Docker login
         run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
       - name: Build Docker image
         run: |
-          docker build -t intothefathom/splyce-frontend-app:${{ github.sha }} .
-          docker tag intothefathom/splyce-frontend-app:${{ github.sha }} intothefathom/splyce-frontend-app:latest
+          docker build -t ${{ steps.set-secrets.outputs.IMAGE_REPOSITORY }}:${{ github.sha }} .
+          docker tag ${{ steps.set-secrets.outputs.IMAGE_REPOSITORY }}:${{ github.sha }} ${{ steps.set-secrets.outputs.IMAGE_REPOSITORY }}:latest
 
       - name: Push Docker image
         run: |
-          docker push intothefathom/splyce-frontend-app:${{ github.sha }}
-          docker push intothefathom/splyce-frontend-app:latest
-
-      - name: Set Argo CD secrets
-        id: set-secrets
-        run: |
-          if [[ $GITHUB_REF == refs/heads/main ]]; then
-            echo "::set-output name=ARGOCD_API_URL::${{ secrets.ARGOCD_API_URL_PROD }}"
-            echo "::set-output name=ARGOCD_AUTH_TOKEN::${{ secrets.ARGOCD_AUTH_TOKEN_PROD }}"
-          else
-            echo "::set-output name=ARGOCD_API_URL::${{ secrets.ARGOCD_API_URL_DEV }}"
-            echo "::set-output name=ARGOCD_AUTH_TOKEN::${{ secrets.ARGOCD_AUTH_TOKEN_DEV }}"
-          fi
+          docker push ${{ steps.set-secrets.outputs.IMAGE_REPOSITORY }}:${{ github.sha }}
+          docker push ${{ steps.set-secrets.outputs.IMAGE_REPOSITORY }}:latest
 
       - name: Sync Argo CD and wait for completion
         run: |
           docker run --rm \
             -e ARGOCD_AUTH_TOKEN=${{ steps.set-secrets.outputs.ARGOCD_AUTH_TOKEN }} \
-            argoproj/argocd:v2.4.3 \
+            argoproj/argocd:v2.6.15 \
             /bin/sh -c \
-            "argocd app set splyce-frontend-app \
+            "argocd app set ${{ steps.set-secrets.outputs.ARGOCD_APP_NAME }} \
             --server ${{ steps.set-secrets.outputs.ARGOCD_API_URL }} \
+            --grpc-web \
             --parameter image.tag=${{ github.sha }} && \
-            argocd app sync splyce-frontend-app \
+            argocd app wait ${{ steps.set-secrets.outputs.ARGOCD_APP_NAME }} \
+            --server ${{ steps.set-secrets.outputs.ARGOCD_API_URL }} \
+            --grpc-web \
+            --operation && \
+            argocd app sync ${{ steps.set-secrets.outputs.ARGOCD_APP_NAME }} \
             --server ${{ steps.set-secrets.outputs.ARGOCD_API_URL }} \
             --grpc-web \
             --timeout 180"

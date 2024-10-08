@@ -7,13 +7,13 @@ License text copyright (c) 2017 MariaDB Corporation Ab, All Rights Reserved.
 
 Parameters
 
-Licensor: Fathom
+Licensor: Splyce Finance
 
-Licensed Work: Fathom Stablecoin Frontend. The Licensed Work is (c) 2022 Fathom
+Licensed Work: Splyce Finance Frontend. The Licensed Work is (c) 2024 Splyce
 
 Additional Use Grant: Any uses listed and defined at this [LICENSE](./LICENSE.md)
 
-Change Date: The earlier of 1 January 2025
+Change Date: The earlier of 1 January 2027
 
 Change License: AGPL-3.0
 
