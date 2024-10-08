@@ -15,17 +15,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      ARGOCD_APP_NAME: ${{ vars.ARGOCD_APP_NAME }}
-      IMAGE_REPOSITORY: ${{ vars.IMAGE_REPOSITORY }}
+      BRANCH_NAME: ${{ github.event.pull_request.base.ref != '' && github.event.pull_request.base.ref || github.ref_name || 'dev' }}
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
-      - name: Print ENV
-        run: |
-          echo ${{ env.ARGOCD_APP_NAME }}
-          echo ${{ env.IMAGE_REPOSITORY }}
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
@@ -44,34 +38,38 @@ jobs:
             npm run build:dev
           fi
 
-      - name: Docker login
-        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-
-      - name: Build Docker image
-        run: |
-          docker build -t ${{ env.IMAGE_REPOSITORY }}:${{ github.sha }} .
-          docker tag ${{ env.IMAGE_REPOSITORY }}:${{ github.sha }} ${{ env.IMAGE_REPOSITORY }}:latest
-
-      - name: Push Docker image
-        run: |
-          docker push ${{ env.IMAGE_REPOSITORY }}:${{ github.sha }}
-          docker push ${{ env.IMAGE_REPOSITORY }}:latest
-
-      - name: Set Argo CD secrets
+      - name: Set secrets
         id: set-secrets
         shell: bash
         run: |
-          if [[ $GITHUB_REF == refs/heads/main ]]; then
+          if [[ "${{ env.BRANCH_NAME }}" == "master" ]]; then
             {
+              echo "IMAGE_REPOSITORY=${{ vars.IMAGE_REPOSITORY_PROD }}"
+              echo "ARGOCD_APP_NAME=${{ vars.ARGOCD_APP_NAME_PROD }}"
               echo "ARGOCD_API_URL=${{ secrets.ARGOCD_API_URL_PROD }}"
               echo "ARGOCD_AUTH_TOKEN=${{ secrets.ARGOCD_AUTH_TOKEN_PROD }}"
             } >> "$GITHUB_OUTPUT"
           else
             {
+              echo "IMAGE_REPOSITORY=${{ vars.IMAGE_REPOSITORY_DEV }}"
+              echo "ARGOCD_APP_NAME=${{ vars.ARGOCD_APP_NAME_DEV }}"
               echo "ARGOCD_API_URL=${{ secrets.ARGOCD_API_URL_DEV }}"
               echo "ARGOCD_AUTH_TOKEN=${{ secrets.ARGOCD_AUTH_TOKEN_DEV }}"
             } >> "$GITHUB_OUTPUT"
           fi
+
+      - name: Docker login
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+
+      - name: Build Docker image
+        run: |
+          docker build -t ${{ steps.set-secrets.outputs.IMAGE_REPOSITORY }}:${{ github.sha }} .
+          docker tag ${{ steps.set-secrets.outputs.IMAGE_REPOSITORY }}:${{ github.sha }} ${{ steps.set-secrets.outputs.IMAGE_REPOSITORY }}:latest
+
+      - name: Push Docker image
+        run: |
+          docker push ${{ steps.set-secrets.outputs.IMAGE_REPOSITORY }}:${{ github.sha }}
+          docker push ${{ steps.set-secrets.outputs.IMAGE_REPOSITORY }}:latest
 
       - name: Sync Argo CD and wait for completion
         run: |
@@ -79,15 +77,15 @@ jobs:
             -e ARGOCD_AUTH_TOKEN=${{ steps.set-secrets.outputs.ARGOCD_AUTH_TOKEN }} \
             argoproj/argocd:v2.6.15 \
             /bin/sh -c \
-            "argocd app set ${{ env.ARGOCD_APP_NAME }} \
+            "argocd app set ${{ steps.set-secrets.outputs.ARGOCD_APP_NAME }} \
             --server ${{ steps.set-secrets.outputs.ARGOCD_API_URL }} \
             --grpc-web \
             --parameter image.tag=${{ github.sha }} && \
-            argocd app wait ${{ env.ARGOCD_APP_NAME }} \
+            argocd app wait ${{ steps.set-secrets.outputs.ARGOCD_APP_NAME }} \
             --server ${{ steps.set-secrets.outputs.ARGOCD_API_URL }} \
             --grpc-web \
             --operation && \
-            argocd app sync ${{ env.ARGOCD_APP_NAME }} \
+            argocd app sync ${{ steps.set-secrets.outputs.ARGOCD_APP_NAME }} \
             --server ${{ steps.set-secrets.outputs.ARGOCD_API_URL }} \
             --grpc-web \
             --timeout 180"
